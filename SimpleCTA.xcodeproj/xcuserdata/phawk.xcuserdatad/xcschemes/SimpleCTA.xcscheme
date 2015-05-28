@@ -34,6 +34,20 @@
                ReferencedContainer = "container:SimpleCTA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "448D2E9F1B15892F008881AA"
+               BuildableName = "SimpleCTA Tests.xctest"
+               BlueprintName = "SimpleCTA Tests"
+               ReferencedContainer = "container:SimpleCTA.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "4422E0BA1B0E6A280017FF28"
                BuildableName = "SimpleCTATests.xctest"
                BlueprintName = "SimpleCTATests"
+               ReferencedContainer = "container:SimpleCTA.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "448D2E9F1B15892F008881AA"
+               BuildableName = "SimpleCTA Tests.xctest"
+               BlueprintName = "SimpleCTA Tests"
                ReferencedContainer = "container:SimpleCTA.xcodeproj">
             </BuildableReference>
          </TestableReference>

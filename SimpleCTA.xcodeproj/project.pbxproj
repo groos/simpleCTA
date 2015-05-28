@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440C04C61B0FA9BC000B2B9E /* cta.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 440C04C51B0FA9BC000B2B9E /* cta.sqlite */; };
 		440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04C91B0FAAD7000B2B9E /* FMDatabase.m */; };
 		440C04D51B0FAAD7000B2B9E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04CB1B0FAAD7000B2B9E /* FMResultSet.m */; };
 		440C04D61B0FAAD7000B2B9E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04CE1B0FAAD7000B2B9E /* FMDatabasePool.m */; };
@@ -26,6 +25,11 @@
 		444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E01B14F98B009B208A /* vcPaulTest.swift */; };
 		444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E21B151DB1009B208A /* tvcCTALines.swift */; };
 		444022E51B1521D1009B208A /* tvcCTAStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E41B1521D1009B208A /* tvcCTAStops.swift */; };
+		448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
+		448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
+		448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
+		448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
+		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,16 @@
 			remoteGlobalIDString = 4422E0A21B0E6A270017FF28;
 			remoteInfo = SimpleCTA;
 		};
+		448D2EA61B15892F008881AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4422E09B1B0E6A270017FF28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4422E0A21B0E6A270017FF28;
+			remoteInfo = SimpleCTA;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		440C04C51B0FA9BC000B2B9E /* cta.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cta.sqlite; sourceTree = "<group>"; };
 		440C04C91B0FAAD7000B2B9E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		440C04CA1B0FAAD7000B2B9E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		440C04CB1B0FAAD7000B2B9E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
@@ -68,6 +78,10 @@
 		444022E01B14F98B009B208A /* vcPaulTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcPaulTest.swift; sourceTree = "<group>"; };
 		444022E21B151DB1009B208A /* tvcCTALines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcCTALines.swift; sourceTree = "<group>"; };
 		444022E41B1521D1009B208A /* tvcCTAStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tvcCTAStops.swift; path = ../../../dbPlay/dbPlay/tvcCTAStops.swift; sourceTree = "<group>"; };
+		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
+		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
+		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
+		448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleCTA Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +95,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4422E0B81B0E6A280017FF28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		448D2E9D1B15892F008881AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -111,7 +132,6 @@
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
-				440C04C51B0FA9BC000B2B9E /* cta.sqlite */,
 				4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */,
 				4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */,
 				4422E0A51B0E6A270017FF28 /* SimpleCTA */,
@@ -125,6 +145,7 @@
 			children = (
 				4422E0A31B0E6A270017FF28 /* SimpleCTA.app */,
 				4422E0BB1B0E6A280017FF28 /* SimpleCTATests.xctest */,
+				448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +183,7 @@
 			children = (
 				4422E0C11B0E6A280017FF28 /* SimpleCTATests.swift */,
 				4422E0BF1B0E6A280017FF28 /* Supporting Files */,
+				448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */,
 			);
 			path = SimpleCTATests;
 			sourceTree = "<group>";
@@ -177,6 +199,8 @@
 		44B1B3451B0E8AE900721143 /* stringBuilders */ = {
 			isa = PBXGroup;
 			children = (
+				448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */,
+				448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */,
 			);
 			name = stringBuilders;
 			sourceTree = "<group>";
@@ -219,6 +243,24 @@
 			productReference = 4422E0BB1B0E6A280017FF28 /* SimpleCTATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		448D2E9F1B15892F008881AA /* SimpleCTA Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 448D2EA81B15892F008881AA /* Build configuration list for PBXNativeTarget "SimpleCTA Tests" */;
+			buildPhases = (
+				448D2E9C1B15892F008881AA /* Sources */,
+				448D2E9D1B15892F008881AA /* Frameworks */,
+				448D2E9E1B15892F008881AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				448D2EA71B15892F008881AA /* PBXTargetDependency */,
+			);
+			name = "SimpleCTA Tests";
+			productName = "SimpleCTA Tests";
+			productReference = 448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,6 +282,10 @@
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 4422E0A21B0E6A270017FF28;
 					};
+					448D2E9F1B15892F008881AA = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 4422E0A21B0E6A270017FF28;
+					};
 				};
 			};
 			buildConfigurationList = 4422E09E1B0E6A270017FF28 /* Build configuration list for PBXProject "SimpleCTA" */;
@@ -257,6 +303,7 @@
 			targets = (
 				4422E0A21B0E6A270017FF28 /* SimpleCTA */,
 				4422E0BA1B0E6A280017FF28 /* SimpleCTATests */,
+				448D2E9F1B15892F008881AA /* SimpleCTA Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,7 +313,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440C04C61B0FA9BC000B2B9E /* cta.sqlite in Resources */,
 				4422E0B11B0E6A270017FF28 /* Main.storyboard in Resources */,
 				4422E0B61B0E6A270017FF28 /* LaunchScreen.xib in Resources */,
 				4422E0B31B0E6A270017FF28 /* Images.xcassets in Resources */,
@@ -274,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4422E0B91B0E6A280017FF28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		448D2E9E1B15892F008881AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,11 +347,13 @@
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
 				440C04D61B0FAAD7000B2B9E /* FMDatabasePool.m in Sources */,
 				440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */,
+				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
 				444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,
 				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
 				440C04D81B0FAAD7000B2B9E /* FMDatabaseQueue.m in Sources */,
+				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +362,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4422E0C21B0E6A280017FF28 /* SimpleCTATests.swift in Sources */,
+				448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */,
+				448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */,
+				448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		448D2E9C1B15892F008881AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +382,11 @@
 			isa = PBXTargetDependency;
 			target = 4422E0A21B0E6A270017FF28 /* SimpleCTA */;
 			targetProxy = 4422E0BC1B0E6A280017FF28 /* PBXContainerItemProxy */;
+		};
+		448D2EA71B15892F008881AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4422E0A21B0E6A270017FF28 /* SimpleCTA */;
+			targetProxy = 448D2EA61B15892F008881AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -477,6 +547,40 @@
 			};
 			name = Release;
 		};
+		448D2EA91B15892F008881AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimpleCTA Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCTA.app/SimpleCTA";
+			};
+			name = Debug;
+		};
+		448D2EAA1B15892F008881AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimpleCTA Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCTA.app/SimpleCTA";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,6 +610,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		448D2EA81B15892F008881AA /* Build configuration list for PBXNativeTarget "SimpleCTA Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				448D2EA91B15892F008881AA /* Debug */,
+				448D2EAA1B15892F008881AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
