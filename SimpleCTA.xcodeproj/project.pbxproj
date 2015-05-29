@@ -40,13 +40,6 @@
 			remoteGlobalIDString = 4422E0A21B0E6A270017FF28;
 			remoteInfo = SimpleCTA;
 		};
-		448D2EA61B15892F008881AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4422E09B1B0E6A270017FF28 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4422E0A21B0E6A270017FF28;
-			remoteInfo = SimpleCTA;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +74,6 @@
 		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
-		448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleCTA Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +87,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4422E0B81B0E6A280017FF28 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		448D2E9D1B15892F008881AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,7 +130,6 @@
 			children = (
 				4422E0A31B0E6A270017FF28 /* SimpleCTA.app */,
 				4422E0BB1B0E6A280017FF28 /* SimpleCTATests.xctest */,
-				448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,24 +227,6 @@
 			productReference = 4422E0BB1B0E6A280017FF28 /* SimpleCTATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		448D2E9F1B15892F008881AA /* SimpleCTA Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 448D2EA81B15892F008881AA /* Build configuration list for PBXNativeTarget "SimpleCTA Tests" */;
-			buildPhases = (
-				448D2E9C1B15892F008881AA /* Sources */,
-				448D2E9D1B15892F008881AA /* Frameworks */,
-				448D2E9E1B15892F008881AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				448D2EA71B15892F008881AA /* PBXTargetDependency */,
-			);
-			name = "SimpleCTA Tests";
-			productName = "SimpleCTA Tests";
-			productReference = 448D2EA01B15892F008881AA /* SimpleCTA Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,10 +248,6 @@
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 4422E0A21B0E6A270017FF28;
 					};
-					448D2E9F1B15892F008881AA = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 4422E0A21B0E6A270017FF28;
-					};
 				};
 			};
 			buildConfigurationList = 4422E09E1B0E6A270017FF28 /* Build configuration list for PBXProject "SimpleCTA" */;
@@ -303,7 +265,6 @@
 			targets = (
 				4422E0A21B0E6A270017FF28 /* SimpleCTA */,
 				4422E0BA1B0E6A280017FF28 /* SimpleCTATests */,
-				448D2E9F1B15892F008881AA /* SimpleCTA Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,13 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4422E0B91B0E6A280017FF28 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		448D2E9E1B15892F008881AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,13 +322,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		448D2E9C1B15892F008881AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -382,11 +329,6 @@
 			isa = PBXTargetDependency;
 			target = 4422E0A21B0E6A270017FF28 /* SimpleCTA */;
 			targetProxy = 4422E0BC1B0E6A280017FF28 /* PBXContainerItemProxy */;
-		};
-		448D2EA71B15892F008881AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4422E0A21B0E6A270017FF28 /* SimpleCTA */;
-			targetProxy = 448D2EA61B15892F008881AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -547,40 +489,6 @@
 			};
 			name = Release;
 		};
-		448D2EA91B15892F008881AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SimpleCTA Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCTA.app/SimpleCTA";
-			};
-			name = Debug;
-		};
-		448D2EAA1B15892F008881AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SimpleCTA Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleCTA.app/SimpleCTA";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,14 +518,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		448D2EA81B15892F008881AA /* Build configuration list for PBXNativeTarget "SimpleCTA Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				448D2EA91B15892F008881AA /* Debug */,
-				448D2EAA1B15892F008881AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
