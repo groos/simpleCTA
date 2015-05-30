@@ -29,6 +29,7 @@
 		448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
+		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
+		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				44B1B3451B0E8AE900721143 /* stringBuilders */,
 				4422E0A81B0E6A270017FF28 /* AppDelegate.swift */,
 				4422E0AF1B0E6A270017FF28 /* Main.storyboard */,
+				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
 				444022E21B151DB1009B208A /* tvcCTALines.swift */,
 				4422E0B21B0E6A270017FF28 /* Images.xcassets */,
 				4422E0B41B0E6A270017FF28 /* LaunchScreen.xib */,
@@ -298,6 +301,7 @@
 				440C04D61B0FAAD7000B2B9E /* FMDatabasePool.m in Sources */,
 				440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
+				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,
 				444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,

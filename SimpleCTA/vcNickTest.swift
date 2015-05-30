@@ -8,6 +8,31 @@
 
 import UIKit
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Global Data Structures for UITableViews
+
+/*
+ROUTES is the top level data structure
+
+it looks like this:
+
+ROUTES[
+"blue" : [ETA Dictionary1, ETA Dictionary2, ETA Dictionary3],
+"Org" : [ETA Dictionary1, ETA Dictionary2, ETA Dictionary3]
+]
+*/
+var ROUTES = NSMutableDictionary()
+
+// Holds the current set of keys available for ROUTES
+// THIS POPULATES TOP UITABLEVIEW
+var ROUTES_KEYS = NSMutableArray()
+
+// Holds ETA dictionaries for the selected line
+// THIS POPULATES BOTTOM UITABLEVIEW
+var ACTIVE_ROUTE_DETAILS = NSMutableArray()
+///////////////////////////////////////////////////////////////////////////////////////////////
+
 class vcNickTest: UIViewController, NSXMLParserDelegate {
     
     //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930
@@ -41,22 +66,9 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
     </eta>
     */
     
-    /*
-        ROUTES is the top level data structure
     
-        it looks like this:
-    
-        ROUTES[
-                "blue" : [ETA Dictionary1, ETA Dictionary2, ETA Dictionary3],
-                "Org" : [ETA Dictionary1, ETA Dictionary2, ETA Dictionary3]
-            ]
-    */
-    var ROUTES = NSMutableDictionary()
-    
-    
-    
-    // use throughout parsing for collecting xml attributes.
-    // The elements dictionary
+    // used throughout parsing for collecting xml attributes.
+    // The elements dictionary gets added to ROUTES at the end of parsing
     var elements = NSMutableDictionary()
     var element = NSString()
     
@@ -69,19 +81,33 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
     
     // custom function to set up and call superclass parser methods (below)
     @IBAction func myParse(){
-        ROUTES = [:]
+        ROUTES.removeAllObjects()
         var xmlParser = NSXMLParser(contentsOfURL: url)
         xmlParser?.delegate = self
         xmlParser?.parse()
-        showParsedResults()
+        updateRoutes()
+    }
+   
+    
+    //
+    func updateRoutes(){
+        ROUTES_KEYS.removeAllObjects()
+        ACTIVE_ROUTE_DETAILS.removeAllObjects()
+        
+        var k = ROUTES.keyEnumerator()
+        for key in k {
+            ROUTES_KEYS.addObject(key)
+        }
     }
     
-    // gets parsed data and puts it on screen
-    // call this once the parsing is finished, and access dictionaries of data
-    func showParsedResults(){
-        println("blank")
+    // call this when user touches a Route from upper UITableView
+    func updateRouteDetails(route: String){
+        if let d = ROUTES[route] as? NSMutableDictionary {
+            for eta in d {
+                ACTIVE_ROUTE_DETAILS.addObject(eta.value)
+            }
+        }
     }
-    
  
     
     // First superclass parser function that gets called. Stop it on the object name you want (eta object is below)
@@ -156,8 +182,8 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
             */
             
             
-            // rt will be something like "blue" or "R" indicating a line.
-            // we will store an array of arrival data objects for each line
+            // rt will be something like "blue" or "R" indicating a Route.
+            // we will store an array of arrival data objects for each Route
             if let rt = elements["rt"] as? String {
                 
                 // if we have already created an array for this Route, add the elements to it
@@ -180,11 +206,13 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
             
         }
     }
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ROUTES = [:]
+        ROUTES_KEYS = ["test1", "test2", "test3"]
+        ACTIVE_ROUTE_DETAILS = []
         // Do any additional setup after loading the view.
     }
 
