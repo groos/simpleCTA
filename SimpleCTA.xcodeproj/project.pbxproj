@@ -29,6 +29,7 @@
 		448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
+		449AD4821B1A2CFF00A029AE /* parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4811B1A2CFF00A029AE /* parse.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
+		449AD4811B1A2CFF00A029AE /* parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parse.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				444022D81B14F73B009B208A /* vcMain.swift */,
 				444022DE1B14F973009B208A /* vcNickTest.swift */,
 				444022E01B14F98B009B208A /* vcPaulTest.swift */,
+				449AD4811B1A2CFF00A029AE /* parse.swift */,
 			);
 			path = SimpleCTA;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,
+				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
 				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
 				440C04D81B0FAAD7000B2B9E /* FMDatabaseQueue.m in Sources */,
 				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
