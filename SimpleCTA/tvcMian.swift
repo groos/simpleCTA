@@ -1,14 +1,14 @@
 //
-//  tvcCTALines.swift
+//  tvcMian.swift
 //  SimpleCTA
 //
-//  Created by paul hawk on 5/26/15.
+//  Created by paul hawk on 5/30/15.
 //  Copyright (c) 2015 Depaul University. All rights reserved.
 //
 
 import UIKit
 
-class tvcCTALines: UITableViewController {
+class tvcMian: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

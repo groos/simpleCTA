@@ -23,13 +23,13 @@
 		444022D91B14F73B009B208A /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022D81B14F73B009B208A /* vcMain.swift */; };
 		444022DF1B14F973009B208A /* vcNickTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022DE1B14F973009B208A /* vcNickTest.swift */; };
 		444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E01B14F98B009B208A /* vcPaulTest.swift */; };
-		444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E21B151DB1009B208A /* tvcCTALines.swift */; };
 		448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
 		449AD4821B1A2CFF00A029AE /* parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4811B1A2CFF00A029AE /* parse.swift */; };
+		449AD4861B1A324900A029AE /* tvcMian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4851B1A324900A029AE /* tvcMian.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,11 +70,11 @@
 		444022D81B14F73B009B208A /* vcMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcMain.swift; sourceTree = "<group>"; };
 		444022DE1B14F973009B208A /* vcNickTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcNickTest.swift; sourceTree = "<group>"; };
 		444022E01B14F98B009B208A /* vcPaulTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcPaulTest.swift; sourceTree = "<group>"; };
-		444022E21B151DB1009B208A /* tvcCTALines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcCTALines.swift; sourceTree = "<group>"; };
 		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
 		449AD4811B1A2CFF00A029AE /* parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parse.swift; sourceTree = "<group>"; };
+		449AD4851B1A324900A029AE /* tvcMian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcMian.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +144,6 @@
 				4422E0A81B0E6A270017FF28 /* AppDelegate.swift */,
 				4422E0AF1B0E6A270017FF28 /* Main.storyboard */,
 				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
-				444022E21B151DB1009B208A /* tvcCTALines.swift */,
 				4422E0B21B0E6A270017FF28 /* Images.xcassets */,
 				4422E0B41B0E6A270017FF28 /* LaunchScreen.xib */,
 				4422E0AA1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld */,
@@ -153,6 +152,7 @@
 				444022DE1B14F973009B208A /* vcNickTest.swift */,
 				444022E01B14F98B009B208A /* vcPaulTest.swift */,
 				449AD4811B1A2CFF00A029AE /* parse.swift */,
+				449AD4851B1A324900A029AE /* tvcMian.swift */,
 			);
 			path = SimpleCTA;
 			sourceTree = "<group>";
@@ -305,8 +305,8 @@
 				440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
 				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,
-				444022E31B151DB1009B208A /* tvcCTALines.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
+				449AD4861B1A324900A029AE /* tvcMian.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
 				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
