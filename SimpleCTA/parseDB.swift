@@ -11,23 +11,22 @@ import Foundation
 class ParseDB {
     init() {}
     
-    func setRoutes(cta:CTA, data:String) {
-        let r = Route()
-        //r.routeDirection = "North"
-        //r.routeId = 100
-        
+    func setRoutesByLocation (cta : CTA , data : [String]?) {
+        let rt1 = Route(rId: 1, rtShortName: 1, rtLN: "Bronzeville", rtType: 3, rtDirection: nil, final: nil)
+        let rt2 = Route(rId: 2, rtShortName: 2, rtLN: "Hyde Park Express", rtType: 3, rtDirection: nil, final: nil)
+        let rt3 = Route(rId: 3, rtShortName: 3, rtLN: "South Shore Night Bus", rtType: 3, rtDirection: nil, final: nil)
+        cta.routes = [1 : rt1]
+        cta.routes = [2 : rt2]
+        cta.routes = [3 : rt3]
+    }
+    
+    func setStops(cta : CTA, data:[String]?){
+        let s1 = Stop(sId: 21, sName: "Jackson and Ke", lat: nil, lon: nil, dest: nil, plat: nil, rtDir: nil, distance: nil, locType: 0)
+        let s2 = Stop(sId: 22, sName: "Jackson and Ka", lat: nil, lon: nil, dest: nil, plat: nil, rtDir: nil, distance: nil, locType: 0)
+        let s3 = Stop(sId: 23, sName: "Jackson and Kz", lat: nil, lon: nil, dest: nil, plat: nil, rtDir: nil, distance: nil, locType: 0)
+        cta.stops = [21 : s1]
+        cta.stops = [22 : s2]
+        cta.stops = [23 : s3]
     }
     
 }
-
-
-
-//class Route {
-//    init(){}
-//    var stops:[Stop]?
-//    let routeId:Int? // db: route_id t: rn
-//    let routeShortName: String? // db: route_short_name t: rt b: rt
-//    let routeType : Int? // db: route_type , ie bus / train
-//    let routeDirection: String? // B: rtdir
-//    let finalDestination : String? // b: des t: destSt
-//}

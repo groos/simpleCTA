@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import Stop
 
 class DbQueryBuilder {
 
@@ -14,7 +15,7 @@ class DbQueryBuilder {
     func GetRoutesByLocation(location:[String: Double]) -> String?{
         return "select * from routes"
     }
-    func getStopsByRoute(#Stop: String?, AndLocation location:[String: Double]) -> String? {
+    func getStopsByRouteUsing( #Stop:String?, AndLocation location:[String: Double]) -> String? {
         return "select * from routes"
     }
 }

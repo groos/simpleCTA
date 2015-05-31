@@ -11,11 +11,11 @@ import Foundation
 class DB {
     init(){}
     // and location? by just calling sql string builder heree?
-    func getRoutesByLocation(sqlStatment:String?) -> [String?] {
-        return ["Red", "Brown", "80"]
+
+    func getStopsByLocation (sqlStatment:String?) -> [String]? {
+        return ["asdf"]
     }
-    
-    func getStopsByRoute(Route:String?) -> [String?] {
+    func getStopsByRoute(sqlStatment:String?) -> [String]? {
         return ["Fullerton","Bellmount", "Addison"]
     }
 }

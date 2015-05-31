@@ -9,20 +9,24 @@
 import Foundation
 
 class Prediction {
-    init(){}
     
     // xml data in bus train
-    let dataRequestedTime : NSDate? = nil  // b: tmstmp t: tmst
-    let predictedArrivalTime : NSDate? = nil  // b: prdtm t: arrT
-    let isApproaching: Bool? = nil  // t: isApp // train only
-    let delayed: Bool? = nil //b: dly  t: isDly
-    let livePrediction : Bool? = nil  // Train only : isSch  // tells if data is from gps or train schedule
-    let predictionGenerated : NSDate? = nil /// train only: prdt
-    let isArraival: Bool? = nil // b: typ // or Departure
+    let dataRequestedTime : NSDate?             // b: tmstmp t: tmst
+    let predictedArrivalTime : Int?          // b: prdtm t: arrT
+    let isApproaching: Bool?                    // t: isApp // train only
+    let delayed: Bool?                          // b: dly  t: isDly
+    let livePrediction : Bool?                  // t: isSch  Train only  // tells if data is from gps or train schedule
+    let predictionGenerated : NSDate?           // t: prdt train only
+    let isArraival: Bool?                       // b: typ // or Departure
     
+    init(ts:NSDate?, pTime:Int?, isApp:Bool?, delay:Bool?, liveP:Bool?, predGen:NSDate?, isA:Bool?){
+        self.dataRequestedTime = ts
+        self.predictedArrivalTime = pTime
+        self.isApproaching = isApp
+        self.delayed = delay
+        self.livePrediction = liveP
+        self.predictionGenerated = predGen
+        self.isArraival = isA 
     
-    // not sure if to just send all data or do a get/set for buses and trains
-    //busPerdictions(){}
-    //trainPerdictions(){}
-    
+    }
 }

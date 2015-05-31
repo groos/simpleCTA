@@ -9,22 +9,34 @@
 import Foundation
 
 class Stop {
-    init(){}
+
     
     var perdications : [Prediction]? = nil
     
-    let stationID: String? = nil // t: staId b: stpid db: stop_id
-    let stationName: String? = nil // B: stpnm t: staNm db: stop_Name or stop_desc
+    let stationID: Int?      // t: staId b: stpid db: stop_id
+    let stationName: String?    // B: stpnm t: staNm db: stop_Name or stop_desc
     
-    let stopLatitude: Double? = nil // b: lat db: stop_lat
-    let stopLongitude: Double? = nil // b: lon db: stop_lon
-    let locationType: String? = nil // db: location_type
+    let stopLatitude: Double?   // b: lat db: stop_lat
+    let stopLongitude: Double?  // b: lon db: stop_lon
+    let locationType: Int?   // db: location_type
     
     // in here or rts?
-    let finalDestination :  String? = nil // b: des t: destSt
-    let platform: String? = nil // which way t:
-    let routeDirection: String? = nil // B: rtdir // should be enum
-    let distanceToUser: Double? = nil // calc of how close and need to setup a sort by
+    let finalDestination :  String?  // b: des t: destSt
+    let platform: String?           // which way t:
+    let routeDirection: String?     // B: rtdir // should be enum
+    let distanceToUser: Double?     // calc of how close and need to setup a sort by
+    
+    init(sId:Int?, sName:String?, lat:Double?,lon:Double?, dest:String?,plat:String?,rtDir:String?,distance:Double?, locType:Int? ){
+        self.stationID = sId
+        self.stationName = sName
+        self.stopLatitude = lat
+        self.stopLongitude = lon
+        self.finalDestination = dest
+        self.platform = plat
+        self.routeDirection = rtDir
+        self.distanceToUser = distance
+        self.locationType = locType
+    }
     
 
 }

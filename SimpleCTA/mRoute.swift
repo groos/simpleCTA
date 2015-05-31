@@ -9,11 +9,21 @@
 import Foundation
 
 class Route {
-    init(){}
-    var stops:[Stop]? = nil
-    let routeId:Int? = nil // db: route_id t: rn
-    let routeShortName: String? = nil // db: route_short_name t: rt b: rt
-    let routeType : Int? = nil // db: route_type , ie bus / train
-    let routeDirection: String? = nil // B: rtdir
-    let finalDestination : String? = nil// b: des t: destSt
+    
+    var stops:[Int : Stop]?
+    let routeId:Int?                // db: route_id t: rn
+    let routeShortName: Int?     // db: route_short_name t: rt b: rt
+    let routeLongName: String?
+    let routeType : Int?            // db: route_type , ie bus / train
+    let routeDirection: String?     // B: rtdir
+    let finalDestination : String?  // b: des t: destSt
+    
+    init(rId:Int?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtDirection:String?, final:String? ){
+        self.routeId = rId
+        self.routeShortName = rtShortName
+        self.routeLongName  = rtLN
+        self.routeType = rtType
+        self.routeDirection = rtDirection
+        self.finalDestination = final
+    }
 }
