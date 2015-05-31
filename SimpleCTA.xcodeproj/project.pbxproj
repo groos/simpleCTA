@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04C91B0FAAD7000B2B9E /* FMDatabase.m */; };
-		440C04D51B0FAAD7000B2B9E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04CB1B0FAAD7000B2B9E /* FMResultSet.m */; };
-		440C04D61B0FAAD7000B2B9E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04CE1B0FAAD7000B2B9E /* FMDatabasePool.m */; };
-		440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04CF1B0FAAD7000B2B9E /* FMDatabaseAdditions.m */; };
-		440C04D81B0FAAD7000B2B9E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 440C04D01B0FAAD7000B2B9E /* FMDatabaseQueue.m */; };
 		4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E0A81B0E6A270017FF28 /* AppDelegate.swift */; };
 		4422E0AC1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4422E0AA1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld */; };
 		4422E0B11B0E6A270017FF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4422E0AF1B0E6A270017FF28 /* Main.storyboard */; };
@@ -54,17 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		440C04C91B0FAAD7000B2B9E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		440C04CA1B0FAAD7000B2B9E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		440C04CB1B0FAAD7000B2B9E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		440C04CC1B0FAAD7000B2B9E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		440C04CD1B0FAAD7000B2B9E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		440C04CE1B0FAAD7000B2B9E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		440C04CF1B0FAAD7000B2B9E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		440C04D01B0FAAD7000B2B9E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		440C04D11B0FAAD7000B2B9E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		440C04D21B0FAAD7000B2B9E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		440C04D31B0FAAD7000B2B9E /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		4422E0A31B0E6A270017FF28 /* SimpleCTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4422E0A71B0E6A270017FF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4422E0A81B0E6A270017FF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,24 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		440C04DA1B0FAAF7000B2B9E /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				440C04C91B0FAAD7000B2B9E /* FMDatabase.m */,
-				440C04CA1B0FAAD7000B2B9E /* FMDatabase.h */,
-				440C04CB1B0FAAD7000B2B9E /* FMResultSet.m */,
-				440C04CC1B0FAAD7000B2B9E /* FMResultSet.h */,
-				440C04CD1B0FAAD7000B2B9E /* FMDatabaseAdditions.h */,
-				440C04CE1B0FAAD7000B2B9E /* FMDatabasePool.m */,
-				440C04CF1B0FAAD7000B2B9E /* FMDatabaseAdditions.m */,
-				440C04D01B0FAAD7000B2B9E /* FMDatabaseQueue.m */,
-				440C04D11B0FAAD7000B2B9E /* FMDatabaseQueue.h */,
-				440C04D21B0FAAD7000B2B9E /* FMDatabasePool.h */,
-				440C04D31B0FAAD7000B2B9E /* FMDB.h */,
-			);
-			name = fmdb;
-			sourceTree = "<group>";
-		};
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +112,7 @@
 				4422E0A51B0E6A270017FF28 /* SimpleCTA */,
 				4422E0BE1B0E6A280017FF28 /* SimpleCTATests */,
 				4422E0A41B0E6A270017FF28 /* Products */,
+				8777ED591B1A397700A435AC /* SimpleCTA-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,14 +343,18 @@
 				449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */,
 				440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
+				8777ED671B1A397800A435AC /* FMDatabaseQueue.m in Sources */,
+				8777ED681B1A397800A435AC /* FMDatabaseAdditions.m in Sources */,
 				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,
+				8777ED691B1A397800A435AC /* FMDatabasePool.m in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
+				8777ED661B1A397800A435AC /* FMResultSet.m in Sources */,
 				449AD4861B1A324900A029AE /* tvcMian.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,
 				449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */,
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
 				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
-				440C04D81B0FAAD7000B2B9E /* FMDatabaseQueue.m in Sources */,
+				8777ED651B1A397800A435AC /* FMDatabase.m in Sources */,
 				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
 				449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */,
 			);
@@ -517,9 +488,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimpleCTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCTA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -527,9 +501,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimpleCTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCTA-Bridging-Header.h";
 			};
 			name = Release;
 		};
