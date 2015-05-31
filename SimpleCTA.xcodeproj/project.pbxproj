@@ -159,22 +159,16 @@
 		4422E0A51B0E6A270017FF28 /* SimpleCTA */ = {
 			isa = PBXGroup;
 			children = (
+				449AD4981B1A3A5600A029AE /* CTAModles */,
+				449AD4891B1A388200A029AE /* Parse */,
 				440C04DA1B0FAAF7000B2B9E /* fmdb */,
+				449AD49F1B1A3DAC00A029AE /* getData */,
+				443FCFAD1B1B996B00DFCCCF /* viewControlers */,
 				44B1B3451B0E8AE900721143 /* stringBuilders */,
-				4422E0A81B0E6A270017FF28 /* AppDelegate.swift */,
 				4422E0AF1B0E6A270017FF28 /* Main.storyboard */,
-				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
 				4422E0B21B0E6A270017FF28 /* Images.xcassets */,
 				4422E0B41B0E6A270017FF28 /* LaunchScreen.xib */,
-				4422E0AA1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld */,
 				4422E0A61B0E6A270017FF28 /* Supporting Files */,
-				444022D81B14F73B009B208A /* vcMain.swift */,
-				444022DE1B14F973009B208A /* vcNickTest.swift */,
-				444022E01B14F98B009B208A /* vcPaulTest.swift */,
-				449AD4891B1A388200A029AE /* Parse */,
-				449AD4851B1A324900A029AE /* tvcMian.swift */,
-				449AD4981B1A3A5600A029AE /* CTAModles */,
-				449AD49F1B1A3DAC00A029AE /* getData */,
 			);
 			path = SimpleCTA;
 			sourceTree = "<group>";
@@ -182,6 +176,8 @@
 		4422E0A61B0E6A270017FF28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4422E0A81B0E6A270017FF28 /* AppDelegate.swift */,
+				4422E0AA1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld */,
 				4422E0A71B0E6A270017FF28 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -203,6 +199,18 @@
 				4422E0C01B0E6A280017FF28 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		443FCFAD1B1B996B00DFCCCF /* viewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
+				444022D81B14F73B009B208A /* vcMain.swift */,
+				444022DE1B14F973009B208A /* vcNickTest.swift */,
+				449AD4851B1A324900A029AE /* tvcMian.swift */,
+				444022E01B14F98B009B208A /* vcPaulTest.swift */,
+			);
+			name = viewControlers;
 			sourceTree = "<group>";
 		};
 		449AD4891B1A388200A029AE /* Parse */ = {
