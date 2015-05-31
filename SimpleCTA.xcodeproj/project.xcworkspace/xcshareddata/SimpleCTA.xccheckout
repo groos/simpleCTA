@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>28C8EE96-3AA8-4B4B-B03C-F5D41900B668</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SimpleCTA</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BE86033588C4DF33764831045C376399313DC1F8</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/pauldhawk/simpleCTA.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SimpleCTA.xcodeproj</string>
+	<string>SimpleCTA.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BE86033588C4DF33764831045C376399313DC1F8</key>
