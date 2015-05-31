@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F55F5CF4-7957-4C78-A851-F4A9FF19CECF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SimpleCTA</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D0D6A2D7CEA39C70D39EAACA76B36DB19F6022D9</key>
 		<string>https://github.com/pauldhawk/simpleCTA.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SimpleCTA.xcodeproj</string>
+	<string>SimpleCTA.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D0D6A2D7CEA39C70D39EAACA76B36DB19F6022D9</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>D0D6A2D7CEA39C70D39EAACA76B36DB19F6022D9</string>
 			<key>IDESourceControlWCCName</key>
-			<string>simpleCTA</string>
+			<string>SimpleCTA</string>
 		</dict>
 	</array>
 </dict>
