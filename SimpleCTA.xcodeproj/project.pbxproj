@@ -30,6 +30,16 @@
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
 		449AD4821B1A2CFF00A029AE /* parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4811B1A2CFF00A029AE /* parse.swift */; };
 		449AD4861B1A324900A029AE /* tvcMian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4851B1A324900A029AE /* tvcMian.swift */; };
+		449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4871B1A386000A029AE /* sbDbQuery.swift */; };
+		449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48A1B1A38AC00A029AE /* parseDB.swift */; };
+		449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48C1B1A38E900A029AE /* parseXml.swift */; };
+		449AD4911B1A39A500A029AE /* mStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4901B1A39A400A029AE /* mStop.swift */; };
+		449AD4931B1A39BF00A029AE /* mRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4921B1A39BF00A029AE /* mRoute.swift */; };
+		449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4941B1A3A2700A029AE /* mPrediction.swift */; };
+		449AD4971B1A3A4E00A029AE /* mCta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4961B1A3A4E00A029AE /* mCta.swift */; };
+		449AD49A1B1A3D4B00A029AE /* GetGpsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4991B1A3D4B00A029AE /* GetGpsLocation.swift */; };
+		449AD49C1B1A3D8A00A029AE /* getXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD49B1B1A3D8A00A029AE /* getXml.swift */; };
+		449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD49D1B1A3DA100A029AE /* getDB.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +85,16 @@
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
 		449AD4811B1A2CFF00A029AE /* parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parse.swift; sourceTree = "<group>"; };
 		449AD4851B1A324900A029AE /* tvcMian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcMian.swift; sourceTree = "<group>"; };
+		449AD4871B1A386000A029AE /* sbDbQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbDbQuery.swift; sourceTree = "<group>"; };
+		449AD48A1B1A38AC00A029AE /* parseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseDB.swift; sourceTree = "<group>"; };
+		449AD48C1B1A38E900A029AE /* parseXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseXml.swift; sourceTree = "<group>"; };
+		449AD4901B1A39A400A029AE /* mStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mStop.swift; sourceTree = "<group>"; };
+		449AD4921B1A39BF00A029AE /* mRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mRoute.swift; sourceTree = "<group>"; };
+		449AD4941B1A3A2700A029AE /* mPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mPrediction.swift; sourceTree = "<group>"; };
+		449AD4961B1A3A4E00A029AE /* mCta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mCta.swift; sourceTree = "<group>"; };
+		449AD4991B1A3D4B00A029AE /* GetGpsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGpsLocation.swift; sourceTree = "<group>"; };
+		449AD49B1B1A3D8A00A029AE /* getXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getXml.swift; sourceTree = "<group>"; };
+		449AD49D1B1A3DA100A029AE /* getDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDB.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,8 +171,10 @@
 				444022D81B14F73B009B208A /* vcMain.swift */,
 				444022DE1B14F973009B208A /* vcNickTest.swift */,
 				444022E01B14F98B009B208A /* vcPaulTest.swift */,
-				449AD4811B1A2CFF00A029AE /* parse.swift */,
+				449AD4891B1A388200A029AE /* Parse */,
 				449AD4851B1A324900A029AE /* tvcMian.swift */,
+				449AD4981B1A3A5600A029AE /* CTAModles */,
+				449AD49F1B1A3DAC00A029AE /* getData */,
 			);
 			path = SimpleCTA;
 			sourceTree = "<group>";
@@ -183,11 +205,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		449AD4891B1A388200A029AE /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				449AD4811B1A2CFF00A029AE /* parse.swift */,
+				449AD48A1B1A38AC00A029AE /* parseDB.swift */,
+				449AD48C1B1A38E900A029AE /* parseXml.swift */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		449AD4981B1A3A5600A029AE /* CTAModles */ = {
+			isa = PBXGroup;
+			children = (
+				449AD4941B1A3A2700A029AE /* mPrediction.swift */,
+				449AD4901B1A39A400A029AE /* mStop.swift */,
+				449AD4921B1A39BF00A029AE /* mRoute.swift */,
+				449AD4961B1A3A4E00A029AE /* mCta.swift */,
+			);
+			name = CTAModles;
+			sourceTree = "<group>";
+		};
+		449AD49F1B1A3DAC00A029AE /* getData */ = {
+			isa = PBXGroup;
+			children = (
+				449AD4991B1A3D4B00A029AE /* GetGpsLocation.swift */,
+				449AD49B1B1A3D8A00A029AE /* getXml.swift */,
+				449AD49D1B1A3DA100A029AE /* getDB.swift */,
+			);
+			name = getData;
+			sourceTree = "<group>";
+		};
 		44B1B3451B0E8AE900721143 /* stringBuilders */ = {
 			isa = PBXGroup;
 			children = (
 				448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */,
 				448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */,
+				449AD4871B1A386000A029AE /* sbDbQuery.swift */,
 			);
 			name = stringBuilders;
 			sourceTree = "<group>";
@@ -297,21 +351,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449AD49C1B1A3D8A00A029AE /* getXml.swift in Sources */,
 				440C04D51B0FAAD7000B2B9E /* FMResultSet.m in Sources */,
+				449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */,
+				449AD4911B1A39A500A029AE /* mStop.swift in Sources */,
+				449AD4931B1A39BF00A029AE /* mRoute.swift in Sources */,
 				4422E0AC1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld in Sources */,
 				444022DF1B14F973009B208A /* vcNickTest.swift in Sources */,
+				449AD4971B1A3A4E00A029AE /* mCta.swift in Sources */,
+				449AD49A1B1A3D4B00A029AE /* GetGpsLocation.swift in Sources */,
+				449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */,
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
 				440C04D61B0FAAD7000B2B9E /* FMDatabasePool.m in Sources */,
+				449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */,
 				440C04D41B0FAAD7000B2B9E /* FMDatabase.m in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
 				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				449AD4861B1A324900A029AE /* tvcMian.swift in Sources */,
 				440C04D71B0FAAD7000B2B9E /* FMDatabaseAdditions.m in Sources */,
+				449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */,
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
 				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
 				440C04D81B0FAAD7000B2B9E /* FMDatabaseQueue.m in Sources */,
 				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
+				449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
