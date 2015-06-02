@@ -47,14 +47,14 @@ class CTA {
     }
     
     // for sening to ui
-    func getRoutes() ->[Route]? {
+    func getRoutes() ->[String]? {
         
         // if routes == nil set it
         if self.routes == nil { setRoutes() }
         
         // reutnr the routes
         if let r = self.routes?.values.array {
-            return r
+            return ["dd"]//r
         } else {
             return nil
         }
@@ -85,13 +85,13 @@ class CTA {
     }
     
     // for showing on ui
-    func getStops () -> [Stop]? {
+    func getStops () -> [String]? {
         // if nil try to create it
         if self.stops == nil { setStops() }
         
         // return the val
         if let s = self.stops?.values.array {
-            return s
+            return ["asdf"]
         } else { return nil }
     }
     

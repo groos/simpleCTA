@@ -70,7 +70,7 @@ class sbTrainHttpReqests {
         
     }
     
-    func predictions (stpid:String?, rt:String?,vid:String?,top:String?) -> String? {
+    func predictions (stpid:String?, rt:String?,vid:String?,top:String?) -> NSURL? {
        // if (stpid != nil && vid != nil) || (stpid == nil && vid == nil) || (stpid != nil && rt != nil) { return nil }
         if let tk = Trainkey, u = predictionsBaseUrl {
             var url = "\(u)?key=\(tk)"
@@ -86,10 +86,9 @@ class sbTrainHttpReqests {
             if let t = top {
                 url = "\(url)&top=\(t)"
             }
-            //return url
+            return NSURL(string:url)
         }
-        //return nil
-        return "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930"
+        return nil
     }
     
     

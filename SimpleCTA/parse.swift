@@ -18,7 +18,7 @@
 //var ACTIVE_ROUTE_DETAILS = NSMutableArray()
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//class vcNickTest: UIViewController, NSXMLParserDelegate {
+//class Parse {
 //    
 //    //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930
 //    //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5
@@ -192,29 +192,6 @@
 //        }
 //    }
 //    
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        ROUTES = [:]
-//        ROUTES_KEYS = ["test1", "test2", "test3"]
-//        ACTIVE_ROUTE_DETAILS = []
-//        // Do any additional setup after loading the view.
-//    }
-//    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    
-//    
-//    /*
-//    // MARK: - Navigation
-//    
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//    // Get the new view controller using segue.destinationViewController.
-//    // Pass the selected object to the new view controller.
-//    }
-//    */
+//
 //    
 //}

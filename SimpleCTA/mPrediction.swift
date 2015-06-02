@@ -12,7 +12,7 @@ class Prediction {
     
     // xml data in bus train
     let dataRequestedTime : NSDate?             // b: tmstmp t: tmst
-    let predictedArrivalTime : Int?          // b: prdtm t: arrT
+    let predictedArrivalTime : Int?             // b: prdtm t: arrT
     let isApproaching: Bool?                    // t: isApp // train only
     let delayed: Bool?                          // b: dly  t: isDly
     let livePrediction : Bool?                  // t: isSch  Train only  // tells if data is from gps or train schedule
