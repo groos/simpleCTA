@@ -8,16 +8,17 @@
 
 var cta = CTA()
 
+
 import Foundation
 
 class CTA {
     
     var userLocation : [String: Double]?
-    var routes : [Int : Route]? // need to make weak
+    var routes : [Route]? // need to make weak
     var route  : Route?
-    var stops  : [Int : Stop]?
+    var stops  : [Stop]?
     var stop   : Stop?
-    var predictions :  [Int : Prediction]?
+    var predictions :  [Prediction]?
     
     init (){}
         /// get the user location here ? might be bad if user does not allow?
@@ -53,11 +54,11 @@ class CTA {
         if self.routes == nil { setRoutes() }
         
         // reutnr the routes
-        if let r = self.routes?.values.array {
+        //if let r = self.routes?.values.array {
             return ["dd"]//r
-        } else {
-            return nil
-        }
+        //} else {
+        //    return nil
+        //}
     }
     
     // for getting the stops for model / show ui
@@ -90,9 +91,8 @@ class CTA {
         if self.stops == nil { setStops() }
         
         // return the val
-        if let s = self.stops?.values.array {
-            return ["asdf"]
-        } else { return nil }
+                 return ["asdf"]
+  
     }
     
     func setPerdictions() {
@@ -106,9 +106,8 @@ class CTA {
     func getPerdictionsByStop (stop:Stop) -> [Prediction]? {
         if self.stops == nil {setPerdictions() }
         
-        if let s = self.predictions?.values.array {
-            return s
-        } else { return nil }
+        return self.predictions
+        
             
     }
 }

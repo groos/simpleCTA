@@ -32,6 +32,7 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
             style: UITableViewCellStyle.Default,
             reuseIdentifier: simpleTableIdentifier)
         }
+         
             cell!.textLabel!.text = dwarves[indexPath.row]
             return cell!
     }
