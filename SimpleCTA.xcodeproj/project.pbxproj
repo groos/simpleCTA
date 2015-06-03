@@ -15,6 +15,9 @@
 		4422E0C21B0E6A280017FF28 /* SimpleCTATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E0C11B0E6A280017FF28 /* SimpleCTATests.swift */; };
 		4422E0CC1B0E6A4C0017FF28 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */; };
 		4422E0CE1B0E6A690017FF28 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */; };
+		443130141B1F5899006A709B /* SimpleCta.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 443130131B1F5899006A709B /* SimpleCta.sqlite */; };
+		4431301A1B1F646F006A709B /* vcStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443130191B1F646F006A709B /* vcStops.swift */; };
+		4431301C1B1F7A44006A709B /* vcGps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431301B1B1F7A44006A709B /* vcGps.swift */; };
 		444022D91B14F73B009B208A /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022D81B14F73B009B208A /* vcMain.swift */; };
 		444022DF1B14F973009B208A /* vcNickTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022DE1B14F973009B208A /* vcNickTest.swift */; };
 		444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E01B14F98B009B208A /* vcPaulTest.swift */; };
@@ -66,6 +69,9 @@
 		4422E0C11B0E6A280017FF28 /* SimpleCTATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCTATests.swift; sourceTree = "<group>"; };
 		4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		443130131B1F5899006A709B /* SimpleCta.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleCta.sqlite; sourceTree = "<group>"; };
+		443130191B1F646F006A709B /* vcStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcStops.swift; sourceTree = "<group>"; };
+		4431301B1B1F7A44006A709B /* vcGps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcGps.swift; sourceTree = "<group>"; };
 		443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleCTA-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		444022D81B14F73B009B208A /* vcMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcMain.swift; sourceTree = "<group>"; };
 		444022DE1B14F973009B208A /* vcNickTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcNickTest.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
+				443130131B1F5899006A709B /* SimpleCta.sqlite */,
 				4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */,
 				443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */,
 				4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */,
@@ -193,6 +200,8 @@
 				444022DE1B14F973009B208A /* vcNickTest.swift */,
 				449AD4851B1A324900A029AE /* tvcMian.swift */,
 				444022E01B14F98B009B208A /* vcPaulTest.swift */,
+				443130191B1F646F006A709B /* vcStops.swift */,
+				4431301B1B1F7A44006A709B /* vcGps.swift */,
 			);
 			name = viewControlers;
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 			files = (
 				4422E0B11B0E6A270017FF28 /* Main.storyboard in Resources */,
 				4422E0B61B0E6A270017FF28 /* LaunchScreen.xib in Resources */,
+				443130141B1F5899006A709B /* SimpleCta.sqlite in Resources */,
 				4422E0B31B0E6A270017FF28 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4431301C1B1F7A44006A709B /* vcGps.swift in Sources */,
 				449AD49C1B1A3D8A00A029AE /* getXml.swift in Sources */,
 				449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */,
 				449AD4911B1A39A500A029AE /* mStop.swift in Sources */,
@@ -371,6 +382,7 @@
 				444022DF1B14F973009B208A /* vcNickTest.swift in Sources */,
 				44E5ADC11B1BAD70000E0E44 /* FMDatabaseAdditions.m in Sources */,
 				449AD4971B1A3A4E00A029AE /* mCta.swift in Sources */,
+				4431301A1B1F646F006A709B /* vcStops.swift in Sources */,
 				449AD49A1B1A3D4B00A029AE /* GetGpsLocation.swift in Sources */,
 				449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */,
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
@@ -516,11 +528,16 @@
 		4422E0C61B0E6A280017FF28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = SimpleCTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCTA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -529,11 +546,16 @@
 		4422E0C71B0E6A280017FF28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = SimpleCTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "SimpleCTA-Bridging-Header.h";
 			};
 			name = Release;

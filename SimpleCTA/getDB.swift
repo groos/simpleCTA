@@ -18,21 +18,9 @@ class DB {
     
     if !database.open() {
     println("Unable to open database")
-    //return
     }
-    
-  //  if !database.executeUpdate("create table test(x text, y text, z text)", withArgumentsInArray: nil) {
-//    println("create table failed: \(database.lastErrorMessage())")
-//    }
-//    
-//    if !database.executeUpdate("insert into test (x, y, z) values (?, ?, ?)", withArgumentsInArray: ["a", "b", "c"]) {
-//    println("insert 1 table failed: \(database.lastErrorMessage())")
-//    }
-//    
-//    if !database.executeUpdate("insert into test (x, y, z) values (?, ?, ?)", withArgumentsInArray: ["e", "f", "g"]) {
-//    println("insert 2 table failed: \(database.lastErrorMessage())")
-//    }
-        var route : [Route] = []
+
+    var route : [Route] = []
     let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
     if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
         while rs.next() {
@@ -45,31 +33,39 @@ class DB {
             println("\(x)")
         }
     } else {
-    println("select failed: \(database.lastErrorMessage())")
-    }//r.route_id, r.route_long_name, r.route_type
-    database.close()
+        println("select failed: \(database.lastErrorMessage())")
+        }//r.route_id, r.route_long_name, r.route_type
+        database.close()
         return route
-    
     }
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func DownloadDatabase() {
+        if let audioUrl = NSURL(string: "https://drive.google.com/file/d/0B2Aqw7GUNKxQR0EtT1R6NnJUOEE/view?usp=sharing") {
+            // create your document folder url
+            let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
+            // your destination file url
+            let destinationUrl = documentsUrl.URLByAppendingPathComponent(audioUrl.lastPathComponent!)
+            println(destinationUrl)
+            // check if it exists before downloading it
+            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+                println("The file already exists at path")
+            } else {
+                //  if the file doesn't exist
+                //  just download the data from your url
+                if let myAudioDataFromUrl = NSData(contentsOfURL: audioUrl){
+                    // after downloading your data you need to save it to your destination url
+                    if myAudioDataFromUrl.writeToURL(destinationUrl, atomically: true) {
+                        println("file saved")
+                    } else {
+                        println("error saving file")
+                    }
+                }
+            }
+        }
+    }
     
     // and location? by just calling sql string builder heree?
 

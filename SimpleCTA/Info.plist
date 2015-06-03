@@ -51,6 +51,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationUsageDescription</key> 
+		<string>Your message</string>
+		<key>NSLocationWhenInUsageDescription</key>
+		<string>Your message</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

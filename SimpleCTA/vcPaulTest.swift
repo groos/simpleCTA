@@ -46,24 +46,31 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if indexPath.row == 0 {
+            return nil
+        } else {
+            return indexPath
+        }
+    }
     
-    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let rowValue = routes[indexPath.row]
+//        let message = "You selected \(rowValue)"
+//        let controller = UIAlertController(title: "Row Selected",
+//        message: message, preferredStyle: .Alert)
+//        let action = UIAlertAction(title: "Yes I Did",
+//        style: .Default, handler: nil)
+//        controller.addAction(action)
+//        presentViewController(controller, animated: true, completion: nil)
+//    }
+//    
     override func viewWillAppear(animated: Bool) {
                 super.viewWillAppear(animated);
         
                 // Do any additional setup after loading the view.
                 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
