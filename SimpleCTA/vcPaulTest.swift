@@ -8,21 +8,26 @@
 
 import UIKit
 
-class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    private let dwarves = [
-        "Sleepy", "Sneezy", "Bashful", "Happy",
-        "Doc", "Grumpy", "Dopey",
-        "Thorin", "Dorin", "Nori", "Ori",
-        "Balin", "Dwalin", "Fili", "Kili",
-        "Oin", "Gloin", "Bifur", "Bofur",
-        "Bombur"
-    ]
+
+class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    private let routes : [Route]? = DB().dbtest()
+//    private let dwarves = [
+//        "Sleepy", "Sneezy", "Bashful", "Happy",
+//        "Doc", "Grumpy", "Dopey",
+//        "Thorin", "Dorin", "Nori", "Ori",
+//        "Balin", "Dwalin", "Fili", "Kili",
+//        "Oin", "Gloin", "Bifur", "Bofur",
+//        "Bombur"
+//    ]
     let simpleTableIdentifier = "SimpleTableIdentifier"
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
-        return dwarves.count
+            if let c = routes?.count {
+                return c
+            }
+            return 0
     }
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -32,15 +37,23 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
             style: UITableViewCellStyle.Default,
             reuseIdentifier: simpleTableIdentifier)
         }
-         
-            cell!.textLabel!.text = dwarves[indexPath.row]
+    if let route = routes?[ indexPath.row ] {
+        cell!.textLabel!.text = route.routeLongName
+    } else {
+        cell!.textLabel!.text = " fail "
+    }
             return cell!
     }
     
     
     
     
-    
+    override func viewWillAppear(animated: Bool) {
+                super.viewWillAppear(animated);
+        
+                // Do any additional setup after loading the view.
+                
+    }
     
     
     
@@ -55,7 +68,6 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

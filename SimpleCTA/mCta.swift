@@ -20,7 +20,7 @@ class CTA {
     var stop   : Stop?
     var predictions :  [Prediction]?
     
-    init (){}
+    init (){ }
         /// get the user location here ? might be bad if user does not allow?
     
     // this is to get the routes for model and to use get to show on ui
@@ -43,7 +43,7 @@ class CTA {
         
         // 4. fill model with results
             // if let query = routesQuery {
-        ParseDB().setRoutesByLocation(self, data: routesQuery!)
+        ParseDB().setRoutesByLocation()
             //}
     }
     

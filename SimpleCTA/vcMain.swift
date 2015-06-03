@@ -42,7 +42,7 @@ class vcMain: UIViewController {
     
     
     @IBAction func goButtonPushed(sender: UIButton) {
-        cta.getRoutes()
+        DB().dbtest()
     }
     
     
@@ -53,7 +53,7 @@ class vcMain: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateRts()
+        
 
         // Do any additional setup after loading the view.
        // vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest

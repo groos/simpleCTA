@@ -11,7 +11,7 @@ import Foundation
 class ParseDB {
     init() {}
     
-    func setRoutesByLocation (cta : CTA , data : [String]?) {
+    func setRoutesByLocation () {
         let rt1 = Route(rId: 1, rtShortName: 1, rtLN: "Bronzeville", rtType: 3, rtDirection: nil, final: nil)
         let rt2 = Route(rId: 2, rtShortName: 2, rtLN: "Hyde Park Express", rtType: 3, rtDirection: nil, final: nil)
         let rt3 = Route(rId: 3, rtShortName: 3, rtLN: "South Shore Night Bus", rtType: 3, rtDirection: nil, final: nil)
