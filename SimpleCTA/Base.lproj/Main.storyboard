@@ -359,12 +359,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NnS-ZZ-CWd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tZR-wo-M0w" id="F7s-HX-D1K"/>
+                                    <outlet property="delegate" destination="tZR-wo-M0w" id="bMd-70-l7p"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UZ5-Ur-kt2" firstAttribute="leading" secondItem="gPM-xE-cWt" secondAttribute="leadingMargin" constant="-16" id="7u6-0e-m2d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UZ5-Ur-kt2" secondAttribute="trailing" constant="-16" id="Duf-O5-3Xy"/>
+                            <constraint firstItem="NnS-ZZ-CWd" firstAttribute="leading" secondItem="gPM-xE-cWt" secondAttribute="leadingMargin" constant="-16" id="F6H-Yj-CSM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NnS-ZZ-CWd" secondAttribute="trailing" constant="-16" id="KSg-KY-Lpa"/>
+                            <constraint firstItem="NnS-ZZ-CWd" firstAttribute="top" secondItem="gPM-xE-cWt" secondAttribute="topMargin" id="L2U-z3-LtZ"/>
                             <constraint firstItem="DAe-vq-6qt" firstAttribute="top" secondItem="UZ5-Ur-kt2" secondAttribute="bottom" id="lcj-M4-rKY"/>
+                            <constraint firstItem="UZ5-Ur-kt2" firstAttribute="top" secondItem="NnS-ZZ-CWd" secondAttribute="bottom" id="qxB-PM-UCA"/>
                         </constraints>
                     </view>
                 </viewController>
