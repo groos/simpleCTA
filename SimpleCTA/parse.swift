@@ -65,6 +65,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     var arrT = NSMutableString()
     var rn = NSMutableString()
     var rt = NSMutableString()
+    var destination = NSMutableString()
     
     // custom function to set up and call superclass parser methods (below)
     @IBAction func myParse(){
@@ -123,6 +124,8 @@ class Parse: NSObject, NSXMLParserDelegate {
             rn = ""
             rt = NSMutableString.alloc()
             rt = ""
+            destination = NSMutableString.alloc()
+            destination = ""
         }
     }
     
@@ -137,6 +140,8 @@ class Parse: NSObject, NSXMLParserDelegate {
             rn.appendString(string)
         } else if element.isEqualToString("rt"){
             rt.appendString(string)
+        } else if element.isEqualToString("destNm"){
+            destination.appendString(string)
         }
     }
     
@@ -156,6 +161,9 @@ class Parse: NSObject, NSXMLParserDelegate {
             }
             if !rt.isEqual(nil){
                 elements.setObject(rt, forKey: "rt")
+            }
+            if !destination.isEqual(nil){
+                elements.setObject(destination, forKey: "destNm")
             }
             
             /*
