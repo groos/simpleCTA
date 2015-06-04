@@ -11,7 +11,7 @@ import UIKit
 class XMLTableViewController: UITableViewController {
     
     // feel free to move this / make global somewhere smarter
-    var dbPath = "/Users/ntgroos/SimpleCta/FinalSimpleCta/simplecta/simplecta.sqlite"
+    //var dbPath = "/Users/ntgroos/SimpleCta/FinalSimpleCta/simplecta/simplecta.sqlite"
 
     @IBOutlet weak var UpperTableView: UITableView!
     

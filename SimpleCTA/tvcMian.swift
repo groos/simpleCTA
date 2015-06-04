@@ -11,7 +11,7 @@ import UIKit
 class tvcMian: UITableViewController {
     
     // set your local dbpath
-    let dbPath = "/users/ntgroos/simplecta/simplecta/simpleCTA.sqlite"
+    //let dbPath = "/users/ntgroos/simplecta/simplecta/simpleCTA.sqlite"
     
     /*
 
