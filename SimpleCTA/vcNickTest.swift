@@ -16,18 +16,15 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
         
         if let route = ROUTES_KEYS[0] as? String{
             parser.updateRouteDetails(route)
-            //println("active count:")
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-               // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
