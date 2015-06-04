@@ -29,21 +29,26 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
             return 0
     }
+     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 1
+    }
+    
+    
+    
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
-        //let cell = tableView.dequeueReusableCellWithIdentifier(wine.type.rawValue, forIndexPath: indexPath) as! UITableViewCell
-            if (cell == nil) {
-            cell = UITableViewCell(
+        //var cell = tableView.dequeueReusableCellWithIdentifier( "red", forIndexPath: indexPath) as! UITableViewCell
+            
+        if (cell == nil) {
+                cell = UITableViewCell(
             style: UITableViewCellStyle.Default,
             reuseIdentifier: simpleTableIdentifier)
         }
-    if let route = routes?[ indexPath.row ] {
-        cell!.textLabel!.text = route.routeLongName
-    } else {
-        cell!.textLabel!.text = " fail "
-    }
-            return cell!
+        cell.textLabel?.text = route.routeLongName
+        return cell!
     }
     
     

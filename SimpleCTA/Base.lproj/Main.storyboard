@@ -392,8 +392,7 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Red Line To Howard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CPf-as-324">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="cellRed" id="O0X-d2-gcX">
@@ -413,7 +412,7 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="#80 Irving Park To Cumberland" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EOs-kY-AyL">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -522,14 +521,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NnS-ZZ-CWd" firstAttribute="top" secondItem="gPM-xE-cWt" secondAttribute="topMargin" id="38s-zW-8rS"/>
                             <constraint firstItem="UZ5-Ur-kt2" firstAttribute="leading" secondItem="gPM-xE-cWt" secondAttribute="leadingMargin" constant="-16" id="7u6-0e-m2d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UZ5-Ur-kt2" secondAttribute="trailing" constant="-16" id="Duf-O5-3Xy"/>
                             <constraint firstItem="NnS-ZZ-CWd" firstAttribute="leading" secondItem="gPM-xE-cWt" secondAttribute="leadingMargin" constant="-16" id="F6H-Yj-CSM"/>
+                            <constraint firstItem="UZ5-Ur-kt2" firstAttribute="top" secondItem="NnS-ZZ-CWd" secondAttribute="bottom" id="GZ2-Jp-vAI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NnS-ZZ-CWd" secondAttribute="trailing" constant="-16" id="KSg-KY-Lpa"/>
                             <constraint firstItem="NnS-ZZ-CWd" firstAttribute="top" secondItem="gPM-xE-cWt" secondAttribute="topMargin" id="L2U-z3-LtZ"/>
+                            <constraint firstItem="NnS-ZZ-CWd" firstAttribute="leading" secondItem="gPM-xE-cWt" secondAttribute="leadingMargin" constant="-16" id="Qjr-Ln-IAm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NnS-ZZ-CWd" secondAttribute="trailing" constant="-16" id="Zuk-PL-IX1"/>
                             <constraint firstItem="DAe-vq-6qt" firstAttribute="top" secondItem="UZ5-Ur-kt2" secondAttribute="bottom" id="lcj-M4-rKY"/>
                             <constraint firstItem="UZ5-Ur-kt2" firstAttribute="top" secondItem="NnS-ZZ-CWd" secondAttribute="bottom" id="qxB-PM-UCA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F6H-Yj-CSM"/>
+                                <exclude reference="KSg-KY-Lpa"/>
+                                <exclude reference="L2U-z3-LtZ"/>
+                                <exclude reference="qxB-PM-UCA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="NnS-ZZ-CWd" id="paW-uS-MNl"/>
