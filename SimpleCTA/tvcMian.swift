@@ -11,7 +11,7 @@ import UIKit
 class tvcMian: UITableViewController {
     
     // set your local dbpath
-    //let dbPath = "/users/ntgroos/simplecta/simplecta/simpleCTA.sqlite"
+    let dbPath = "/users/ntgroos/simplecta/simplecta/simpleCTA.sqlite"
     
     /*
 
@@ -21,6 +21,7 @@ class tvcMian: UITableViewController {
     
     // create the db object and you can make queries. See dbPlay repo for example
     func aDBFunc(){
+        
         var dbObject = FMDatabase(path: dbPath)
         
         

@@ -49,7 +49,7 @@ class XMLTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("DetailsCell", forIndexPath: indexPath) as! UITableViewCell
-        
+        let dbPath = "/./"
         if let detail = ACTIVE_ROUTE_DETAILS[indexPath.row] as? NSMutableDictionary{
             
             if let routeKey = detail.valueForKey("rt") as? String {
