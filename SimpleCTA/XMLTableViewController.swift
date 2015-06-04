@@ -9,28 +9,9 @@
 import UIKit
 
 class XMLTableViewController: UITableViewController {
-    
-    // feel free to move this / make global somewhere smarter
-    //var dbPath = "/Users/ntgroos/SimpleCta/FinalSimpleCta/simplecta/simplecta.sqlite"
 
     @IBOutlet weak var UpperTableView: UITableView!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -40,43 +21,18 @@ class XMLTableViewController: UITableViewController {
             println("upper found")
             return ACTIVE_ROUTE_DETAILS.count
         }
-        
-        
+
         return 0
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("DetailsCell", forIndexPath: indexPath) as! UITableViewCell
-        let dbPath = "/./"
-        if let detail = ACTIVE_ROUTE_DETAILS[indexPath.row] as? NSMutableDictionary{
+
+        if let detail = ACTIVE_ROUTE_DETAILS[indexPath.row] as? NSMutableDictionary {
             
             if let routeKey = detail.valueForKey("rt") as? String {
-                //cell.textLabel?.text = "Route Key: " + routeKey
-                
-                println("key is: " + routeKey)
-                
-                // Get the full Route Name from db with "rt" attribute
-                
-                let contactDB = FMDatabase(path: dbPath)
-                //var routeLongName: String
-                
-                if contactDB.open() {
-                    let querySQL = "SELECT route_long_name FROM ROUTES WHERE route_id = '" + routeKey + "'"
-                    
-                    let results:FMResultSet? = contactDB.executeQuery(querySQL,
-                        withArgumentsInArray: nil)
-                    
-                    if results?.next() == true {
-                        cell.textLabel?.text = results?.stringForColumn("route_long_name")
-                    } else {
-                        cell.textLabel?.text = "----"
-                    }
-                    contactDB.close()
-                } else {
-                    println("Error: \(contactDB.lastErrorMessage())")
-                }
+                cell.textLabel?.text =  DB().getRouteLongName(routeKey: routeKey)
             }
             
             if let arrivalTime = detail.valueForKey("arrT") as? String {
@@ -88,6 +44,21 @@ class XMLTableViewController: UITableViewController {
         
         return cell
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
 

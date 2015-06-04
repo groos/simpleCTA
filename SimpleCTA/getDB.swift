@@ -69,7 +69,28 @@ class DB {
             }
         }
     }
-
+    
+    func getRouteLongName (routeKey rk:String?) -> String? {
+        var route = "----"
+        if let routeKey = rk {
+            let contactDB = FMDatabase(path: self.getDBPath())
+            
+            if contactDB.open() {
+                let querySQL = "SELECT route_long_name FROM ROUTES WHERE route_id = '" + routeKey + "'"
+                
+                let results:FMResultSet? = contactDB.executeQuery(querySQL, withArgumentsInArray: nil)
+                
+                if results?.next() == true {
+                    if let r = results?.stringForColumn("route_long_name") {
+                        route = r
+                    }
+                }
+                contactDB.close()
+            }
+        }
+        return route
+    }
+    
     func getStopsByLocation (sqlStatment:String?) -> [String]? {
         return ["asdf"]
     }
