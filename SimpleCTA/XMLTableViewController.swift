@@ -80,9 +80,10 @@ class XMLTableViewController: UITableViewController {
             }
             
             if let arrivalTime = detail.valueForKey("arrT") as? String {
-                cell.detailTextLabel?.text = "Arriving at: " + arrivalTime
+                if let destination = detail.valueForKey("destNm") as? String{
+                    cell.detailTextLabel?.text = "Heading Towards " + destination +  "\nArriving at: " + arrivalTime
+                }
             }
-            
         }
         
         return cell
