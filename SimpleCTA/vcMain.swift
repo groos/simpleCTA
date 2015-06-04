@@ -21,28 +21,79 @@ class vcMain: UIViewController {
         if sender.selected {
             sender.alpha = 1
             sender.selected = !sender.selected
-
         } else {
             sender.alpha = 0.50
             sender.selected = !sender.selected
         }
-        
         if let text = sender.titleLabel!.text {
             if let bool = dbParams[text] {
                 dbParams[text] = !bool
                 println(dbParams[text])
             }
-            
         }
     }
     
     @IBAction func goButtonPushed(sender: UIButton) {
         DB().DownloadDatabase()
     }
+    @IBAction func switchViews(sender: UIBarButtonItem) {
+        if vcpaultest?.view.superview == nil {
+            if vcpaultest == nil {
+                vcpaultest = storyboard?.instantiateViewControllerWithIdentifier("Paul") as! vcPaulTest
+            }
+        } else if vcnicktest?.view.superview == nil {
+            if vcnicktest == nil {
+                vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest
+            }
+        } else if tvcstops?.view.superview == nil {
+            if tvcstops == nil {
+                tvcstops = storyboard?.instantiateViewControllerWithIdentifier("Stops") as! vcStops
+            }
+            
+            if vcpaultest != nil && vcpaultest!.view.superview != nil {
+                vcnicktest.view.frame = view.frame
+                switchViewController(from: vcpaultest, to: vcnicktest)
+            } else if (vcnicktest != nil && vcpaultest!.view.superview != nil){
+                vcpaultest.view.frame = view.frame
+                switchViewController(from: vcnicktest, to: vcpaultest)
+            } else  {
+                vcpaultest.view.frame = view.frame
+                switchViewController(from: vcpaultest, to: tvcstops)
+            }
+        }
+    }
+    
+    private func switchViewController(from fromVC:UIViewController?, to toVC:UIViewController?) {
+        if fromVC != nil {
+            fromVC!.willMoveToParentViewController(nil)
+            fromVC!.view.removeFromSuperview()
+            fromVC!.removeFromParentViewController()
+        }
+        if toVC != nil {
+            self.addChildViewController(toVC!)
+            self.view.insertSubview(toVC!.view, atIndex: 0)
+            toVC!.didMoveToParentViewController(self)
+        }
+        
+        UIView.beginAnimations("View Flip", context: nil)
+        UIView.setAnimationDuration(0.4)
+        UIView.setAnimationCurve(.EaseInOut)
+        
+        // Switch view controllers
+        if vcpaultest != nil && vcpaultest!.view.superview != nil {
+            UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
+            vcnicktest.view.frame = view.frame
+            switchViewController(from: vcpaultest, to: vcnicktest)
+        } else {
+            UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
+            vcpaultest.view.frame = view.frame
+            switchViewController(from: vcnicktest, to: vcpaultest)
+        }
+        UIView.commitAnimations()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,63 +107,5 @@ class vcMain: UIViewController {
             && vcnicktest!.view.superview == nil {
             vcnicktest = nil
         }
-    
     }
-    @IBAction func switchViews(sender: UIBarButtonItem) {
-        if vcpaultest?.view.superview == nil {
-            if vcpaultest == nil {
-            vcpaultest = storyboard?.instantiateViewControllerWithIdentifier("Paul") as! vcPaulTest
-        }
-    } else if vcnicktest?.view.superview == nil {
-        if vcnicktest == nil {
-            vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest
-        }
-        } else if tvcstops?.view.superview == nil {
-            if tvcstops == nil {
-                tvcstops = storyboard?.instantiateViewControllerWithIdentifier("Stops") as! vcStops
-            }
-
-        if vcpaultest != nil && vcpaultest!.view.superview != nil {
-            vcnicktest.view.frame = view.frame
-            switchViewController(from: vcpaultest, to: vcnicktest)
-        } else if (vcnicktest != nil && vcpaultest!.view.superview != nil){
-            vcpaultest.view.frame = view.frame
-            switchViewController(from: vcnicktest, to: vcpaultest)
-        } else  {
-            vcpaultest.view.frame = view.frame
-            switchViewController(from: vcpaultest, to: tvcstops)
-            }
-        }
-    }
-    private func switchViewController(from fromVC:UIViewController?, to toVC:UIViewController?) {
-                if fromVC != nil {
-                    fromVC!.willMoveToParentViewController(nil)
-                    fromVC!.view.removeFromSuperview()
-                    fromVC!.removeFromParentViewController()
-                }
-                if toVC != nil {
-                    self.addChildViewController(toVC!)
-                    self.view.insertSubview(toVC!.view, atIndex: 0)
-                    toVC!.didMoveToParentViewController(self)
-                }
-                
-                UIView.beginAnimations("View Flip", context: nil)
-                UIView.setAnimationDuration(0.4)
-                UIView.setAnimationCurve(.EaseInOut)
-                
-                // Switch view controllers
-                if vcpaultest != nil && vcpaultest!.view.superview != nil {
-                    UIView.setAnimationTransition(.FlipFromRight, forView: view, cache: true)
-                    vcnicktest.view.frame = view.frame
-                    switchViewController(from: vcpaultest, to: vcnicktest)
-                } else {
-                    UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
-                    vcpaultest.view.frame = view.frame
-                    switchViewController(from: vcnicktest, to: vcpaultest)
-                }
-                UIView.commitAnimations()
-    
-    
-    }
-    
 }

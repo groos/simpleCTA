@@ -14,24 +14,17 @@ class RouteView: UITableViewController{
         return 1
     }
     
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1   //ROUTES_KEYS.count
-//    }
-    
     override func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath)
-        -> UITableViewCell {
+        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier(
-                "Route", forIndexPath: indexPath)
-                as! UITableViewCell
+                "Route", forIndexPath: indexPath) as! UITableViewCell
             
-           // cell.textLabel?.text = ROUTES_KEYS[indexPath.row] as? String
+            cell.textLabel?.text = "anyone home?"
             println("anyone home?")
             return cell
     }
     
-    override func tableView(tableView: UITableView,
-        didSelectRowAtIndexPath indexPath: NSIndexPath){
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
             let title = "A title is here"
             let message = "You clicked a Route!"
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)

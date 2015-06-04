@@ -15,47 +15,38 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let simpleTableIdentifier = "SimpleTableIdentifier"
     
-    func tableView(tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int {
-            if let c = routes?.count {
-                return c
-            }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            if let c = routes?.count { return c }
             return 0
     }
+    
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
+        
         if (cell == nil) {
-            cell = UITableViewCell(
+            cell = UITableViewCell (
             style: UITableViewCellStyle.Default,
             reuseIdentifier: simpleTableIdentifier)
         }
-    if let route = routes?[ indexPath.row ] {
-        cell!.textLabel!.text = route.routeLongName
-    } else {
-        cell!.textLabel!.text = " fail "
+        
+        if let route = routes?[ indexPath.row ] {
+            cell!.textLabel!.text = route.routeLongName
+        } else {
+            cell!.textLabel!.text = "Error"
+        }
+        return cell!
     }
-            return cell!
-    }
-    
-    
-    
     
     override func viewWillAppear(animated: Bool) {
                 super.viewWillAppear(animated);
-        
-                // Do any additional setup after loading the view.
-                
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 }
