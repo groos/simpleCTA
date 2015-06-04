@@ -40,6 +40,7 @@
 		44E5ADC21B1BAD70000E0E44 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBA1B1BAD70000E0E44 /* FMDatabasePool.m */; };
 		44E5ADC31B1BAD70000E0E44 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBC1B1BAD70000E0E44 /* FMDatabaseQueue.m */; };
 		44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */; };
+		876028EF1B1FC03F0009F851 /* XMLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		44E5ADBD1B1BAD70000E0E44 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		44E5ADBE1B1BAD70000E0E44 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLTableViewController.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 		443FCFAD1B1B996B00DFCCCF /* viewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */,
 				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
 				444022D81B14F73B009B208A /* vcMain.swift */,
 				444022DE1B14F973009B208A /* vcNickTest.swift */,
@@ -374,6 +377,7 @@
 				449AD49A1B1A3D4B00A029AE /* GetGpsLocation.swift in Sources */,
 				449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */,
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
+				876028EF1B1FC03F0009F851 /* XMLTableViewController.swift in Sources */,
 				449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
 				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,

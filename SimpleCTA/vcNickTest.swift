@@ -11,6 +11,14 @@ import UIKit
 class vcNickTest: UIViewController, NSXMLParserDelegate {
     
 
+    @IBAction func parseXML(sender: UIButton) {
+        parser.myParse()
+        
+        if let route = ROUTES_KEYS[0] as? String{
+            parser.updateRouteDetails(route)
+            //println("active count:")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
