@@ -531,10 +531,13 @@
                             <constraint firstItem="UZ5-Ur-kt2" firstAttribute="top" secondItem="NnS-ZZ-CWd" secondAttribute="bottom" id="qxB-PM-UCA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="NnS-ZZ-CWd" id="paW-uS-MNl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-9b-4NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2166" y="250"/>
+            <point key="canvasLocation" x="2017" y="-24"/>
         </scene>
         <!--Vc Stops-->
         <scene sceneID="PsT-Bu-0pM">
@@ -586,6 +589,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="4YZ-42-QMB"/>
         <segue reference="zBJ-sG-Owt"/>
-        <segue reference="ztP-75-Hpr"/>
+        <segue reference="OSd-lq-Y2U"/>
     </inferredMetricsTieBreakers>
 </document>

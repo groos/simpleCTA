@@ -32,7 +32,8 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
-        if (cell == nil) {
+        //let cell = tableView.dequeueReusableCellWithIdentifier(wine.type.rawValue, forIndexPath: indexPath) as! UITableViewCell
+            if (cell == nil) {
             cell = UITableViewCell(
             style: UITableViewCellStyle.Default,
             reuseIdentifier: simpleTableIdentifier)

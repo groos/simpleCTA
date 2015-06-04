@@ -36,13 +36,9 @@ class vcMain: UIViewController {
         }
     }
     
-    
     @IBAction func goButtonPushed(sender: UIButton) {
         DB().DownloadDatabase()
-        
-        //DB().dbtest()
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

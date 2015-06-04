@@ -9,7 +9,12 @@
 import Foundation
 
 class Route {
-    
+    enum Type: String {
+        case Red = "red"
+        case White = "white"
+        case Rosé = "rose"
+        case Sparkling = "sparkling"
+    }
     var stops:[Int : Stop]?
     let routeId:Int?                // db: route_id t: rn
     let routeShortName: Int?     // db: route_short_name t: rt b: rt

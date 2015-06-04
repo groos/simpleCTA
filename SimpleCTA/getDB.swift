@@ -43,7 +43,7 @@ class DB {
     
     
     func DownloadDatabase() {
-        if let audioUrl = NSURL(string: "https://drive.google.com/file/d/0B2Aqw7GUNKxQR0EtT1R6NnJUOEE/view?usp=sharing") {
+        if let audioUrl = NSURL(string: "http://www.pdhawk.com/SimpleCta.sqlite") {
             // create your document folder url
             let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
             // your destination file url
