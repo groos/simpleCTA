@@ -63,7 +63,18 @@ class XMLTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("DetailsCell", forIndexPath: indexPath) as! UITableViewCell
         
         if let detail = ACTIVE_ROUTE_DETAILS[indexPath.row] as? NSMutableDictionary{
-               cell.textLabel?.text = detail.valueForKey("arrT") as? String
+            
+            if let routeKey = detail.valueForKey("rt") as? String {
+                cell.textLabel?.text = "Route Key: " + routeKey
+            }
+            
+            if let arrivalTime = detail.valueForKey("arrT") as? String {
+                cell.detailTextLabel?.text = "Arriving at: " + arrivalTime
+            }
+            
+            
+            //cell.textLabel?.text = "Route " + (detail.valueForKey("arrT") as? String)!
+            //cell.detailTextLabel?.text = "Arriving at: " + (detail.valueForKey("arrT") as? String)!
         }
         
         return cell
