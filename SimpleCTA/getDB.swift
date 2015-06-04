@@ -10,36 +10,39 @@ import Foundation
 
 class DB {
     init(){}
+    
     func dbtest() -> [Route]?   {
-    let documentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-    let path = documentsFolder.stringByAppendingPathComponent("SimpleCta.sqlite")
+        let documentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let path = documentsFolder.stringByAppendingPathComponent("SimpleCta.sqlite")
     
-    let database = FMDatabase(path: path)
+        let database = FMDatabase(path: path)
     
-    if !database.open() {
-    println("Unable to open database")
-    }
-
-    var route : [Route] = []
-    let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
-    if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
-        while rs.next() {
-            let x = rs.stringForColumn("route_id")
-            let y = rs.stringForColumn("route_long_name")
-            let z = rs.stringForColumn("route_type")
-            let r = Route(rId: x.toInt(), rtShortName: nil, rtLN: y, rtType: z.toInt(), rtDirection: nil, final: nil)
-             route.append(r)
-          
-            println("\(x)")
+        if !database.open() {
+            println("Unable to open database")
         }
-    } else {
-        println("select failed: \(database.lastErrorMessage())")
-        }//r.route_id, r.route_long_name, r.route_type
+
+        var route : [Route] = []
+        let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
+        if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
+            while rs.next() {
+                let x = rs.stringForColumn("route_id")
+                let y = rs.stringForColumn("route_long_name")
+                let z = rs.stringForColumn("route_type")
+                let r = Route(rId: x.toInt(), rtShortName: nil, rtLN: y, rtType: z.toInt(), rtDirection: nil, final: nil)
+                 route.append(r)
+                println("\(x)")
+            }
+        } else {
+            println("select failed: \(database.lastErrorMessage())")
+        }
         database.close()
         return route
     }
     
-    
+    func getDBPath () -> String? {
+        let documentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        return documentsFolder.stringByAppendingPathComponent("SimpleCta.sqlite")
+    }
     
     
     func DownloadDatabase() {
@@ -66,8 +69,6 @@ class DB {
             }
         }
     }
-    
-    // and location? by just calling sql string builder heree?
 
     func getStopsByLocation (sqlStatment:String?) -> [String]? {
         return ["asdf"]

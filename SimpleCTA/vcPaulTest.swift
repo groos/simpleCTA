@@ -12,14 +12,7 @@ import UIKit
 
 class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private let routes : [Route]? = DB().dbtest()
-//    private let dwarves = [
-//        "Sleepy", "Sneezy", "Bashful", "Happy",
-//        "Doc", "Grumpy", "Dopey",
-//        "Thorin", "Dorin", "Nori", "Ori",
-//        "Balin", "Dwalin", "Fili", "Kili",
-//        "Oin", "Gloin", "Bifur", "Bofur",
-//        "Bombur"
-//    ]
+
     let simpleTableIdentifier = "SimpleTableIdentifier"
     
     func tableView(tableView: UITableView,
@@ -64,16 +57,5 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
