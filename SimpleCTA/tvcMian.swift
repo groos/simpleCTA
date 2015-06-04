@@ -18,8 +18,6 @@ class tvcMian: UITableViewController {
     so to connect it you need rt id  and trip id in trips and connect trip id stop id in stop_times then connect stops to routes
     the rest of the data is not needed in stop_times
     */
-
-    @IBOutlet weak var testOutput: UITextView!
     
     // create the db object and you can make queries. See dbPlay repo for example
     func aDBFunc(){

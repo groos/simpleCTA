@@ -13,8 +13,7 @@ import UIKit
 class vcMain: UIViewController {
     private var vcnicktest: vcNickTest!
     private var vcpaultest: vcPaulTest!
-    
-    
+    private var tvcstops: vcStops!
     
     @IBOutlet var dbParameters: [UIButton]!
     
@@ -35,60 +34,17 @@ class vcMain: UIViewController {
             }
             
         }
-        
-
-
     }
-    
     
     @IBAction func goButtonPushed(sender: UIButton) {
-        cta.getRoutes()
+        DB().DownloadDatabase()
     }
-    
-    
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateRts()
 
-        // Do any additional setup after loading the view.
-       // vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest
-       // vcnicktest.view.frame = view.frame
-       // switchViewController(from: nil, to: vcnicktest)
     }
 
-    func populateRts(){
-        //var dbParams: [String]?
-        
-//        for x in dbParameters {
-//            if x.selected {
-//                if let button = x.titleLabel?.text {
-//                    dbParams?.append(button)
-//                    println(button)
-//                }
-//            }
-//        }
-
-//            for x in dbParameters {
-//                if let b = x as? UIButton{
-//                    if b.selected {
-//                        dbParams?.append(b.titleLabel?.text)
-//                    }
-//                }
-//            }
-
-        
-        let rts = cta.getRoutes()
-        if let r = rts {
-            /// populate data
-        }
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
@@ -111,13 +67,21 @@ class vcMain: UIViewController {
         if vcnicktest == nil {
             vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest
         }
-    }
+        } else if tvcstops?.view.superview == nil {
+            if tvcstops == nil {
+                tvcstops = storyboard?.instantiateViewControllerWithIdentifier("Stops") as! vcStops
+            }
+
         if vcpaultest != nil && vcpaultest!.view.superview != nil {
             vcnicktest.view.frame = view.frame
             switchViewController(from: vcpaultest, to: vcnicktest)
-        } else {
+        } else if (vcnicktest != nil && vcpaultest!.view.superview != nil){
             vcpaultest.view.frame = view.frame
             switchViewController(from: vcnicktest, to: vcpaultest)
+        } else  {
+            vcpaultest.view.frame = view.frame
+            switchViewController(from: vcpaultest, to: tvcstops)
+            }
         }
     }
     private func switchViewController(from fromVC:UIViewController?, to toVC:UIViewController?) {

@@ -15,7 +15,7 @@ class DbQueryBuilder {
     func GetRoutesByLocation(location:[String: Double]) -> String?{
         
         
-        return (  " select distinct r.route_id, r.route_long_name, r.route_type " +
+        return (  " select distinct r.route_id, r.route_long_name, r.route_type, " +
             "rds.direction_id " +
             "from routes_stops as rs, stops as s, routes as r, routes_directions as rds " +
             "where s.stop_id = rs.stop_id " +
