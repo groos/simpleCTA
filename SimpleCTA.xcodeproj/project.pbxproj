@@ -15,7 +15,6 @@
 		4422E0C21B0E6A280017FF28 /* SimpleCTATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4422E0C11B0E6A280017FF28 /* SimpleCTATests.swift */; };
 		4422E0CC1B0E6A4C0017FF28 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */; };
 		4422E0CE1B0E6A690017FF28 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */; };
-		443130141B1F5899006A709B /* SimpleCta.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 443130131B1F5899006A709B /* SimpleCta.sqlite */; };
 		4431301A1B1F646F006A709B /* vcStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443130191B1F646F006A709B /* vcStops.swift */; };
 		4431301C1B1F7A44006A709B /* vcGps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431301B1B1F7A44006A709B /* vcGps.swift */; };
 		444022D91B14F73B009B208A /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022D81B14F73B009B208A /* vcMain.swift */; };
@@ -70,7 +69,6 @@
 		4422E0C11B0E6A280017FF28 /* SimpleCTATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCTATests.swift; sourceTree = "<group>"; };
 		4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		443130131B1F5899006A709B /* SimpleCta.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleCta.sqlite; sourceTree = "<group>"; };
 		443130191B1F646F006A709B /* vcStops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcStops.swift; sourceTree = "<group>"; };
 		4431301B1B1F7A44006A709B /* vcGps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcGps.swift; sourceTree = "<group>"; };
 		443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleCTA-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -130,7 +128,6 @@
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
-				443130131B1F5899006A709B /* SimpleCta.sqlite */,
 				4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */,
 				443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */,
 				4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */,
@@ -355,7 +352,6 @@
 			files = (
 				4422E0B11B0E6A270017FF28 /* Main.storyboard in Resources */,
 				4422E0B61B0E6A270017FF28 /* LaunchScreen.xib in Resources */,
-				443130141B1F5899006A709B /* SimpleCta.sqlite in Resources */,
 				4422E0B31B0E6A270017FF28 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
