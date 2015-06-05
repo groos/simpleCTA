@@ -11,15 +11,24 @@ var dbParams = ["N": false, "S": false, "E" : false, "W": false, "Bus":false, "T
 import UIKit
 
 class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    ////// view's vars
     private var vcnicktest: vcNickTest!
     private var vcpaultest: vcPaulTest!
     private var tvcstops: vcStops!
-    private let routes : [Route]? = DB().dbtest()
-    let textCellIdentifier = "red"
-    
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var dbParameters: [UIButton]!
     
+    //////// buttons / views /////////////
+    @IBOutlet var dbParameters: [UIButton]!
+    @IBOutlet var routeImage: UIImageView!
+    @IBOutlet var routeLabel: UILabel!
+    @IBOutlet var stopImage: UIImageView!
+    @IBOutlet var stopLabel: UILabel!
+    
+    /////////  table data source ///////////
+    private let routes : [Route]? = DB().dbtest()
+    
+    
+    ///////// functions user actions /////////
     @IBAction func dbParamsButtonPushed(sender: UIButton) {
         if sender.selected {
             sender.alpha = 1
@@ -36,6 +45,11 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    @IBAction func goButtonPushed(sender: UIButton) {
+        DB().DownloadDatabase()
+    }
+    
+    ///////////////// table view /////////////////////
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 7
     }
@@ -60,12 +74,11 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let row = indexPath.row
         if let r = routes {
             println(r[row].routeLongName)
+            routeLabel.text = r[row].routeLongName
         }
     }
     
-    @IBAction func goButtonPushed(sender: UIButton) {
-        DB().DownloadDatabase()
-    }
+    ///////////// segues /////////////////
     @IBAction func switchViews(sender: UIBarButtonItem) {
         if vcpaultest?.view.superview == nil {
             if vcpaultest == nil {
@@ -122,6 +135,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         UIView.commitAnimations()
     }
     
+    ///////////////// view methods ////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
 

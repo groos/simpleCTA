@@ -210,6 +210,9 @@
                                                 <segue destination="yEm-wF-Dcj" kind="show" id="ztP-75-Hpr"/>
                                             </connections>
                                         </button>
+                                        <connections>
+                                            <action selector="switchViews:" destination="p27-2I-VFw" id="bJe-rF-Glt"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="FDV-Ki-Eoy">
                                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
@@ -226,6 +229,9 @@
                                                 <segue destination="tZR-wo-M0w" kind="show" id="zBJ-sG-Owt"/>
                                             </connections>
                                         </button>
+                                        <connections>
+                                            <action selector="switchViews:" destination="p27-2I-VFw" id="FyK-4U-kbS"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -468,6 +474,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="routeImage" destination="Yos-DK-qho" id="J56-85-BDY"/>
+                        <outlet property="routeLabel" destination="Xls-da-yJ0" id="RsE-7L-pqW"/>
+                        <outlet property="stopImage" destination="0PK-3i-y4O" id="qbJ-nE-WO6"/>
+                        <outlet property="stopLabel" destination="fc6-sd-aqd" id="w28-ht-hbR"/>
                         <outlet property="tableView" destination="AAR-kL-Rht" id="qUB-7M-Yko"/>
                         <outletCollection property="dbParameters" destination="nAX-Wx-gb4" collectionClass="NSMutableArray" id="yju-8p-iTa"/>
                         <outletCollection property="dbParameters" destination="ILH-wr-nSZ" collectionClass="NSMutableArray" id="1ZP-f1-PN8"/>
