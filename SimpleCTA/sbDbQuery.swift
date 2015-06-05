@@ -11,23 +11,48 @@ import Foundation
 
 class DbQueryBuilder {
 
-    
     func GetRoutesByLocation(location:[String: Double]) -> String?{
-        
-        
-        return (  " select distinct r.route_id, r.route_long_name, r.route_type, " +
-            "rds.direction_id " +
-            "from routes_stops as rs, stops as s, routes as r, routes_directions as rds " +
-            "where s.stop_id = rs.stop_id " +
-            "and r.r_pk = rs.r_pk " +
-            "and s.stop_id = rs.stop_id " +
-            "and r.r_pk = rds.r_pk " +
-            "and rds.direction_id in (1,2,0) " +
-            "and r.route_type = 3 " +
-            "and s.stop_lat between (41.87659463  - .1) and (41.87659463 + .1) " +
-        "and s.stop_lon between  (-87.75461526 - .1) and (-87.75461526 + .1) ")
+        return (
+            "SELECT DISTINCT r.route_id,  " +
+            "r.route_long_name,  " +
+            "r.route_type,  " +
+            "r.route_style  " +
+            "FROM routes_stops AS rs,  " +
+            "stops AS s,  " +
+            "routes AS r,  " +
+            "routes_directions AS rds  " +
+            "WHERE s.stop_id = rs.stop_id  " +
+            "AND r.r_pk = rs.r_pk  " +
+            "AND s.stop_id = rs.stop_id  " +
+            "AND r.r_pk = rds.r_pk  " +
+            "AND s.stop_lat BETWEEN (41.87659463 - .005) AND (41.925222 + .005)  " +
+            "AND s.stop_lon BETWEEN (-87.75461526 - .005) AND (-87.653689 + .005)  "
+        )
     }
-    func getStopsByRouteUsing( #Stop:String?, AndLocation location:[String: Double]) -> String? {
-        return "select * from routes"
+    
+    func getStopsByRoute( route:String?, AndLocation location:[String: Double]) -> String? {
+        return "SELECT DISTINCT r.route_id,       " +
+        "r.route_long_name,    " +
+        "r.route_style,    " +
+        "s.stop_name,    " +
+        "s.stop_lat,    " +
+        "s.stop_lon,    " +
+        "s.stop_id,  " +
+        "d.direction    " +
+        "FROM routes_stops AS rs,    " +
+        "stops AS s,    " +
+        "routes AS r,    " +
+        "routes_directions AS rds,    " +
+        "directions as d    " +
+        "WHERE s.stop_id = rs.stop_id    " +
+        "AND r.r_pk = rs.r_pk    " +
+        "AND s.stop_id = rs.stop_id    " +
+        "AND r.r_pk = rds.r_pk    " +
+        "AND d.direction_id = rds.direction_id    " +
+        "and r.route_id = 49    " +
+        "AND s.stop_lat BETWEEN (41.87659463 - .001 ) AND (41.87659463 + .001)    " +
+        "AND s.stop_lon BETWEEN (-87.75461526 - .1) AND (-87.75461526 + .09)"
+
+
     }
 }

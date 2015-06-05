@@ -7,18 +7,44 @@
 //
 
 import Foundation
+import MapKit
 
-class UserGps {
+class UserGps: NSObject {
 
-    let latitude : Double?  // need to make enums
-    let longitude : Double?
-    
-    init(){
-        self.latitude = 41.89632184
-        self.longitude = -87.75410482
+    var latitude : Double?  // need to make enums
+    var longitude : Double?
+    var manager: OneShotLocationManager?
+
+    override init(){
+        self.latitude = 41.925222
+        self.longitude = -87.653689
+        manager = OneShotLocationManager()
     }
+
     
     func getUserLocation() -> [String:Double]? {
+        
+        // closure runs immediately
+        manager?.fetchWithCompletion {location, error in
+            if let loc = location {
+                GPS.latitude = loc.coordinate.latitude
+                GPS.longitude = loc.coordinate.longitude
+                
+   // REMOVE IF YOU WANT TO USE REAL LOCATION SERVICES.
+                // ///////////////////////////////////
+  /*------*/    GPS.latitude = 41.925222
+  /*------*/    GPS.longitude = -87.653689
+                /////////////////////////////////////
+                
+                
+            } else if let err = error {
+                println(err.localizedDescription)
+            }
+            // release the manager
+            self.manager = nil
+        }
+
+        
         if let lat = self.latitude, long = self.longitude {
             return ["latitude" : lat,  "longitude" : long]
         } else {

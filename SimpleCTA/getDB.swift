@@ -11,26 +11,21 @@ import Foundation
 class DB {
     init(){}
     
-    func dbtest() -> [Route]?   {
-        let documentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        let path = documentsFolder.stringByAppendingPathComponent("SimpleCta.sqlite")
+    func dbtest() -> [PublicTransit]?   {
+        let database = FMDatabase(path: self.getDBPath())
     
-        let database = FMDatabase(path: path)
-    
-        if !database.open() {
-            println("Unable to open database")
-        }
+        if !database.open() { println("Unable to open database") }
 
-        var route : [Route] = []
+        var route : [PublicTransit] = [Route]()
         let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
         if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
             while rs.next() {
-                let x = rs.stringForColumn("route_id")
-                let y = rs.stringForColumn("route_long_name")
-                let z = rs.stringForColumn("route_type")
-                let r = Route(rId: x.toInt(), rtShortName: nil, rtLN: y, rtType: z.toInt(), rtDirection: nil, final: nil)
-                 route.append(r)
-                println("\(x)")
+                let rid = rs.stringForColumn("route_id")
+                let rln = rs.stringForColumn("route_long_name")
+                let rt = rs.stringForColumn("route_type")
+                let rs = rs.stringForColumn("route_style")
+                let r = Route(rId:rid, rtShortName : nil, rtLN : rln, rtType : rt.toInt(), rtStyle: rs, rtDirection: nil, final: nil)
+                route.append(r)
             }
         } else {
             println("select failed: \(database.lastErrorMessage())")
@@ -52,21 +47,15 @@ class DB {
             // your destination file url
             let destinationUrl = documentsUrl.URLByAppendingPathComponent(audioUrl.lastPathComponent!)
             println(destinationUrl)
-            // check if it exists before downloading it
-            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
-                println("The file already exists at path")
-            } else {
-                //  if the file doesn't exist
-                //  just download the data from your url
-                if let myAudioDataFromUrl = NSData(contentsOfURL: audioUrl){
-                    // after downloading your data you need to save it to your destination url
-                    if myAudioDataFromUrl.writeToURL(destinationUrl, atomically: true) {
-                        println("file saved")
-                    } else {
-                        println("error saving file")
-                    }
+            if let myAudioDataFromUrl = NSData(contentsOfURL: audioUrl){
+                // after downloading your data you need to save it to your destination url
+                if myAudioDataFromUrl.writeToURL(destinationUrl, atomically: true) {
+                    println("file saved")
+                } else {
+                    println("error saving file")
                 }
             }
+    
         }
     }
     
@@ -91,10 +80,34 @@ class DB {
         return route
     }
     
-    func getStopsByLocation (sqlStatment:String?) -> [String]? {
-        return ["asdf"]
-    }
-    func getStopsByRoute(sqlStatment:String?) -> [String]? {
-        return ["Fullerton","Bellmount", "Addison"]
+    func getStopsByRoute(route:String?, andLocation location: String?) -> [PublicTransit]? {
+        let database = FMDatabase(path: self.getDBPath())
+        
+        if !database.open() { println("Unable to open database") }
+        
+        var stop : [PublicTransit] = [Stop]()
+        let a = DbQueryBuilder().getStopsByRoute("asdf", AndLocation: [ "asdf" : 4.4])
+        if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
+            while rs.next() {
+                    var rid =   rs.stringForColumn("route_id")
+                    var rln =   rs.stringForColumn("route_long_name")
+                    var sn =    rs.stringForColumn("stop_name")
+                    var style = rs.stringForColumn("route_style")
+                    var slon =  rs.stringForColumn("stop_lon")
+                    var slat =  rs.stringForColumn("stop_lat")
+                    var rdir =  rs.stringForColumn("direction")
+                    var sid =   rs.stringForColumn("stop_id")
+            
+                    var s = Stop(sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
+                        lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
+                    
+                    stop.append(s)
+                }
+            } else {
+                println("select failed: \(database.lastErrorMessage())")
+            }
+            database.close()
+        
+        return stop
     }
 }

@@ -18,15 +18,14 @@
 		4431301A1B1F646F006A709B /* vcStops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443130191B1F646F006A709B /* vcStops.swift */; };
 		4431301C1B1F7A44006A709B /* vcGps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431301B1B1F7A44006A709B /* vcGps.swift */; };
 		444022D91B14F73B009B208A /* vcMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022D81B14F73B009B208A /* vcMain.swift */; };
-		444022DF1B14F973009B208A /* vcNickTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022DE1B14F973009B208A /* vcNickTest.swift */; };
-		444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E01B14F98B009B208A /* vcPaulTest.swift */; };
+		444022DF1B14F973009B208A /* vcNick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022DE1B14F973009B208A /* vcNick.swift */; };
+		444022E11B14F98B009B208A /* vcPaul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444022E01B14F98B009B208A /* vcPaul.swift */; };
 		448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E981B1582F4008881AA /* sbTrainHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */; };
 		448D2E991B1582F8008881AA /* sbBusHttpReqests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */; };
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
 		449AD4821B1A2CFF00A029AE /* parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4811B1A2CFF00A029AE /* parse.swift */; };
-		449AD4861B1A324900A029AE /* tvcMian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4851B1A324900A029AE /* tvcMian.swift */; };
 		449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4871B1A386000A029AE /* sbDbQuery.swift */; };
 		449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48A1B1A38AC00A029AE /* parseDB.swift */; };
 		449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48C1B1A38E900A029AE /* parseXml.swift */; };
@@ -38,13 +37,15 @@
 		449AD49C1B1A3D8A00A029AE /* getXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD49B1B1A3D8A00A029AE /* getXml.swift */; };
 		449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD49D1B1A3DA100A029AE /* getDB.swift */; };
 		44BF8FFB1B1FF263001CE79C /* tvcRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF8FFA1B1FF263001CE79C /* tvcRoutes.swift */; };
+		44E3196D1B214FB6009504DD /* mPublicTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E3196C1B214FB6009504DD /* mPublicTransit.swift */; };
 		44E5ADC01B1BAD70000E0E44 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADB61B1BAD70000E0E44 /* FMDatabase.m */; };
 		44E5ADC11B1BAD70000E0E44 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADB81B1BAD70000E0E44 /* FMDatabaseAdditions.m */; };
 		44E5ADC21B1BAD70000E0E44 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBA1B1BAD70000E0E44 /* FMDatabasePool.m */; };
 		44E5ADC31B1BAD70000E0E44 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBC1B1BAD70000E0E44 /* FMDatabaseQueue.m */; };
 		44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */; };
-		876028EF1B1FC03F0009F851 /* XMLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */; };
-		87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRouteView.swift */; };
+		876028EF1B1FC03F0009F851 /* tvcXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876028EE1B1FC03F0009F851 /* tvcXML.swift */; };
+		8779FD741B2267F500FB289E /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779FD731B2267F500FB289E /* OneShotLocationManager.swift */; };
+		87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +75,12 @@
 		4431301B1B1F7A44006A709B /* vcGps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcGps.swift; sourceTree = "<group>"; };
 		443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleCTA-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		444022D81B14F73B009B208A /* vcMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcMain.swift; sourceTree = "<group>"; };
-		444022DE1B14F973009B208A /* vcNickTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcNickTest.swift; sourceTree = "<group>"; };
-		444022E01B14F98B009B208A /* vcPaulTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcPaulTest.swift; sourceTree = "<group>"; };
+		444022DE1B14F973009B208A /* vcNick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcNick.swift; sourceTree = "<group>"; };
+		444022E01B14F98B009B208A /* vcPaul.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcPaul.swift; sourceTree = "<group>"; };
 		448D2E941B1582D1008881AA /* sbTrainHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbTrainHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E961B1582EE008881AA /* sbBusHttpReqests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqests.swift; sourceTree = "<group>"; };
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
 		449AD4811B1A2CFF00A029AE /* parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parse.swift; sourceTree = "<group>"; };
-		449AD4851B1A324900A029AE /* tvcMian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcMian.swift; sourceTree = "<group>"; };
 		449AD4871B1A386000A029AE /* sbDbQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbDbQuery.swift; sourceTree = "<group>"; };
 		449AD48A1B1A38AC00A029AE /* parseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseDB.swift; sourceTree = "<group>"; };
 		449AD48C1B1A38E900A029AE /* parseXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseXml.swift; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		449AD49B1B1A3D8A00A029AE /* getXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getXml.swift; sourceTree = "<group>"; };
 		449AD49D1B1A3DA100A029AE /* getDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDB.swift; sourceTree = "<group>"; };
 		44BF8FFA1B1FF263001CE79C /* tvcRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcRoutes.swift; sourceTree = "<group>"; };
+		44E3196C1B214FB6009504DD /* mPublicTransit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mPublicTransit.swift; sourceTree = "<group>"; };
 		44E5ADB51B1BAD70000E0E44 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		44E5ADB61B1BAD70000E0E44 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		44E5ADB71B1BAD70000E0E44 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -103,8 +104,9 @@
 		44E5ADBD1B1BAD70000E0E44 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		44E5ADBE1B1BAD70000E0E44 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLTableViewController.swift; sourceTree = "<group>"; };
-		87D989901B193E9A008CFFB2 /* vcRouteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRouteView.swift; sourceTree = "<group>"; };
+		876028EE1B1FC03F0009F851 /* tvcXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcXML.swift; sourceTree = "<group>"; };
+		8779FD731B2267F500FB289E /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
+		87D989901B193E9A008CFFB2 /* vcRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
+				8779FD731B2267F500FB289E /* OneShotLocationManager.swift */,
 				4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */,
 				443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */,
 				4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */,
@@ -196,12 +199,11 @@
 		443FCFAD1B1B996B00DFCCCF /* viewControlers */ = {
 			isa = PBXGroup;
 			children = (
-				876028EE1B1FC03F0009F851 /* XMLTableViewController.swift */,
-				87D989901B193E9A008CFFB2 /* vcRouteView.swift */,
+				876028EE1B1FC03F0009F851 /* tvcXML.swift */,
+				87D989901B193E9A008CFFB2 /* vcRoute.swift */,
 				444022D81B14F73B009B208A /* vcMain.swift */,
-				444022DE1B14F973009B208A /* vcNickTest.swift */,
-				449AD4851B1A324900A029AE /* tvcMian.swift */,
-				444022E01B14F98B009B208A /* vcPaulTest.swift */,
+				444022DE1B14F973009B208A /* vcNick.swift */,
+				444022E01B14F98B009B208A /* vcPaul.swift */,
 				443130191B1F646F006A709B /* vcStops.swift */,
 				4431301B1B1F7A44006A709B /* vcGps.swift */,
 				44BF8FFA1B1FF263001CE79C /* tvcRoutes.swift */,
@@ -226,6 +228,7 @@
 				449AD4901B1A39A400A029AE /* mStop.swift */,
 				449AD4921B1A39BF00A029AE /* mRoute.swift */,
 				449AD4961B1A3A4E00A029AE /* mCta.swift */,
+				44E3196C1B214FB6009504DD /* mPublicTransit.swift */,
 			);
 			name = CTAModles;
 			sourceTree = "<group>";
@@ -382,24 +385,25 @@
 				44E5ADC01B1BAD70000E0E44 /* FMDatabase.m in Sources */,
 				449AD4931B1A39BF00A029AE /* mRoute.swift in Sources */,
 				4422E0AC1B0E6A270017FF28 /* SimpleCTA.xcdatamodeld in Sources */,
-				444022DF1B14F973009B208A /* vcNickTest.swift in Sources */,
+				444022DF1B14F973009B208A /* vcNick.swift in Sources */,
+				44E3196D1B214FB6009504DD /* mPublicTransit.swift in Sources */,
 				44E5ADC11B1BAD70000E0E44 /* FMDatabaseAdditions.m in Sources */,
 				449AD4971B1A3A4E00A029AE /* mCta.swift in Sources */,
 				4431301A1B1F646F006A709B /* vcStops.swift in Sources */,
 				449AD49A1B1A3D4B00A029AE /* GetGpsLocation.swift in Sources */,
 				449AD49E1B1A3DA100A029AE /* getDB.swift in Sources */,
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
-				876028EF1B1FC03F0009F851 /* XMLTableViewController.swift in Sources */,
+				876028EF1B1FC03F0009F851 /* tvcXML.swift in Sources */,
 				449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */,
+				8779FD741B2267F500FB289E /* OneShotLocationManager.swift in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
-				87D989911B193E9A008CFFB2 /* vcRouteView.swift in Sources */,
+				87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				44E5ADC31B1BAD70000E0E44 /* FMDatabaseQueue.m in Sources */,
-				449AD4861B1A324900A029AE /* tvcMian.swift in Sources */,
 				44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */,
 				449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */,
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
-				444022E11B14F98B009B208A /* vcPaulTest.swift in Sources */,
+				444022E11B14F98B009B208A /* vcPaul.swift in Sources */,
 				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
 				449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */,
 			);
