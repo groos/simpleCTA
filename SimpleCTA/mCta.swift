@@ -43,7 +43,7 @@ class CTA {
         
         // 4. fill model with results
             // if let query = routesQuery {
-        ParseDB().setRoutesByLocation()
+       // ParseDB().setRoutesByLocation()
             //}
     }
     

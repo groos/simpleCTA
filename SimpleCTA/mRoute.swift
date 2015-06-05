@@ -9,26 +9,36 @@
 import Foundation
 
 class Route {
-    enum Type: String {
-        case Red = "red"
-        case White = "white"
-        case Rosé = "rose"
-        case Sparkling = "sparkling"
-    }
+   
     var stops:[Int : Stop]?
-    let routeId:Int?                // db: route_id t: rn
-    let routeShortName: Int?     // db: route_short_name t: rt b: rt
+    let routeId: String?                // db: route_id t: rn
+    let routeShortName: Int?        // db: route_short_name t: rt b: rt
     let routeLongName: String?
     let routeType : Int?            // db: route_type , ie bus / train
     let routeDirection: String?     // B: rtdir
     let finalDestination : String?  // b: des t: destSt
-    
-    init(rId:Int?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtDirection:String?, final:String? ){
+    let style : String?
+
+    init( rId:String?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtStyle:String?, rtDirection:String?, final:String? ){
         self.routeId = rId
         self.routeShortName = rtShortName
         self.routeLongName  = rtLN
         self.routeType = rtType
         self.routeDirection = rtDirection
         self.finalDestination = final
+        self.style = rtStyle
     }
+    
+    func getTitle() -> String {
+        if let s = self.style, rln = self.routeLongName {
+            if s  != "bus" {
+               return "\(rln)"
+            }
+            if let rid = self.routeId {
+                return "\(rid) : \(rln)"
+            }
+        }
+        return "error"
+    }
+    
 }

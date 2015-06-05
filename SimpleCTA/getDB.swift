@@ -25,12 +25,14 @@ class DB {
         let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
         if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
             while rs.next() {
-                let x = rs.stringForColumn("route_id")
-                let y = rs.stringForColumn("route_long_name")
-                let z = rs.stringForColumn("route_type")
-                let r = Route(rId: x.toInt(), rtShortName: nil, rtLN: y, rtType: z.toInt(), rtDirection: nil, final: nil)
+                let rid = rs.stringForColumn("route_id")
+                let rln = rs.stringForColumn("route_long_name")
+                let rt = rs.stringForColumn("route_type")
+                let rs = rs.stringForColumn("route_style")
+                let r = Route(rId:rid, rtShortName : nil, rtLN : rln, rtType : rt.toInt(), rtStyle: rs, rtDirection: nil, final: nil)
+                //let r = Route(rId: rid.toInt(), rtShortName: nil, rtLN: rln, rtType: rt.toInt(), rtStyle: rs, rtDirection: nil, final: nil)
                  route.append(r)
-                println("\(x)")
+                
             }
         } else {
             println("select failed: \(database.lastErrorMessage())")
@@ -53,9 +55,9 @@ class DB {
             let destinationUrl = documentsUrl.URLByAppendingPathComponent(audioUrl.lastPathComponent!)
             println(destinationUrl)
             // check if it exists before downloading it
-            if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
-                println("The file already exists at path")
-            } else {
+            //if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+              //  println("The file already exists at path")
+            //} else {
                 //  if the file doesn't exist
                 //  just download the data from your url
                 if let myAudioDataFromUrl = NSData(contentsOfURL: audioUrl){
@@ -67,7 +69,7 @@ class DB {
                     }
                 }
             }
-        }
+        
     }
     
     func getRouteLongName (routeKey rk:String?) -> String? {

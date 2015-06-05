@@ -46,12 +46,11 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-        
         let row = indexPath.row
-        if let r = routes {
-            cell.textLabel?.text = r[row].routeLongName
-        }
+        let r = routes![row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(r.style!, forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = r.getTitle()
+        
         return cell
     }
 
