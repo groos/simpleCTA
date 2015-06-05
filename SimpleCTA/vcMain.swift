@@ -10,11 +10,14 @@ var dbParams = ["N": false, "S": false, "E" : false, "W": false, "Bus":false, "T
 
 import UIKit
 
-class vcMain: UIViewController {
+class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var vcnicktest: vcNickTest!
     private var vcpaultest: vcPaulTest!
     private var tvcstops: vcStops!
+    private let routes : [Route]? = DB().dbtest()
+    let textCellIdentifier = "red"
     
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var dbParameters: [UIButton]!
     
     @IBAction func dbParamsButtonPushed(sender: UIButton) {
@@ -30,6 +33,34 @@ class vcMain: UIViewController {
                 dbParams[text] = !bool
                 println(dbParams[text])
             }
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 7
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let c = routes?.count { return c }
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        
+        let row = indexPath.row
+        if let r = routes {
+            cell.textLabel?.text = r[row].routeLongName
+        }
+        return cell
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        if let r = routes {
+            println(r[row].routeLongName)
         }
     }
     
@@ -94,6 +125,7 @@ class vcMain: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func didReceiveMemoryWarning() {

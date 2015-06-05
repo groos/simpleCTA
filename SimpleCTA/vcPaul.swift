@@ -13,7 +13,7 @@ import UIKit
 class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private let routes : [Route]? = DB().dbtest()
 
-    let simpleTableIdentifier = "SimpleTableIdentifier"
+    //let simpleTableIdentifier = "SimpleTableIdentifier"
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             if let c = routes?.count { return c }
@@ -22,20 +22,14 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
-        
-        if (cell == nil) {
-            cell = UITableViewCell (
-            style: UITableViewCellStyle.Default,
-            reuseIdentifier: simpleTableIdentifier)
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("Red", forIndexPath: indexPath) as! UITableViewCell
         
         if let route = routes?[ indexPath.row ] {
-            cell!.textLabel!.text = route.routeLongName
+            cell.textLabel!.text = route.routeLongName
         } else {
-            cell!.textLabel!.text = "Error"
+            cell.textLabel!.text = "Error"
         }
-        return cell!
+        return cell
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,6 +38,7 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
