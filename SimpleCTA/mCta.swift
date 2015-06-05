@@ -14,9 +14,9 @@ import Foundation
 class CTA {
     
     var userLocation : [String: Double]?
-    var routes : [Route]? // need to make weak
+    var gotRoute : Bool?
+    var gotStop : Bool?
     var route  : Route?
-    var stops  : [Stop]?
     var stop   : Stop?
     var predictions :  [Prediction]?
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Route {
+class Route : PublicTransit {
    
     var stops:[Int : Stop]?
     let routeId: String?                // db: route_id t: rn
@@ -29,16 +29,22 @@ class Route {
         self.style = rtStyle
     }
     
-    func getTitle() -> String {
-        if let s = self.style, rln = self.routeLongName {
-            if s  != "bus" {
-               return "\(rln)"
+    var title : String {
+        get {
+            if let s = self.style, rln = self.routeLongName {
+                if s  != "bus" {
+                    return "\(rln)"
+                }
+                if let rid = self.routeId {
+                    return "\(rid) : \(rln)"
+                }
             }
-            if let rid = self.routeId {
-                return "\(rid) : \(rln)"
-            }
+            return "error"
         }
-        return "error"
     }
+    
+        
+    
+  
     
 }
