@@ -11,7 +11,7 @@ import UIKit
 class vcStops: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
     let simpleTableIdentifier = "SimpleTableIdentifier"
-    private let routes : [Route]? = DB().dbtest()
+    private let routes : [PublicTransit]? = DB().dbtest()
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
@@ -29,7 +29,7 @@ class vcStops: UIViewController , UITableViewDataSource, UITableViewDelegate{
                     reuseIdentifier: simpleTableIdentifier)
             }
             if let route = routes?[ indexPath.row ] {
-                cell!.textLabel!.text = route.routeLongName
+                cell!.textLabel!.text = route.title
             } else {
                 cell!.textLabel!.text = " fail "
             }

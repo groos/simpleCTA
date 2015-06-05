@@ -11,12 +11,12 @@ import Foundation
 class DB {
     init(){}
     
-    func dbtest() -> [Route]?   {
+    func dbtest() -> [PublicTransit]?   {
         let database = FMDatabase(path: self.getDBPath())
     
         if !database.open() { println("Unable to open database") }
 
-        var route : [Route] = []
+        var route : [PublicTransit] = [Route]()
         let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
         if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
             while rs.next() {
@@ -80,26 +80,26 @@ class DB {
         return route
     }
     
-    func getStopsByRoute(route:String?, andLocation location: String?) -> [Stop]? {
-        var stop : [Stop] = []
+    func getStopsByRoute(route:String?, andLocation location: String?) -> [PublicTransit]? {
         let database = FMDatabase(path: self.getDBPath())
-        if let sqlStatment = DbQueryBuilder().getStopsByRoute(route, AndLocation: ["asdf":34]) {
-            if !database.open() { println("Unable to open database") }
+        
+        if !database.open() { println("Unable to open database") }
+        
+        var stop : [PublicTransit] = [Stop]()
+        let a = DbQueryBuilder().getStopsByRoute("asdf", AndLocation: [ "asdf" : 4.4])
+        if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
+            while rs.next() {
+                    var rid =   rs.stringForColumn("route_id")
+                    var rln =   rs.stringForColumn("route_long_name")
+                    var sn =    rs.stringForColumn("stop_name")
+                    var style = rs.stringForColumn("route_style")
+                    var slon =  rs.stringForColumn("stop_lon")
+                    var slat =  rs.stringForColumn("stop_lat")
+                    var rdir =  rs.stringForColumn("direction")
+                    var sid =   rs.stringForColumn("stop_id")
             
-            
-            let a = DbQueryBuilder().GetRoutesByLocation(["asdf":4.4])
-            if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
-                while rs.next() {
-                    let rid = rs.stringForColumn("route_id")
-                    let rln = rs.stringForColumn("route_long_name")
-                    let sn = rs.stringForColumn("stop_name")
-                    let style = rs.stringForColumn("route_style")
-                    let slon = rs.stringForColumn("stop_lon")
-                    let slat = rs.stringForColumn("stop_lat")
-                    let rdir = rs.stringForColumn("direction")
-                    let sid = rs.stringForColumn("stop_id")
-            
-                    let s = Stop(sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue, lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
+                    var s = Stop(sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
+                        lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
                     
                     stop.append(s)
                 }
@@ -107,32 +107,7 @@ class DB {
                 println("select failed: \(database.lastErrorMessage())")
             }
             database.close()
-        }
+        
         return stop
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

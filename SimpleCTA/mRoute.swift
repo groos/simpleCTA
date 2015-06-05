@@ -17,7 +17,7 @@ class Route : PublicTransit {
     let routeType : Int?            // db: route_type , ie bus / train
     let routeDirection: String?     // B: rtdir
     let finalDestination : String?  // b: des t: destSt
-    let style : String?
+    let cellStyle : String?
 
     init( rId:String?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtStyle:String?, rtDirection:String?, final:String? ){
         self.routeId = rId
@@ -26,10 +26,15 @@ class Route : PublicTransit {
         self.routeType = rtType
         self.routeDirection = rtDirection
         self.finalDestination = final
-        self.style = rtStyle
+        self.cellStyle = rtStyle
     }
     
-    var title : String {
+    var style : String? {
+        get {
+            return self.cellStyle
+        }
+    }
+    var title : String? {
         get {
             if let s = self.style, rln = self.routeLongName {
                 if s  != "bus" {

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-I5-ytd">
+                            <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-I5-ytd">
                                 <rect key="frame" x="0.0" y="113" width="600" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-sd-aqd">
@@ -46,6 +46,11 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="cTB-IN-dFd"/>
+                                        <exclude reference="ugJ-Ns-pQ8"/>
+                                        <exclude reference="wDr-k0-ShT"/>
+                                        <exclude reference="6St-6V-Q50"/>
+                                        <exclude reference="akZ-Kf-Vu1"/>
                                         <exclude reference="qcY-n7-dqo"/>
                                     </mask>
                                 </variation>
@@ -61,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="WHI-WO-BmY"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="7j2-kv-gcG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILH-wr-nSZ" userLabel="South">
@@ -75,7 +80,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="vjv-p9-0AO"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="Y4D-vB-iNX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmI-SN-uYi" userLabel="East">
@@ -89,7 +94,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="Jsy-LN-3qF"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="HaK-Mv-vSW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKM-WJ-4BG" userLabel="Bus">
@@ -103,7 +108,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="DHr-IF-4HS"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="lWh-Xn-yHU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duj-B1-L5i" userLabel="West">
@@ -117,7 +122,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="onD-0a-6xg"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="v25-Nb-ld7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-hM-2CT" userLabel="Train">
@@ -131,10 +136,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParamsButtonPushed:" destination="p27-2I-VFw" eventType="touchUpInside" id="nbV-tm-Ju4"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="sCT-pD-J1V"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-el-5WW" userLabel="route Header">
+                            <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-el-5WW" userLabel="route Header">
                                 <rect key="frame" x="0.0" y="70" width="600" height="43"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellWhiteBus" translatesAutoresizingMaskIntoConstraints="NO" id="Yos-DK-qho">
@@ -221,7 +226,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <state key="normal" title="PTest">
+                                            <state key="normal" title="Settings">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -610,7 +615,6 @@
         <!--PaulTest-->
         <scene sceneID="TNZ-Ju-Q8v">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-9b-4NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="PaulTest" id="tZR-wo-M0w" customClass="vcPaulTest" customModule="SimpleCTA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pvl-I8-PWr"/>
@@ -658,6 +662,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-9b-4NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2017" y="-24"/>
         </scene>

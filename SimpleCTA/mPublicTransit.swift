@@ -9,5 +9,6 @@
 import Foundation
 
 protocol PublicTransit {
-    var title: String { get }
+    var title: String? { get }
+    var style: String? { get }
 }

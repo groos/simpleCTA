@@ -14,10 +14,10 @@ import Foundation
 class CTA {
     
     var userLocation : [String: Double]?
-    var gotRoute : Bool?
-    var gotStop : Bool?
-    var route  : Route?
-    var stop   : Stop?
+    var gotRoute = false
+    var gotStop = false
+    var route  : PublicTransit?
+    var stop   : PublicTransit?
     var predictions :  [Prediction]?
     
     init (){ }

@@ -12,10 +12,10 @@ class UserGps {
 
     let latitude : Double?  // need to make enums
     let longitude : Double?
-    
+
     init(){
-        self.latitude = 41.89632184
-        self.longitude = -87.75410482
+        self.latitude = 41.925222
+        self.longitude = -87.653689
     }
     
     func getUserLocation() -> [String:Double]? {

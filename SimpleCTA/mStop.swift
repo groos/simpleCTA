@@ -19,7 +19,7 @@ class Stop: PublicTransit {
     let stopLatitude: Double?   // b: lat db: stop_lat
     let stopLongitude: Double?  // b: lon db: stop_lon
     let locationType: Int?   // db: location_type
-    let style: String?
+    let cellStyle: String?
     
     // in here or rts?
     //let finalDestination :  String?  // b: des t: destSt
@@ -38,12 +38,22 @@ class Stop: PublicTransit {
         self.distanceToUser = distance
         self.locationType = locType
         self.routeLongName = routeLongName
-        self.style = style
+        self.cellStyle = style
     }
     
-    var title: String {
+    
+    
+    var style: String? {
         get {
-            return "\(routeLongName) at \(stationName) .5 miles"
+            return self.cellStyle
+        }
+    }
+    var title: String? {
+        get {
+            if let rln = self.routeLongName, sn = self.routeDirection {
+               return "\(rln) at \(sn) .5 miles"
+            }
+            return "Error"
         }
     }
     
