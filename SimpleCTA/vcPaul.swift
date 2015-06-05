@@ -19,7 +19,11 @@ class vcPaulTest: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if let c = routes?.count { return c }
             return 0
     }
+    @IBAction func killButtonPressed(sender: UIButton) {
+        busImage.image = nil
+    }
     
+    @IBOutlet var busImage: UIImageView!
     func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Red", forIndexPath: indexPath) as! UITableViewCell
