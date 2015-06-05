@@ -44,6 +44,7 @@
 		44E5ADC31B1BAD70000E0E44 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBC1B1BAD70000E0E44 /* FMDatabaseQueue.m */; };
 		44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */; };
 		876028EF1B1FC03F0009F851 /* tvcXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876028EE1B1FC03F0009F851 /* tvcXML.swift */; };
+		8779FD741B2267F500FB289E /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779FD731B2267F500FB289E /* OneShotLocationManager.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRoute.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		44E5ADBE1B1BAD70000E0E44 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		876028EE1B1FC03F0009F851 /* tvcXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcXML.swift; sourceTree = "<group>"; };
+		8779FD731B2267F500FB289E /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		4422E09A1B0E6A270017FF28 = {
 			isa = PBXGroup;
 			children = (
+				8779FD731B2267F500FB289E /* OneShotLocationManager.swift */,
 				4422E0CD1B0E6A690017FF28 /* libsqlite3.dylib */,
 				443FCFB01B1B9F0A00DFCCCF /* SimpleCTA-Bridging-Header.h */,
 				4422E0CB1B0E6A4C0017FF28 /* MapKit.framework */,
@@ -392,6 +395,7 @@
 				4422E0A91B0E6A270017FF28 /* AppDelegate.swift in Sources */,
 				876028EF1B1FC03F0009F851 /* tvcXML.swift in Sources */,
 				449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */,
+				8779FD741B2267F500FB289E /* OneShotLocationManager.swift in Sources */,
 				448D2E951B1582D1008881AA /* sbTrainHttpReqests.swift in Sources */,
 				87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
