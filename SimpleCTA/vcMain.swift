@@ -49,7 +49,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let row = indexPath.row
         let r = routes![row]
         let cell = tableView.dequeueReusableCellWithIdentifier(r.style!, forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = r.getTitle()
+        cell.textLabel?.text = r.title
         
         return cell
     }
