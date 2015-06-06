@@ -78,6 +78,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     
     func setAndRun(url: String, routes: String) {
         setUrl(url)
+        myParse()
         updateRoutes()
     }
     
