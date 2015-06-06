@@ -45,6 +45,7 @@
 		44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */; };
 		876028EF1B1FC03F0009F851 /* tvcXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876028EE1B1FC03F0009F851 /* tvcXML.swift */; };
 		8779FD741B2267F500FB289E /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779FD731B2267F500FB289E /* OneShotLocationManager.swift */; };
+		8779FD761B226FF000FB289E /* userSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779FD751B226FF000FB289E /* userSettings.swift */; };
 		87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D989901B193E9A008CFFB2 /* vcRoute.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		44E5ADBF1B1BAD70000E0E44 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		876028EE1B1FC03F0009F851 /* tvcXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tvcXML.swift; sourceTree = "<group>"; };
 		8779FD731B2267F500FB289E /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
+		8779FD751B226FF000FB289E /* userSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userSettings.swift; sourceTree = "<group>"; };
 		87D989901B193E9A008CFFB2 /* vcRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vcRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +241,7 @@
 				449AD4991B1A3D4B00A029AE /* GetGpsLocation.swift */,
 				449AD49B1B1A3D8A00A029AE /* getXml.swift */,
 				449AD49D1B1A3DA100A029AE /* getDB.swift */,
+				8779FD751B226FF000FB289E /* userSettings.swift */,
 			);
 			name = getData;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				87D989911B193E9A008CFFB2 /* vcRoute.swift in Sources */,
 				444022D91B14F73B009B208A /* vcMain.swift in Sources */,
 				44E5ADC31B1BAD70000E0E44 /* FMDatabaseQueue.m in Sources */,
+				8779FD761B226FF000FB289E /* userSettings.swift in Sources */,
 				44E5ADC41B1BAD70000E0E44 /* FMResultSet.m in Sources */,
 				449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */,
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,

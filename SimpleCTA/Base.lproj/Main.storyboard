@@ -656,14 +656,74 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-Fe-emP">
-                                <rect key="frame" x="230" y="48" width="140" height="30"/>
-                                <state key="normal" title="Print Location Info">
+                                <rect key="frame" x="29" y="494" width="230" height="30"/>
+                                <state key="normal" title="Print Location and Setting Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="printLocation:" destination="tZR-wo-M0w" eventType="touchUpInside" id="IAd-rp-6hL"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="EKi-t1-qZx">
+                                <rect key="frame" x="27" y="61" width="115" height="31"/>
+                                <connections>
+                                    <action selector="updateSearchRadius:" destination="tZR-wo-M0w" eventType="valueChanged" id="cw6-vD-LfT"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RLU-yR-AG7">
+                                <rect key="frame" x="37" y="123" width="94" height="29"/>
+                                <connections>
+                                    <action selector="updateSearchReturns:" destination="tZR-wo-M0w" eventType="valueChanged" id="hcO-vE-Ph6"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Radius (miles)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i83-ah-zLq">
+                                <rect key="frame" x="214" y="65" width="117" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Routes Returned" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-U6-Ajg">
+                                <rect key="frame" x="214" y="109" width="150" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Settings:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-08-0Ve">
+                                <rect key="frame" x="29" y="20" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Settings:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiH-Mu-hdb">
+                                <rect key="frame" x="29" y="245" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcB-Li-IBA">
+                                <rect key="frame" x="160" y="127" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="89c-vP-NFT">
+                                <rect key="frame" x="60" y="289" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchUnits:" destination="tZR-wo-M0w" eventType="valueChanged" id="dMT-nX-RdW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Meters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVv-JI-H5K">
+                                <rect key="frame" x="171" y="294" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFC-Ir-Ocx">
+                                <rect key="frame" x="157" y="65" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -672,6 +732,13 @@
                             <constraint firstItem="DAe-vq-6qt" firstAttribute="top" secondItem="UZ5-Ur-kt2" secondAttribute="bottom" id="lcj-M4-rKY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="routesReturned" destination="GcB-Li-IBA" id="ySc-Mw-qJO"/>
+                        <outlet property="routesReturnedStepper" destination="RLU-yR-AG7" id="PzK-Zt-9mi"/>
+                        <outlet property="searchRadius" destination="JFC-Ir-Ocx" id="F2o-zF-yxe"/>
+                        <outlet property="searchRadiusLabel" destination="i83-ah-zLq" id="605-dV-Pch"/>
+                        <outlet property="searchRadiusSlider" destination="EKi-t1-qZx" id="lbj-3O-6ou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-9b-4NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,8 +756,8 @@
         <image name="queryWest" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ztP-75-Hpr"/>
         <segue reference="4YZ-42-QMB"/>
         <segue reference="zBJ-sG-Owt"/>
+        <segue reference="OSd-lq-Y2U"/>
     </inferredMetricsTieBreakers>
 </document>
