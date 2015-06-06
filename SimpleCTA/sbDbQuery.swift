@@ -93,32 +93,42 @@ class DbQueryBuilder {
         var directions : String? = nil
         var isFirst = true
         
-       if dbParams["N"] == true {
+       if dbParams["N"]! == true {
          if isFirst == false { directions! += " ,1 "} else { directions = " 1 "; isFirst = false }
         }
-        if dbParams["S"] == true {
+        if dbParams["S"]! == true {
             if isFirst == false { directions! += " ,2 "} else { directions = " 2 "; isFirst = false }
         }
-        if dbParams["E"] == true {
+        if dbParams["E"]! == true {
             if isFirst == false { directions! += " ,3 "} else { directions = " 3 "; isFirst = false }
         }
-        if dbParams["W"] == true {
+        if dbParams["W"]! == true {
             if isFirst == false { directions! += " ,4 "} else { directions = " 4 "; isFirst = false }
         }
-        return isFirst == true ? nil : " AND d.direction_id in (\(directions)) "
+        return isFirst == true ? nil : " AND d.direction_id in (\(directions!)) "
     }
     
     func whereRouteType () -> String? {
         var routeType: String?
         var isFirst = true
         
-        if dbParams["Bus"] == true {
-            if isFirst == false { routeType = " ,3 " } else { routeType! += " 3 "; isFirst = false}
+        if dbParams["Bus"]! == true {
+            if isFirst == true {
+                routeType = " 3 "
+                isFirst = false
+            } else {
+                routeType! += " ,3 " ;
+            }
         }
-        if dbParams["Train"] == true {
-            if isFirst == false { routeType = " ,1 " } else { routeType! += " 1 "; isFirst = false}
+        if dbParams["Train"]! == true {
+            if isFirst == true {
+                routeType = " 1 "
+                isFirst = false
+            } else {
+                routeType! += " ,1 " ;
+            }
         }
-        if let ret = routeType { let x =  " AND r.route_type in ( \(ret) ) "; return x } else { return nil }
+         if let ret = routeType { let x =  " AND r.route_type in ( \(ret) ) "; return x } else { return nil }
     }
 }
 
