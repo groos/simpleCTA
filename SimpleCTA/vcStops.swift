@@ -11,7 +11,7 @@ import UIKit
 class vcStops: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
     let simpleTableIdentifier = "SimpleTableIdentifier"
-    private let routes : [PublicTransit]? = DB().dbtest()
+    private let routes : [PublicTransit]? = DB().getRoutesByLocation()
     
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {

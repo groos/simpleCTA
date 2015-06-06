@@ -28,9 +28,16 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var stopLabel:    UILabel!
     
     /////////  table data source ///////////
-    //var stop =
-    private var transit : [PublicTransit]? = DB().dbtest()
+    private var transit : [PublicTransit]? = DB().getRoutesByLocation()
     
+    @IBAction func goButtonPressed(sender: UIBarButtonItem) {
+        if cta.gotRoute == false {
+            transit = DB().getRoutesByLocation()
+        } else {
+            transit = DB().getStopsByRoute(cta.route?.routeId!)
+        }
+        reloadTable()
+    }
     func reloadTable() {
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
@@ -47,7 +54,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cta.gotRoute = true
             cta.route = itemSelected
             // reload data
-            transit = DB().getStopsByRoute("the rt", andLocation: "the location")
+            transit = DB().getStopsByRoute(itemSelected.routeId)
             reloadTable()
         // stop selected
         } else {
@@ -55,13 +62,12 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 stopLabel.text = itemSelected.title
                 stopImage.image = UIImage(named: "cellBlackBus")
                 // set bools
+                cta.stop = itemSelected
                 cta.gotStop = true
-
-
         }
     }
     func setup() {
-        routeHeader.hidden = true
+      //  routeHeader.hidden = true
 //        stopLabel.text = nil
 //        stopImage.image = nil
 //        routeLabel.text = nil
@@ -72,7 +78,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     ///////// functions user actions /////////
-    
     @IBAction func dbParametersButtonPressed(sender: UIButton) {
         
         if sender.selected {
@@ -189,7 +194,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     ///////////////// view methods ////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+       // setup()
     }
 
     override func didReceiveMemoryWarning() {

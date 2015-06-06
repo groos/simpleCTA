@@ -11,7 +11,7 @@ import Foundation
 class DB {
     init(){}
     
-    func dbtest() -> [PublicTransit]?   {
+    func getRoutesByLocation() -> [PublicTransit]?   {
         let database = FMDatabase(path: self.getDBPath())
     
         if !database.open() { println("Unable to open database") }
@@ -80,14 +80,14 @@ class DB {
         return route
     }
     
-    func getStopsByRoute(route:String?, andLocation location: String?) -> [PublicTransit]? {
+    func getStopsByRoute(route:String?) -> [PublicTransit]? {
         let database = FMDatabase(path: self.getDBPath())
         
         if !database.open() { println("Unable to open database") }
         
         var stop : [PublicTransit] = [Stop]()
-        let a = DbQueryBuilder().getStopsByRoute("asdf", AndLocation: [ "asdf" : 4.4])
-        if let rs = database.executeQuery(a!, withArgumentsInArray: nil) {
+        let a = DbQueryBuilder().getStopsByRoute(route)
+        if let rs = database.executeQuery(a, withArgumentsInArray: nil) {
             while rs.next() {
                     var rid =   rs.stringForColumn("route_id")
                     var rln =   rs.stringForColumn("route_long_name")
@@ -98,7 +98,7 @@ class DB {
                     var rdir =  rs.stringForColumn("direction")
                     var sid =   rs.stringForColumn("stop_id")
             
-                    var s = Stop(sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
+                var s = Stop(rId: rid , sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
                         lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
                     
                     stop.append(s)

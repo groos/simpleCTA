@@ -11,7 +11,7 @@ import Foundation
 class Route : PublicTransit {
    
     var stops:[Int : Stop]?
-    let routeId: String?                // db: route_id t: rn
+    let rId: String?                // db: route_id t: rn
     let routeShortName: Int?        // db: route_short_name t: rt b: rt
     let routeLongName: String?
     let routeType : Int?            // db: route_type , ie bus / train
@@ -20,7 +20,7 @@ class Route : PublicTransit {
     let cellStyle : String?
 
     init( rId:String?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtStyle:String?, rtDirection:String?, final:String? ){
-        self.routeId = rId
+        self.rId = rId
         self.routeShortName = rtShortName
         self.routeLongName  = rtLN
         self.routeType = rtType
@@ -28,7 +28,11 @@ class Route : PublicTransit {
         self.finalDestination = final
         self.cellStyle = rtStyle
     }
-    
+    var routeId: String? {
+        get {
+            return self.rId
+        }
+    }
     var style : String? {
         get {
             return self.cellStyle

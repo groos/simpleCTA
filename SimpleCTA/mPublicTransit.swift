@@ -11,4 +11,5 @@ import Foundation
 protocol PublicTransit {
     var title: String? { get }
     var style: String? { get }
+    var routeId: String? { get }
 }

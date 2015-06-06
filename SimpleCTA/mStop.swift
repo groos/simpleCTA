@@ -20,6 +20,7 @@ class Stop: PublicTransit {
     let stopLongitude: Double?  // b: lon db: stop_lon
     let locationType: Int?   // db: location_type
     let cellStyle: String?
+    let rId: String?
     
     // in here or rts?
     //let finalDestination :  String?  // b: des t: destSt
@@ -27,7 +28,8 @@ class Stop: PublicTransit {
     let routeDirection: String?     // B: rtdir // should be enum
     let distanceToUser: Double?     // calc of how close and need to setup a sort by
     
-    init(sId:Int?, sName:String?, routeLongName:String?, lat:Double?,lon:Double?,rtDir:String?,distance:Double?, locType:Int?, style:String? ){
+    init(rId:String?, sId:Int?, sName:String?, routeLongName:String?, lat:Double?,lon:Double?,rtDir:String?,distance:Double?, locType:Int?, style:String? ){
+        self.rId = rId
         self.stationID = sId
         self.stationName = sName
         self.stopLatitude = lat
@@ -42,7 +44,11 @@ class Stop: PublicTransit {
     }
     
     
-    
+    var routeId: String? {
+        get {
+            return self.rId
+        }
+    }
     var style: String? {
         get {
             return self.cellStyle

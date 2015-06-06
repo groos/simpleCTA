@@ -20,6 +20,7 @@ class CTA {
     var stop   : PublicTransit?
     var predictions :  [Prediction]?
     
+    
     init (){ }
         /// get the user location here ? might be bad if user does not allow?
     
