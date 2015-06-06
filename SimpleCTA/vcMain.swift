@@ -18,6 +18,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView:    UITableView!
     
     //////// buttons / views /////////////
+    @IBOutlet var routeHeader: UIView!
     @IBOutlet var dbParameters: [UIButton]!
     @IBOutlet var routeImage:   UIImageView!
     @IBOutlet var routeLabel:   UILabel!
@@ -58,6 +59,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     func setup() {
+        routeHeader.hidden = true
 //        stopLabel.text = nil
 //        stopImage.image = nil
 //        routeLabel.text = nil

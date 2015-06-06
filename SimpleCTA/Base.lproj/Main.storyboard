@@ -430,6 +430,7 @@
                             <constraint firstItem="duj-B1-L5i" firstAttribute="leading" secondItem="SmI-SN-uYi" secondAttribute="trailing" constant="8" id="Dp5-5l-65f"/>
                             <constraint firstItem="i4T-IK-aBy" firstAttribute="top" secondItem="HKb-oI-23x" secondAttribute="bottom" id="Esv-a6-crS"/>
                             <constraint firstItem="ZKM-WJ-4BG" firstAttribute="top" secondItem="nAX-Wx-gb4" secondAttribute="top" id="Fcc-X4-Goh"/>
+                            <constraint firstItem="6uQ-I5-ytd" firstAttribute="height" secondItem="Nmd-el-5WW" secondAttribute="height" id="Hc2-9f-rYp"/>
                             <constraint firstItem="ZKM-WJ-4BG" firstAttribute="top" secondItem="SyF-hM-2CT" secondAttribute="top" id="I2u-XJ-Vkb"/>
                             <constraint firstItem="6uQ-I5-ytd" firstAttribute="leading" secondItem="Oc8-3D-yZv" secondAttribute="leadingMargin" constant="-16" id="JSP-h8-q3T"/>
                             <constraint firstItem="nAX-Wx-gb4" firstAttribute="top" secondItem="Xps-Gn-mUl" secondAttribute="bottom" constant="8" symbolic="YES" id="Kde-8V-FXi"/>
@@ -479,6 +480,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="routeHeader" destination="Nmd-el-5WW" id="XHh-VM-Jc0"/>
                         <outlet property="routeImage" destination="Yos-DK-qho" id="J56-85-BDY"/>
                         <outlet property="routeLabel" destination="Xls-da-yJ0" id="RsE-7L-pqW"/>
                         <outlet property="stopImage" destination="0PK-3i-y4O" id="qbJ-nE-WO6"/>
