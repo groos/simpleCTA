@@ -14,10 +14,15 @@ class UserGps: NSObject {
     var latitude : Double?  // need to make enums
     var longitude : Double?
     var manager: OneShotLocationManager?
+    
+    
+    var mileRadius: Double?
+    var degreesRadius: Double?
 
     override init(){
         self.latitude = 41.925222
         self.longitude = -87.653689
+        self.mileRadius = 0.5
         manager = OneShotLocationManager()
     }
 

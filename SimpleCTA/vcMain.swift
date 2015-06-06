@@ -8,6 +8,7 @@
 
 var dbParams = ["N": false, "S": false, "E" : false, "W": false, "Bus":false, "Train":false ]
 var GPS = UserGps()
+var Settings = userSettings()
 
 import UIKit
 
