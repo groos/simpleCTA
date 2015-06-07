@@ -149,7 +149,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     
     // Second parser func that gets called throughout.
     // gets actual data inside tags
-    func parser(parser: NSXMLParser!, foundCharacters string: String?) {
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
         if element.isEqualToString("staID"){
             staID.appendString(string!)
         } else if element.isEqualToString("arrT"){
@@ -165,7 +165,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     
     // the last parser fun that gets called.
     // called when finding a closing element. Adds the finished strings to dictionary
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
         if (elementName as NSString).isEqualToString("eta") {
             if !staID.isEqual(nil) {
