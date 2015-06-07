@@ -38,6 +38,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         reloadTable()
     }
+
     func reloadTable() {
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
@@ -66,18 +67,20 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cta.gotStop = true
         }
     }
-    func setup() {
+
+ //   func setup() {
       //  routeHeader.hidden = true
 //        stopLabel.text = nil
 //        stopImage.image = nil
 //        routeLabel.text = nil
 //        routeImage.image = nil
         
-    }
+   // }
 
     
     
     ///////// functions user actions /////////
+
     @IBAction func dbParametersButtonPressed(sender: UIButton) {
         
         if sender.selected {
@@ -102,7 +105,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     ///////////////// table view /////////////////////
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
