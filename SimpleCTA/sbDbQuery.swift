@@ -34,15 +34,13 @@ class DbQueryBuilder {
             if let routeType = whereRouteType () {
                 statement += routeType
             }
+            print(statement)
             return statement
         }
     
-    
-    
-    
     func getStopsByRoute(route:String?) -> String {
         
-       var statement = "SELECT DISTINCT r.route_id, " +
+       var statement = "SELECT distinct r.route_id, " +
         "r.route_long_name,    " +
         "r.route_style,    " +
         "s.stop_name,    " +
@@ -62,7 +60,7 @@ class DbQueryBuilder {
         "AND d.direction_id = rds.direction_id    "
             
         if let r = route {
-           statement += " and r.route_id =  \(r) "
+           statement += " and r.route_id = \'\(r)\' "
         }
         if let radius = whereSeachRadius() {
             statement += radius
@@ -73,6 +71,7 @@ class DbQueryBuilder {
         if let routeType = whereRouteType () {
             statement += routeType
         }
+        print(statement)
         return statement
     }
     
@@ -94,7 +93,7 @@ class DbQueryBuilder {
         var isFirst = true
         
        if dbParams["N"]! == true {
-         if isFirst == false { directions! += " ,1 "} else { directions = " 1 "; isFirst = false }
+         if isFirst == false { directions = " 1 "; isFirst = false }
         }
         if dbParams["S"]! == true {
             if isFirst == false { directions! += " ,2 "} else { directions = " 2 "; isFirst = false }
@@ -116,8 +115,6 @@ class DbQueryBuilder {
             if isFirst == true {
                 routeType = " 3 "
                 isFirst = false
-            } else {
-                routeType! += " ,3 " ;
             }
         }
         if dbParams["Train"]! == true {
