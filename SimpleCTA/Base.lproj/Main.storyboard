@@ -101,20 +101,19 @@
                                     <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="sCT-pD-J1V"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-oI-23x">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-oI-23x">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="9aT-xZ-Anv">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="waf-wb-ziN">
-                                            <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="91" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="8Hq-S2-Gbq"/>
                                                 <constraint firstAttribute="height" constant="50" id="Vga-mz-jFz"/>
                                                 <constraint firstAttribute="width" constant="50" id="xGA-TM-NdY"/>
                                             </constraints>
-                                            <state key="normal" image="save">
+                                            <state key="normal" title="Save DB" image="save">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </state>
@@ -133,10 +132,10 @@
                                     <barButtonItem style="plain" id="FDV-Ki-Eoy">
                                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" id="B5s-vT-Y5Y">
-                                            <rect key="frame" x="70" y="0.0" width="44" height="44"/>
+                                            <rect key="frame" x="70" y="0.0" width="87" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="settings">
-                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Settings" image="settings">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -149,10 +148,10 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="ssc-uS-Kk3">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="27f-Co-LB1">
-                                            <rect key="frame" x="124" y="-2" width="23" height="22"/>
+                                            <rect key="frame" x="167" y="11" width="80" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="redo">
-                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Reload" image="redo">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -162,10 +161,10 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="xC9-s7-6pN">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hNz-Nn-gGF">
-                                            <rect key="frame" x="205" y="-14" width="20" height="24"/>
+                                            <rect key="frame" x="200" y="10" width="94" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="time">
-                                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Get Time" image="time">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -400,8 +399,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="H8K-T1-mZ8"/>
                                         <exclude reference="e2Z-hl-iuf"/>
+                                        <exclude reference="H8K-T1-mZ8"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -743,7 +742,7 @@
         <image name="time" width="20" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pyP-U6-9D6"/>
         <segue reference="zBJ-sG-Owt"/>
+        <segue reference="LcY-R9-RUJ"/>
     </inferredMetricsTieBreakers>
 </document>
