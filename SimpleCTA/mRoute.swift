@@ -12,14 +12,14 @@ class Route : PublicTransit {
    
     var stops:[Int : Stop]?
     let rId: String?                // db: route_id t: rn
-    let routeShortName: Int?        // db: route_short_name t: rt b: rt
+    let routeShortName: String?        // db: route_short_name t: rt b: rt
     let routeLongName: String?
     let routeType : Int?            // db: route_type , ie bus / train
     let routeDirection: String?     // B: rtdir
     let finalDestination : String?  // b: des t: destSt
     let cellStyle : String?
 
-    init( rId:String?, rtShortName:Int?, rtLN:String?, rtType:Int?, rtStyle:String?, rtDirection:String?, final:String? ){
+    init( rId:String?, rtShortName:String?, rtLN:String?, rtType:Int?, rtStyle:String?, rtDirection:String?, final:String? ){
         self.rId = rId
         self.routeShortName = rtShortName
         self.routeLongName  = rtLN
@@ -27,6 +27,11 @@ class Route : PublicTransit {
         self.routeDirection = rtDirection
         self.finalDestination = final
         self.cellStyle = rtStyle
+    }
+    var stopId: String? {
+        get {
+            return nil
+        }
     }
     var routeId: String? {
         get {

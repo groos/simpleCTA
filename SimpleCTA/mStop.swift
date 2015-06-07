@@ -13,7 +13,7 @@ class Stop: PublicTransit {
     
     var perdications : [Prediction]? = nil
     
-    let stationID: Int?      // t: staId b: stpid db: stop_id
+    let stationID: String?      // t: staId b: stpid db: stop_id
     let stationName: String?    // B: stpnm t: staNm db: stop_Name or stop_desc
     let routeLongName: String?
     let stopLatitude: Double?   // b: lat db: stop_lat
@@ -28,7 +28,7 @@ class Stop: PublicTransit {
     let routeDirection: String?     // B: rtdir // should be enum
     let distanceToUser: Double?     // calc of how close and need to setup a sort by
     
-    init(rId:String?, sId:Int?, sName:String?, routeLongName:String?, lat:Double?,lon:Double?,rtDir:String?,distance:Double?, locType:Int?, style:String? ){
+    init(rId:String?, sId:String?, sName:String?, routeLongName:String?, lat:Double?,lon:Double?,rtDir:String?,distance:Double?, locType:Int?, style:String? ){
         self.rId = rId
         self.stationID = sId
         self.stationName = sName
@@ -43,6 +43,11 @@ class Stop: PublicTransit {
         self.cellStyle = style
     }
     
+    var stopId: String? {
+        get {
+            return self.stationID
+        }
+    }
     
     var routeId: String? {
         get {
@@ -56,8 +61,8 @@ class Stop: PublicTransit {
     }
     var title: String? {
         get {
-            if let rln = self.routeLongName, sn = self.routeDirection {
-               return "\(rln) at \(sn) .5 miles"
+            if let st = self.stationName, sn = self.routeDirection {
+               return "\(st) at \(sn)"
             }
             return "Error"
         }

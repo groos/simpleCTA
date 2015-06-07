@@ -98,10 +98,10 @@ class DB {
                     var rdir =  rs.stringForColumn("direction")
                     var sid =   rs.stringForColumn("stop_id")
             
-                var s = Stop(rId: rid , sId: sid.toInt(), sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
+                var s = Stop(rId: rid , sId: sid, sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
                         lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
-                    
                     stop.append(s)
+                
                 }
             } else {
                 println("select failed: \(database.lastErrorMessage())")

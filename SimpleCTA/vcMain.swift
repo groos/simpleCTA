@@ -38,6 +38,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         reloadTable()
     }
+
     func reloadTable() {
         dispatch_async(dispatch_get_main_queue()) {
             self.tableView.reloadData()
@@ -66,18 +67,20 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cta.gotStop = true
         }
     }
+
     func setup() {
       //  routeHeader.hidden = true
-//        stopLabel.text = nil
-//        stopImage.image = nil
-//        routeLabel.text = nil
-//        routeImage.image = nil
+        stopLabel.text = nil
+        stopImage.image = nil
+        routeLabel.text = nil
+        routeImage.image = nil
         
     }
 
     
     
     ///////// functions user actions /////////
+
     @IBAction func dbParametersButtonPressed(sender: UIButton) {
         
         if sender.selected {
@@ -102,7 +105,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     ///////////////// table view /////////////////////
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -187,6 +190,8 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             vcpaultest.view.frame = view.frame
             switchViewController(from: vcnicktest, to: vcpaultest)
+        let a = cta.route as! Route
+            a.routeType
         }
         UIView.commitAnimations()
     }
@@ -194,7 +199,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     ///////////////// view methods ////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setup()
+      //  setup()
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,14 @@
 import UIKit
 
 class vcNickTest: UIViewController, NSXMLParserDelegate {
-    
+    func gethtml () {
+        let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
+        let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
+            print(bushttp)
+            print(trainHttp)
+        
+        
+    }
 
     @IBAction func parseXML(sender: UIButton) {
         parser.myParse()
@@ -17,8 +24,13 @@ class vcNickTest: UIViewController, NSXMLParserDelegate {
         if let route = ROUTES_KEYS[0] as? String{
             parser.updateRouteDetails(route)
         }
+        
     }
 
+    @IBAction func httpbuttonPruessed(sender: UIButton) {
+        gethtml()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

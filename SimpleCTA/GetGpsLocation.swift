@@ -37,8 +37,8 @@ class UserGps: NSObject {
                 
    // REMOVE IF YOU WANT TO USE REAL LOCATION SERVICES.
                 // ///////////////////////////////////
- // /*------*/    GPS.latitude = 41.925222
- // /*------*/    GPS.longitude = -87.653689
+  /*------*/    GPS.latitude = 41.925222
+  /*------*/    GPS.longitude = -87.653689
                 /////////////////////////////////////
                 
                 
