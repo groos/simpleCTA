@@ -18,7 +18,7 @@ class XMLTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == UpperTableView {
-            println("upper found")
+            //println("upper found")
             return ACTIVE_ROUTE_DETAILS.count
         }
         return 0
@@ -39,6 +39,7 @@ class XMLTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
