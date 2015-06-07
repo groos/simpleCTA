@@ -67,7 +67,28 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cta.gotStop = true
         }
     }
+    
+    func gethtml () {
+        let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
+        let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
+        print(bushttp)
+        //print(trainHttp)
+        
+        
+    }
 
+    @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
+//        cta.gotRoute = false
+//        cta.gotStop = false
+//        cta.route = nil
+//        cta.stop = nil
+//        DB().getRoutesByLocation()
+//        
+//        
+//            self.tableView.reloadData()
+        
+        gethtml()
+    }
     func setup() {
       //  routeHeader.hidden = true
         stopLabel.text = nil

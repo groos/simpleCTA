@@ -96,9 +96,9 @@ class sbBusHttpReqests {
     // vid or stpid required but not both
     // rt only with vid - optional
     // top - optional
-
+//(stpid != nil && rt != nil)
     func predictions (stpid:String?, rt:String?,vid:String?,top:String?) -> NSURL? {
-        if (stpid != nil && vid != nil) || (stpid == nil && vid == nil) || (stpid != nil && rt != nil) { return nil }
+        if (stpid != nil && vid != nil) || (stpid == nil && vid == nil)   { return nil }
         if let bk = busKey, u = predictionsBaseUrl {
             var url = "\(u)?key=\(bk)"
             if let s = stpid {

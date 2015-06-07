@@ -34,7 +34,7 @@ class DbQueryBuilder {
             if let routeType = whereRouteType () {
                 statement += routeType
             }
-            print(statement)
+            //print(statement)
             return statement
         }
     
@@ -71,7 +71,7 @@ class DbQueryBuilder {
         if let routeType = whereRouteType () {
             statement += routeType
         }
-        print(statement)
+        //print(statement)
         return statement
     }
     

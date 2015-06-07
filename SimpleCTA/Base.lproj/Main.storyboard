@@ -61,12 +61,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKM-WJ-4BG" userLabel="Bus">
                                 <rect key="frame" x="74" y="20" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27058823529411763" green="0.28627450980392155" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Llf-m2-eaN"/>
                                     <constraint firstAttribute="width" constant="50" id="UoF-8u-nHp"/>
                                 </constraints>
-                                <state key="normal" image="queryBus">
+                                <state key="normal" image="cellWhiteBus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -123,7 +123,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="refresh" id="ssc-uS-Kk3">
                                         <connections>
-                                            <action selector="goButtonPressed:" destination="p27-2I-VFw" id="Bqv-wd-BV6"/>
+                                            <action selector="refreshButtonClicked:" destination="p27-2I-VFw" id="QRD-9P-KVu"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="xC9-s7-6pN">
@@ -201,7 +201,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.77647058823529413" green="0.047058823529411764" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.85911563306889205" green="0.0" blue="0.18171024370398292" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yellow" textLabel="LdS-Gg-sIw" imageView="9ki-Lp-MQw" style="IBUITableViewCellStyleDefault" id="RVS-iF-LJN">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -237,7 +237,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.75758144663993898" green="0.76315160591054865" blue="0.77986208372237786" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="green" textLabel="N7I-X7-UgE" imageView="aLQ-c6-9Li" style="IBUITableViewCellStyleDefault" id="Woa-y9-kLp">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -698,7 +698,6 @@
     <resources>
         <image name="cellWhiteBus" width="43" height="43"/>
         <image name="cellWhiteTrain" width="43" height="43"/>
-        <image name="queryBus" width="50" height="50"/>
         <image name="queryEast" width="50" height="50"/>
         <image name="queryNorth" width="50" height="50"/>
         <image name="querySouth" width="50" height="50"/>
