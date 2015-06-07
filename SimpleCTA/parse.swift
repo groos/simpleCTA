@@ -25,7 +25,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930
     //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5
     
-    var URLRequest = NSURL(string: "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930")
+    var URLRequest = NSURL(string: "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5")
     
     /* Here is the xml object we want.
     or paste this in browser: http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5
@@ -68,9 +68,11 @@ class Parse: NSObject, NSXMLParserDelegate {
     var destination = NSMutableString()
     
     // custom function to set up and call superclass parser methods (below)
-    @IBAction func myParse(){
+    func myParse(){
+        println("in myParse")
+        println(URLRequest!)
         ROUTES.removeAllObjects()
-        var xmlParser = NSXMLParser(contentsOfURL: URLRequest)
+        var xmlParser = NSXMLParser(contentsOfURL: URLRequest!)
         xmlParser?.delegate = self
         xmlParser?.parse()
         updateRoutes()
@@ -86,8 +88,13 @@ class Parse: NSObject, NSXMLParserDelegate {
         URLRequest = NSURL(string: url)
     }
     
+    func setNSURL(url: NSURL){
+        URLRequest = url
+    }
+    
     //
     func updateRoutes(){
+        println("in updateRoutes")
         ROUTES_KEYS.removeAllObjects()
         ACTIVE_ROUTE_DETAILS.removeAllObjects()
         
@@ -105,7 +112,7 @@ class Parse: NSObject, NSXMLParserDelegate {
         if let d = ROUTES[route] as? NSMutableArray {
             println("got routes of route")
             for eta in d {
-                //println("added details for route " + route)
+                println("added details for route " + route)
                 ACTIVE_ROUTE_DETAILS.addObject(eta)
             }
         }
@@ -115,6 +122,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     // First superclass parser function that gets called. Stop it on the object name you want (eta object is below)
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         
+        println("in parser")
         // store current element name in outer class
         // so it can referenced from other parser method
         element = elementName
@@ -132,22 +140,26 @@ class Parse: NSObject, NSXMLParserDelegate {
             rt = ""
             destination = NSMutableString.alloc()
             destination = ""
+            
+            println("found an eta object")
         }
+        println("element name:")
+        println(elementName)
     }
     
     // Second parser func that gets called throughout.
     // gets actual data inside tags
-    func parser(parser: NSXMLParser!, foundCharacters string: String!) {
+    func parser(parser: NSXMLParser!, foundCharacters string: String?) {
         if element.isEqualToString("staID"){
-            staID.appendString(string)
+            staID.appendString(string!)
         } else if element.isEqualToString("arrT"){
-            arrT.appendString(string)
+            arrT.appendString(string!)
         } else if element.isEqualToString("rn"){
-            rn.appendString(string)
+            rn.appendString(string!)
         } else if element.isEqualToString("rt"){
-            rt.appendString(string)
+            rt.appendString(string!)
         } else if element.isEqualToString("destNm"){
-            destination.appendString(string)
+            destination.appendString(string!)
         }
     }
     
@@ -171,24 +183,6 @@ class Parse: NSObject, NSXMLParserDelegate {
             if !destination.isEqual(nil){
                 elements.setObject(destination, forKey: "destNm")
             }
-            
-            /*
-            redefine posts (let's call it Lines) to be a dictionary of arrays
-            
-            // this would be a private variable at the top of class
-            var Lines = NSMutableDictionary()
-            
-            // get routeID string from the current xml
-            // this name needs to be consistent with names user selects from Main TableView
-            var L = elements("rt")
-            
-            if posts[L] is nil {
-            posts[L] = new NSMutableArray()
-            posts[L].addObject(elements)
-            } else {
-            posts[L].addObject(elements)
-            }
-            */
             
             
             // rt will be something like "blue" or "R" indicating a Route.

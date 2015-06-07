@@ -39,7 +39,36 @@ class XMLTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
+        if let a = cta.route as? Route {
+            if let type = a.routeType {
+                if type == 1 {
+                    println("train request going out")
+                    let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)?.absoluteString
+                    
+                    var trainHttpString = "http://" + trainHttp!
+                    
+                    parser.setUrl(trainHttpString)
+                    println(trainHttp!)
+                    
+                    parser.myParse()
+                    parser.updateRouteDetails(a.routeId!)
+                } else if type == 3 {
+                    
+                    let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)?.absoluteString
+                    
+                    println("bus link:")
+                    println(bushttp)
+                    
+                    //var busHttpString = "http://" + bushttp!
+                    //parser.setUrl(busHttpString)
+                    
+                    parser.myParse()
+                    parser.updateRouteDetails(a.routeId!)
+                }
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
