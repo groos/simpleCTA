@@ -68,14 +68,14 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
 
- //   func setup() {
+    func setup() {
       //  routeHeader.hidden = true
-//        stopLabel.text = nil
-//        stopImage.image = nil
-//        routeLabel.text = nil
-//        routeImage.image = nil
+        stopLabel.text = nil
+        stopImage.image = nil
+        routeLabel.text = nil
+        routeImage.image = nil
         
-   // }
+    }
 
     
     
@@ -190,6 +190,8 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             UIView.setAnimationTransition(.FlipFromLeft, forView: view, cache: true)
             vcpaultest.view.frame = view.frame
             switchViewController(from: vcnicktest, to: vcpaultest)
+        let a = cta.route as! Route
+            a.routeType
         }
         UIView.commitAnimations()
     }
@@ -197,7 +199,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     ///////////////// view methods ////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setup()
+      //  setup()
     }
 
     override func didReceiveMemoryWarning() {

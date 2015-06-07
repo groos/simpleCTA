@@ -56,8 +56,8 @@ class Stop: PublicTransit {
     }
     var title: String? {
         get {
-            if let sn = self.stationName, d = self.routeDirection {
-               return "\(sn) at \(d)"
+            if let rln = self.routeLongName, sn = self.routeDirection {
+               return "\(rln) at \(sn) .5 miles"
             }
             return "Error"
         }
