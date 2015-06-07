@@ -62,7 +62,7 @@ class DbQueryBuilder {
         "AND d.direction_id = rds.direction_id    "
             
         if let r = route {
-           statement += " and r.route_id =  \(r) "
+           statement += " and r.route_id =  \'\(r)\' "
         }
         if let radius = whereSeachRadius() {
             statement += radius
@@ -94,7 +94,7 @@ class DbQueryBuilder {
         var isFirst = true
         
        if dbParams["N"] == true {
-         if isFirst == false { directions! += " ,1 "} else { directions = " 1 "; isFirst = false }
+            directions = " 1 "; isFirst = false
         }
         if dbParams["S"] == true {
             if isFirst == false { directions! += " ,2 "} else { directions = " 2 "; isFirst = false }
@@ -113,7 +113,7 @@ class DbQueryBuilder {
         var isFirst = true
         
         if dbParams["Bus"] == true {
-            if isFirst == false { routeType = " ,3 " } else { routeType! += " 3 "; isFirst = false}
+             routeType! += " 3 "; isFirst = false
         }
         if dbParams["Train"] == true {
             if isFirst == false { routeType = " ,1 " } else { routeType! += " 1 "; isFirst = false}
