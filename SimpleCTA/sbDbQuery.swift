@@ -34,15 +34,13 @@ class DbQueryBuilder {
             if let routeType = whereRouteType () {
                 statement += routeType
             }
+            print(statement)
             return statement
         }
     
-    
-    
-    
     func getStopsByRoute(route:String?) -> String {
         
-       var statement = "SELECT DISTINCT r.route_id, " +
+       var statement = "SELECT distinct r.route_id, " +
         "r.route_long_name,    " +
         "r.route_style,    " +
         "s.stop_name,    " +
@@ -73,6 +71,7 @@ class DbQueryBuilder {
         if let routeType = whereRouteType () {
             statement += routeType
         }
+        print(statement)
         return statement
     }
     
@@ -96,16 +95,16 @@ class DbQueryBuilder {
        if dbParams["N"] == true {
             directions = " 1 "; isFirst = false
         }
-        if dbParams["S"] == true {
+        if dbParams["S"]! == true {
             if isFirst == false { directions! += " ,2 "} else { directions = " 2 "; isFirst = false }
         }
-        if dbParams["E"] == true {
+        if dbParams["E"]! == true {
             if isFirst == false { directions! += " ,3 "} else { directions = " 3 "; isFirst = false }
         }
-        if dbParams["W"] == true {
+        if dbParams["W"]! == true {
             if isFirst == false { directions! += " ,4 "} else { directions = " 4 "; isFirst = false }
         }
-        return isFirst == true ? nil : " AND d.direction_id in (\(directions)) "
+        return isFirst == true ? nil : " AND d.direction_id in (\(directions!)) "
     }
     
     func whereRouteType () -> String? {
@@ -115,10 +114,15 @@ class DbQueryBuilder {
         if dbParams["Bus"] == true {
              routeType! += " 3 "; isFirst = false
         }
-        if dbParams["Train"] == true {
-            if isFirst == false { routeType = " ,1 " } else { routeType! += " 1 "; isFirst = false}
+        if dbParams["Train"]! == true {
+            if isFirst == true {
+                routeType = " 1 "
+                isFirst = false
+            } else {
+                routeType! += " ,1 " ;
+            }
         }
-        if let ret = routeType { let x =  " AND r.route_type in ( \(ret) ) "; return x } else { return nil }
+         if let ret = routeType { let x =  " AND r.route_type in ( \(ret) ) "; return x } else { return nil }
     }
 }
 
