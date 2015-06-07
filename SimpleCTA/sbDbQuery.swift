@@ -93,7 +93,7 @@ class DbQueryBuilder {
         var isFirst = true
         
        if dbParams["N"]! == true {
-         if isFirst == false { directions = " 1 "; isFirst = false }
+          directions = " 1 "; isFirst = false 
         }
         if dbParams["S"]! == true {
             if isFirst == false { directions! += " ,2 "} else { directions = " 2 "; isFirst = false }
