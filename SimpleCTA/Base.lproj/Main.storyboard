@@ -29,7 +29,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="7j2-kv-gcG"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="U3R-XG-oM3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILH-wr-nSZ" userLabel="South">
@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="Y4D-vB-iNX"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="7ZF-G7-kl4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmI-SN-uYi" userLabel="East">
@@ -59,7 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="HaK-Mv-vSW"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="QTE-2u-sHC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKM-WJ-4BG" userLabel="Bus">
@@ -74,7 +74,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="lWh-Xn-yHU"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="34L-EK-Baa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duj-B1-L5i" userLabel="West">
@@ -89,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="v25-Nb-ld7"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="H9I-I3-75U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-hM-2CT" userLabel="Train">
@@ -104,7 +104,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="sCT-pD-J1V"/>
+                                    <action selector="dbParametersButtonPressed:" destination="p27-2I-VFw" eventType="touchUpInside" id="rrn-Mu-ugx"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-oI-23x">
@@ -133,7 +133,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="refresh" id="ssc-uS-Kk3">
                                         <connections>
-                                            <action selector="refreshButtonClicked:" destination="p27-2I-VFw" id="QRD-9P-KVu"/>
+                                            <action selector="refreshButtonPressed:" destination="p27-2I-VFw" id="yKG-j6-KNe"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="xC9-s7-6pN">

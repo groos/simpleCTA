@@ -20,48 +20,23 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView:    UITableView!
     
     //////// buttons / views /////////////
-    @IBOutlet var routeHeader: UIView!
     @IBOutlet var dbParameters: [UIButton]!
-    @IBOutlet var routeImage:   UIImageView!
-    @IBOutlet var routeLabel:   UILabel!
-    @IBOutlet var stopImage:    UIImageView!
-    @IBOutlet var stopLabel:    UILabel!
     
     /////////  table data source ///////////
     private var transit : [PublicTransit]? = DB().getRoutesByLocation()
     
-    @IBAction func goButtonPressed(sender: UIBarButtonItem) {
-        if cta.gotRoute == false {
-            transit = DB().getRoutesByLocation()
-        } else {
-            transit = DB().getStopsByRoute(cta.route?.routeId!)
-        }
-        reloadTable()
-    }
+//    @IBAction func goButtonPressed(sender: UIBarButtonItem) {
+//        if cta.gotRoute == false {
+//            transit = DB().getRoutesByLocation()
+//        } else {
+//            transit = DB().getStopsByRoute(cta.route?.routeId!)
+//        }
+//        reloadTable()
+//    }
 
-    func reloadTable() {
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
-        }
-    }
+
     ///////////////////////////////////////////////////////////
-    func handelInput (itemSelected : PublicTransit) {
-        // route selected
-        if cta.gotRoute == false {
-            // set bools
-            cta.gotRoute = true
-            cta.route = itemSelected
-            // reload data
-            transit = DB().getStopsByRoute(itemSelected.routeId)
-            reloadTable()
-        // stop selected
-        } else {
 
-                // set bools
-                cta.stop = itemSelected
-                cta.gotStop = true
-        }
-    }
     
     func gethtml () {
         let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
@@ -69,29 +44,31 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         //print(bushttp)
     }
 
-    @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
-        cta.gotRoute = false
-        cta.gotStop = false
-        cta.route = nil
-        cta.stop = nil
-        DB().getRoutesByLocation()
-        
-        self.tableView.reloadData()
-        
-        var k = dbParams.keys        
-        for key in k {
-            dbParams[key] = false
-        }
-        
-        gethtml()
-    }
+//    @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
+//        cta.gotRoute = false
+//        cta.gotStop = false
+//        cta.route = nil
+//        cta.stop = nil
+//        DB().getRoutesByLocation()
+//        
+//        self.tableView.reloadData()
+//        
+//        var k = dbParams.keys        
+//        for key in k {
+//            dbParams[key] = false
+//        }
+//        
+//        gethtml()
+//    }
 
     
     @IBAction func downloadDb(sender: UIBarButtonItem) {
         DB().DownloadDatabase()
     }
     
-    ///////// functions user actions /////////
+    //////////////////////////////////////////////////
+    /////////// deal with reloading / loading of data
+    //////////////////////////////////////////////
 
     @IBAction func dbParametersButtonPressed(sender: UIButton) {
         
@@ -108,7 +85,68 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 println(dbParams[text])
             }
         }
+        if cta.gotRoute == false {
+            self.reloadTable("Route")
+        } else {
+            self.reloadTable("Stopo")
+        }
     
+    }
+    
+    
+    @IBAction func refreshButtonPressed(sender: AnyObject)  {
+        
+        /// set values
+        dbParams = ["N": false, "S": false, "E" : false, "W": false, "Bus":false, "Train":false ]
+        cta.route = nil
+        cta.stop = nil
+        cta.gotRoute = false
+        cta.gotStop = false
+        
+        // call reload table
+        self.reloadTable("Route")
+        
+    }
+    
+    func handelInput (itemSelected : PublicTransit)  {
+        var getWhat : String? = nil
+        // route selected
+        if cta.gotRoute == false {
+            // set bools
+            cta.gotRoute = true
+            cta.route = itemSelected
+            getWhat = "Route"
+        } else {
+            cta.stop = itemSelected
+            cta.gotStop = true
+            getWhat = "Stop"
+        }
+        self.reloadTable(getWhat)
+        
+    }
+    
+    func getData (getWhat:String?) {
+        if let what = getWhat {
+            switch(what) {
+                case "Route":
+                    self.transit = DB().getRoutesByLocation()
+                    break
+                case "Stop":
+                    transit = DB().getStopsByRoute(cta.route?.routeId)
+                    break
+                default :
+                    self.transit = DB().getRoutesByLocation()
+                    break
+            }
+        }
+        
+    }
+    
+    func reloadTable(getWhat:String?) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.getData(getWhat)
+            self.tableView.reloadData()
+        }
     }
     
     
