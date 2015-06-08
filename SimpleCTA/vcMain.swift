@@ -87,6 +87,9 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     
+    @IBAction func downloadDb(sender: UIBarButtonItem) {
+        DB().DownloadDatabase()
+    }
     
     ///////// functions user actions /////////
 
@@ -108,9 +111,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     }
     
-    @IBAction func goButtonPushed(sender: UIButton) {
-        DB().DownloadDatabase()
-    }
     
     ///////////////// table view /////////////////////
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

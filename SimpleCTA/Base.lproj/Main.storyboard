@@ -110,7 +110,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HKb-oI-23x">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="save" id="9aT-xZ-Anv"/>
+                                    <barButtonItem style="plain" systemItem="save" id="9aT-xZ-Anv">
+                                        <connections>
+                                            <action selector="downloadDb:" destination="p27-2I-VFw" id="AGa-M5-hnu"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem image="redo" style="plain" id="FDV-Ki-Eoy">
                                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="11" maxY="0.0"/>
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="B5s-vT-Y5Y">
