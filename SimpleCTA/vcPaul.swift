@@ -17,6 +17,7 @@ class vcPaulTest: UIViewController {
     @IBOutlet weak var searchRadius: UILabel!
     @IBOutlet weak var routesReturned: UILabel!
     @IBOutlet weak var routesReturnedStepper: UIStepper!
+    @IBOutlet weak var Meters: UISwitch!
     
     @IBAction func updateSearchRadius(sender: UISlider) {
         searchRadius.text = sender.value.description
@@ -71,8 +72,31 @@ class vcPaulTest: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        routesReturnedStepper.value = 10.0
-        searchRadiusSlider.value = 2.0
+        
+        if let degrees = Settings.searchRadius {
+            if let mult = Settings.searchRadiusMultiplier {
+                searchRadiusSlider.value = Float(degrees / mult)
+                searchRadius.text = Double(degrees / mult).description
+            }
+        }
+        
+        if let results = Settings.numberSearchResults {
+            routesReturnedStepper.value = Double(results)
+            routesReturned.text = String(results)
+        }
+        
+        if let m = Settings.useMeters {
+            if m {
+                Meters.setOn(true, animated: false)
+                searchRadiusLabel.text = "Search Radius (kilometers)"
+            } else {
+                Meters.setOn(false, animated: false)
+                searchRadiusLabel.text = "Search Radius (miles)"
+            }
+        }
+        
+        //routesReturnedStepper.value = 10.0
+        //searchRadiusSlider.value = 2.0
     }
 
     override func didReceiveMemoryWarning() {

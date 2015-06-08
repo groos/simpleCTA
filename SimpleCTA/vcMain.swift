@@ -78,14 +78,18 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
-//        cta.gotRoute = false
-//        cta.gotStop = false
-//        cta.route = nil
-//        cta.stop = nil
-//        DB().getRoutesByLocation()
-//        
-//        
-//            self.tableView.reloadData()
+        cta.gotRoute = false
+        cta.gotStop = false
+        cta.route = nil
+        cta.stop = nil
+        DB().getRoutesByLocation()
+        
+        self.tableView.reloadData()
+        
+        var k = dbParams.keys        
+        for key in k {
+            dbParams[key] = false
+        }
         
         gethtml()
     }
