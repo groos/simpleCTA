@@ -136,7 +136,7 @@
                                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="W6v-2f-zff" kind="show" id="9pM-hX-n8s"/>
+                                                <segue destination="W6v-2f-zff" kind="show" identifier="ArrivalTimesSegue" id="9pM-hX-n8s"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -473,7 +473,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="p27-2I-VFw" kind="show" id="LcY-R9-RUJ"/>
+                                                <segue destination="p27-2I-VFw" kind="show" identifier="NickTestBack" id="LcY-R9-RUJ"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -485,7 +485,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="tZR-wo-M0w" kind="show" id="STk-bH-UOb"/>
+                                                <segue destination="tZR-wo-M0w" kind="show" identifier="NickPaul" id="STk-bH-UOb"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -506,7 +506,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W6v-2f-zff" kind="show" id="2PB-g1-7Sf"/>
+                                    <segue destination="W6v-2f-zff" kind="show" identifier="NickTestArrivals" id="2PB-g1-7Sf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -531,6 +531,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.051549096410000002" green="0.1333073421" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jwE-FE-yqI">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Back" id="UeH-1P-cJf">
+                                    <connections>
+                                        <segue destination="p27-2I-VFw" kind="show" identifier="ArrivalsBack" id="Ki4-qw-9Of"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailsCell" textLabel="YdQ-M5-4NL" detailTextLabel="dxa-rg-HQ1" style="IBUITableViewCellStyleValue2" id="6CE-jq-vvS">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -560,10 +571,16 @@
                     </tableView>
                     <connections>
                         <outlet property="UpperTableView" destination="q1K-AY-pto" id="RPx-k6-XcO"/>
-                        <segue destination="p27-2I-VFw" kind="show" id="pyP-U6-9D6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb0-gF-0kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gjM-hR-6fo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Item" id="iXu-nl-Mfb"/>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-249" y="1378"/>
         </scene>
@@ -602,7 +619,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="yEm-wF-Dcj" kind="show" id="OSd-lq-Y2U"/>
+                                                <segue destination="yEm-wF-Dcj" kind="show" identifier="SettingsNick" id="OSd-lq-Y2U"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -710,7 +727,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="STk-bH-UOb"/>
-        <segue reference="2PB-g1-7Sf"/>
         <segue reference="LcY-R9-RUJ"/>
+        <segue reference="2PB-g1-7Sf"/>
     </inferredMetricsTieBreakers>
 </document>
