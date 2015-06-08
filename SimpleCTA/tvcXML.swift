@@ -44,7 +44,7 @@ class XMLTableViewController: UITableViewController {
         if let a = cta.route as? Route {
             if let type = a.routeType {
                 if type == 1 {
-                    println("train request going out")
+                    //println("train request going out")
                     let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)?.absoluteString
                     
                     var trainHttpString = "http://" + trainHttp!
@@ -65,7 +65,14 @@ class XMLTableViewController: UITableViewController {
                     parser.setUrl(busHttpString)
                     
                     parser.myParse()
+                    
+                    println("route id is: " + String(a.routeId!))
+                    
                     parser.updateRouteDetails(a.routeId!)
+                    
+                    println(ROUTES.count)
+                    println(ROUTES_KEYS.count)
+                    println(ACTIVE_ROUTE_DETAILS.count)
                 }
             }
         }

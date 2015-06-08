@@ -100,7 +100,7 @@ class Parse: NSObject, NSXMLParserDelegate {
         
         var k = ROUTES.keyEnumerator()
         for key in k {
-            ROUTES_KEYS.addObject(key)
+            ROUTES_KEYS.addObject(String(key as! NSString))
             println("added key " + (key as! String))
         }
     }
@@ -122,12 +122,11 @@ class Parse: NSObject, NSXMLParserDelegate {
     // First superclass parser function that gets called. Stop it on the object name you want (eta object is below)
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         
-        println("in parser")
         // store current element name in outer class
         // so it can referenced from other parser method
         element = elementName
         
-        if (elementName as NSString).isEqualToString("eta"){
+        if (elementName as NSString).isEqualToString("eta") || (elementName as NSString).isEqualToString("prd") {
             elements = NSMutableDictionary.alloc()
             elements = [:]
             staID = NSMutableString.alloc()
@@ -141,10 +140,7 @@ class Parse: NSObject, NSXMLParserDelegate {
             destination = NSMutableString.alloc()
             destination = ""
             
-            println("found an eta object")
         }
-        println("element name:")
-        println(elementName)
     }
     
     // Second parser func that gets called throughout.
@@ -160,6 +156,12 @@ class Parse: NSObject, NSXMLParserDelegate {
             rt.appendString(string!)
         } else if element.isEqualToString("destNm"){
             destination.appendString(string!)
+        } else if element.isEqualToString("stpid"){ // bus attributes start here
+            staID.appendString(string!)
+        } else if element.isEqualToString("des"){
+            destination.appendString(string!)
+        } else if element.isEqualToString("prdtm"){
+            arrT.appendString(string!)
         }
     }
     
@@ -167,7 +169,7 @@ class Parse: NSObject, NSXMLParserDelegate {
     // called when finding a closing element. Adds the finished strings to dictionary
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
-        if (elementName as NSString).isEqualToString("eta") {
+        if (elementName as NSString).isEqualToString("eta") || (elementName as NSString).isEqualToString("prd"){
             if !staID.isEqual(nil) {
                 elements.setObject(staID, forKey: "staID")
             }
@@ -179,6 +181,7 @@ class Parse: NSObject, NSXMLParserDelegate {
             }
             if !rt.isEqual(nil){
                 elements.setObject(rt, forKey: "rt")
+                println("rt is: " + String(rt))
             }
             if !destination.isEqual(nil){
                 elements.setObject(destination, forKey: "destNm")
@@ -188,21 +191,22 @@ class Parse: NSObject, NSXMLParserDelegate {
             // rt will be something like "blue" or "R" indicating a Route.
             // we will store an array of arrival data objects for each Route
             if let rt = elements["rt"] as? String {
-                
+                println("got route key: " + rt)
                 // if we have already created an array for this Route, add the elements to it
                 
                 
                 if let route = ROUTES[rt] as? NSMutableArray{
                     ROUTES[rt]!.addObject(elements)
                     println("added a new object for a line")
-                    
+                    println(ROUTES[rt]!.count)
                     
                 } else {
                     // array for this Route doesn't exist yet, so create a new one
                     ROUTES[rt] = NSMutableArray()
                     ROUTES[rt]!.addObject(elements)
                     println("created new line array and added an object")
-                    println(rt)
+                    println("count? " )
+                    println(ROUTES[rt]!.count)
                 }
                 
             } else {
