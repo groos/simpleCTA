@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="p27-2I-VFw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="p27-2I-VFw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -319,64 +319,10 @@
                                     <outlet property="delegate" destination="p27-2I-VFw" id="Vdl-g7-PZI"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Nmd-el-5WW" userLabel="route Header">
-                                <rect key="frame" x="0.0" y="70" width="600" height="1"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yos-DK-qho">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="0.0"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="cEz-cY-IkV"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-da-yJ0">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-3i-y4O">
-                                        <rect key="frame" x="0.0" y="1" width="0.0" height="0.0"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-sd-aqd">
-                                        <rect key="frame" x="8" y="1" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Yos-DK-qho" firstAttribute="top" secondItem="Nmd-el-5WW" secondAttribute="top" id="4lZ-cU-xKZ"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="leading" secondItem="Nmd-el-5WW" secondAttribute="leading" id="BaC-Ed-IYG"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xls-da-yJ0" secondAttribute="bottom" constant="1" id="BeL-Nk-Gzn"/>
-                                    <constraint firstItem="Yos-DK-qho" firstAttribute="centerY" secondItem="Xls-da-yJ0" secondAttribute="centerY" id="Gjd-gZ-Vba"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="top" secondItem="Yos-DK-qho" secondAttribute="bottom" constant="1" id="H8K-T1-mZ8"/>
-                                    <constraint firstItem="Yos-DK-qho" firstAttribute="leading" secondItem="Nmd-el-5WW" secondAttribute="leading" id="HEL-7c-ef5"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="top" secondItem="Yos-DK-qho" secondAttribute="bottom" constant="1" id="P1b-BC-dha"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="top" secondItem="Nmd-el-5WW" secondAttribute="top" constant="1" id="Q2B-ob-pN0"/>
-                                    <constraint firstItem="Xls-da-yJ0" firstAttribute="top" secondItem="Nmd-el-5WW" secondAttribute="top" id="bIY-Cv-18o"/>
-                                    <constraint firstItem="fc6-sd-aqd" firstAttribute="leading" secondItem="0PK-3i-y4O" secondAttribute="trailing" constant="8" id="cZN-TF-HcA"/>
-                                    <constraint firstItem="Xls-da-yJ0" firstAttribute="leading" secondItem="Yos-DK-qho" secondAttribute="trailing" constant="8" id="e2Z-hl-iuf"/>
-                                    <constraint firstItem="fc6-sd-aqd" firstAttribute="leading" secondItem="Nmd-el-5WW" secondAttribute="leading" constant="8" id="fgV-gm-6WM"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="centerY" secondItem="fc6-sd-aqd" secondAttribute="centerY" id="fsc-2w-8I4"/>
-                                    <constraint firstItem="0PK-3i-y4O" firstAttribute="leading" secondItem="Nmd-el-5WW" secondAttribute="leading" id="m4c-sj-sgt"/>
-                                    <constraint firstItem="fc6-sd-aqd" firstAttribute="top" secondItem="Nmd-el-5WW" secondAttribute="top" constant="1" id="pBd-46-ROS"/>
-                                    <constraint firstAttribute="bottom" secondItem="0PK-3i-y4O" secondAttribute="bottom" id="qbu-fp-Tsw"/>
-                                    <constraint firstItem="Xls-da-yJ0" firstAttribute="leading" secondItem="Nmd-el-5WW" secondAttribute="leading" id="rrg-v4-tBs"/>
-                                    <constraint firstAttribute="bottom" secondItem="fc6-sd-aqd" secondAttribute="bottom" id="sb4-l5-ZPG"/>
-                                    <constraint firstAttribute="bottom" secondItem="0PK-3i-y4O" secondAttribute="bottom" id="t4S-1H-chA"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="e2Z-hl-iuf"/>
-                                        <exclude reference="H8K-T1-mZ8"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ILH-wr-nSZ" firstAttribute="leading" secondItem="nAX-Wx-gb4" secondAttribute="trailing" constant="8" id="17h-CK-w1x"/>
-                            <constraint firstItem="Nmd-el-5WW" firstAttribute="top" secondItem="SyF-hM-2CT" secondAttribute="bottom" id="2MS-4c-XLJ"/>
                             <constraint firstItem="ZKM-WJ-4BG" firstAttribute="top" secondItem="ILH-wr-nSZ" secondAttribute="top" id="2Rc-QZ-YaL"/>
                             <constraint firstItem="nAX-Wx-gb4" firstAttribute="top" secondItem="duj-B1-L5i" secondAttribute="top" id="5eW-00-4oE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HKb-oI-23x" secondAttribute="trailing" id="5g2-3e-nKW"/>
@@ -401,16 +347,14 @@
                             <constraint firstItem="ZKM-WJ-4BG" firstAttribute="top" secondItem="SmI-SN-uYi" secondAttribute="top" id="WOE-6l-Rpn"/>
                             <constraint firstItem="HKb-oI-23x" firstAttribute="leading" secondItem="Oc8-3D-yZv" secondAttribute="leadingMargin" id="X13-VJ-CzQ"/>
                             <constraint firstItem="SmI-SN-uYi" firstAttribute="leading" secondItem="ILH-wr-nSZ" secondAttribute="trailing" constant="8" id="XeC-GL-6UZ"/>
-                            <constraint firstItem="Nmd-el-5WW" firstAttribute="leading" secondItem="Oc8-3D-yZv" secondAttribute="leadingMargin" constant="-16" id="coj-B2-Tww"/>
+                            <constraint firstItem="AAR-kL-Rht" firstAttribute="top" secondItem="ILH-wr-nSZ" secondAttribute="bottom" constant="1" id="f2g-nc-eRz"/>
                             <constraint firstItem="nAX-Wx-gb4" firstAttribute="top" secondItem="SmI-SN-uYi" secondAttribute="top" id="gic-ih-tce"/>
                             <constraint firstItem="HKb-oI-23x" firstAttribute="leading" secondItem="Oc8-3D-yZv" secondAttribute="leadingMargin" constant="-16" id="h0N-dE-WcL"/>
                             <constraint firstItem="duj-B1-L5i" firstAttribute="leading" secondItem="SmI-SN-uYi" secondAttribute="trailing" constant="8" id="htB-vc-ofn"/>
                             <constraint firstItem="nAX-Wx-gb4" firstAttribute="leading" secondItem="ZKM-WJ-4BG" secondAttribute="trailing" constant="8" id="mvb-xk-ivV"/>
                             <constraint firstItem="nAX-Wx-gb4" firstAttribute="top" secondItem="SyF-hM-2CT" secondAttribute="top" id="rQm-p9-1py"/>
-                            <constraint firstItem="AAR-kL-Rht" firstAttribute="top" secondItem="Nmd-el-5WW" secondAttribute="bottom" id="sGQ-pF-sfF"/>
                             <constraint firstItem="HKb-oI-23x" firstAttribute="top" secondItem="AAR-kL-Rht" secondAttribute="bottom" id="ugr-vt-aeR"/>
                             <constraint firstItem="AAR-kL-Rht" firstAttribute="leading" secondItem="Oc8-3D-yZv" secondAttribute="leadingMargin" constant="-16" id="vmI-iX-B3c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nmd-el-5WW" secondAttribute="trailing" constant="-16" id="wL2-Dc-8oZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -432,11 +376,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="routeHeader" destination="Nmd-el-5WW" id="XHh-VM-Jc0"/>
-                        <outlet property="routeImage" destination="Yos-DK-qho" id="J56-85-BDY"/>
-                        <outlet property="routeLabel" destination="Xls-da-yJ0" id="RsE-7L-pqW"/>
-                        <outlet property="stopImage" destination="0PK-3i-y4O" id="qbJ-nE-WO6"/>
-                        <outlet property="stopLabel" destination="fc6-sd-aqd" id="w28-ht-hbR"/>
                         <outlet property="tableView" destination="AAR-kL-Rht" id="qUB-7M-Yko"/>
                         <outletCollection property="dbParameters" destination="nAX-Wx-gb4" collectionClass="NSMutableArray" id="yju-8p-iTa"/>
                         <outletCollection property="dbParameters" destination="ILH-wr-nSZ" collectionClass="NSMutableArray" id="1ZP-f1-PN8"/>
