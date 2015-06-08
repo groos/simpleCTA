@@ -19,7 +19,8 @@ class DbQueryBuilder {
                 "FROM routes_stops AS rs,  " +
                 "stops AS s,  " +
                 "routes AS r,  " +
-                "routes_directions AS rds  " +
+                "routes_directions AS rds,  " +
+                "directions as d "  +
                 "WHERE s.stop_id = rs.stop_id  " +
                 "AND r.r_pk = rs.r_pk  " +
                 "AND s.stop_id = rs.stop_id  " +
@@ -104,7 +105,11 @@ class DbQueryBuilder {
         if dbParams["W"]! == true {
             if isFirst == false { directions! += " ,4 "} else { directions = " 4 "; isFirst = false }
         }
-        return isFirst == true ? nil : " AND d.direction_id in (\(directions!)) "
+        if let d = directions {
+            let ret = " AND rds.direction_id in (\(directions!)) "
+            return ret
+        }
+        return nil
     }
     
     func whereRouteType () -> String? {

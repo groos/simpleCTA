@@ -85,11 +85,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 println(dbParams[text])
             }
         }
-        if cta.gotRoute == false {
             self.reloadTable("Route")
-        } else {
-            self.reloadTable("Stopo")
-        }
     
     }
     
