@@ -48,9 +48,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func handelInput (itemSelected : PublicTransit) {
         // route selected
         if cta.gotRoute == false {
-            // handel the sign
-            routeLabel.text = itemSelected.title
-            routeImage.image = UIImage(named: "cellBlackBus")
             // set bools
             cta.gotRoute = true
             cta.route = itemSelected
@@ -59,9 +56,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             reloadTable()
         // stop selected
         } else {
-                // handel the sign
-                stopLabel.text = itemSelected.title
-                stopImage.image = UIImage(named: "cellBlackBus")
+
                 // set bools
                 cta.stop = itemSelected
                 cta.gotStop = true
@@ -71,10 +66,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func gethtml () {
         let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
         let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
-        print(bushttp)
-        //print(trainHttp)
-        
-        
+        //print(bushttp)
     }
 
     @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
@@ -92,14 +84,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
         gethtml()
-    }
-    func setup() {
-      //  routeHeader.hidden = true
-        stopLabel.text = nil
-        stopImage.image = nil
-        routeLabel.text = nil
-        routeImage.image = nil
-        
     }
 
     
@@ -224,7 +208,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     ///////////////// view methods ////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  setup()
     }
 
     override func didReceiveMemoryWarning() {

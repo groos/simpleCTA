@@ -24,7 +24,8 @@
                                     <constraint firstAttribute="height" constant="50" id="Fcl-Y8-DU0"/>
                                     <constraint firstAttribute="width" constant="50" id="TSE-sY-4k9"/>
                                 </constraints>
-                                <state key="normal" image="queryNorth">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="N" image="queryNorth">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -38,7 +39,8 @@
                                     <constraint firstAttribute="width" constant="50" id="GLx-MA-2BO"/>
                                     <constraint firstAttribute="height" constant="50" id="uhW-5Q-ahg"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="querySouth">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="S" backgroundImage="querySouth">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -52,7 +54,8 @@
                                     <constraint firstAttribute="width" constant="50" id="j8y-DL-27t"/>
                                     <constraint firstAttribute="height" constant="50" id="oTL-c7-smv"/>
                                 </constraints>
-                                <state key="normal" image="queryEast">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="E" image="queryEast">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -66,7 +69,8 @@
                                     <constraint firstAttribute="height" constant="50" id="Llf-m2-eaN"/>
                                     <constraint firstAttribute="width" constant="50" id="UoF-8u-nHp"/>
                                 </constraints>
-                                <state key="normal" image="cellWhiteBus">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="Bus" image="cellWhiteBus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -80,7 +84,8 @@
                                     <constraint firstAttribute="width" constant="50" id="8hL-hb-MBs"/>
                                     <constraint firstAttribute="height" constant="50" id="SUe-Tk-zyx"/>
                                 </constraints>
-                                <state key="normal" image="queryWest">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="W" image="queryWest">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -94,7 +99,8 @@
                                     <constraint firstAttribute="height" constant="50" id="NhI-9T-keY"/>
                                     <constraint firstAttribute="width" constant="50" id="ePK-Uj-ZIP"/>
                                 </constraints>
-                                <state key="normal" image="queryTrain">
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="Train" image="queryTrain">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -165,7 +171,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.63137254901960782" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.63137254901960782" blue="0.87058823529411766" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brown" textLabel="fPf-p7-Fhf" imageView="oA4-6G-a5E" style="IBUITableViewCellStyleDefault" id="iXt-wL-2Nd">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -183,7 +189,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.3843137254901961" green="0.21176470588235294" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.3843137254901961" green="0.21176470588235294" blue="0.10588235294117647" alpha="0.63" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="red" textLabel="b1i-Z8-QLf" imageView="IhW-pl-GTZ" style="IBUITableViewCellStyleDefault" id="hzj-SJ-nha">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +224,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.97647058823529409" green="0.8901960784313725" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.97647058823529409" green="0.8901960784313725" blue="0.0" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bus" textLabel="ba4-I9-Huq" imageView="36Y-QJ-bdf" style="IBUITableViewCellStyleDefault" id="P8E-iN-7hT">
@@ -255,7 +261,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.60784313725490191" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.60784313725490191" blue="0.22745098039215686" alpha="0.69000000000000006" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="orange" textLabel="wX4-Kx-8oV" imageView="RJm-x8-8Fi" style="IBUITableViewCellStyleDefault" id="zMe-3d-UnG">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -273,7 +279,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.97647058823529409" green="0.27450980392156865" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.97647058823529409" green="0.27450980392156865" blue="0.10980392156862745" alpha="0.63" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="purple" textLabel="yuU-3m-2b5" imageView="Rzo-0u-FJW" style="IBUITableViewCellStyleDefault" id="IRC-fc-bpX">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -290,7 +296,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.32156862745098042" green="0.13725490196078433" blue="0.59607843137254901" alpha="0.60999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.60784313729999995" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -309,7 +315,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.88627450980392153" green="0.49411764705882355" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.88627450980392153" green="0.49411764705882355" blue="0.65098039215686276" alpha="0.62" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
