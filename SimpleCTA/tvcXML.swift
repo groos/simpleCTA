@@ -61,8 +61,13 @@ class XMLTableViewController: UITableViewController {
                     println("bus link:")
                     println(bushttp)
                     
-                    var busHttpString = bushttp!
-                    parser.setUrl(busHttpString)
+                    if let bus = bushttp {
+                        var busHttpString = String(bus)
+                        parser.setUrl(busHttpString)
+                    }
+                    
+                    //var busHttpString = bushttp!
+                    //parser.setUrl(bushttp)
                     
                     parser.myParse()
                     
