@@ -399,78 +399,6 @@
             </objects>
             <point key="canvasLocation" x="390" y="602"/>
         </scene>
-        <!--NickTest-->
-        <scene sceneID="QUG-xc-qU3">
-            <objects>
-                <viewController title="NickTest" id="yEm-wF-Dcj" customClass="vcNickTest" customModule="SimpleCTA" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FiR-8L-8oY"/>
-                        <viewControllerLayoutGuide type="bottom" id="DDw-k6-BSr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hij-cS-WiF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRS-nT-fEc">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="j06-Jw-scu">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rBn-Lo-mPo">
-                                            <rect key="frame" x="16" y="7" width="89" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="back to main">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="p27-2I-VFw" kind="show" identifier="NickTestBack" id="LcY-R9-RUJ"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="lj2-QN-iDK">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VZK-Tb-usR">
-                                            <rect key="frame" x="115" y="7" width="81" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="to Paul Test">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="tZR-wo-M0w" kind="show" identifier="NickPaul" id="STk-bH-UOb"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="290-Ce-GbL">
-                                <rect key="frame" x="0.0" y="35" width="274" height="30"/>
-                                <state key="normal" title="Send Request to CTA and Parse">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="parseXML:" destination="yEm-wF-Dcj" eventType="touchUpInside" id="oaa-84-2aN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUk-Od-F9U">
-                                <rect key="frame" x="43" y="104" width="188" height="30"/>
-                                <state key="normal" title="See Results in TableView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="W6v-2f-zff" kind="show" identifier="NickTestArrivals" id="2PB-g1-7Sf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kRS-nT-fEc" secondAttribute="trailing" constant="-16" id="OWC-o2-KVQ"/>
-                            <constraint firstItem="kRS-nT-fEc" firstAttribute="leading" secondItem="Hij-cS-WiF" secondAttribute="leadingMargin" constant="-16" id="gjP-EE-pa8"/>
-                            <constraint firstItem="DDw-k6-BSr" firstAttribute="top" secondItem="kRS-nT-fEc" secondAttribute="bottom" id="phf-4E-rpu"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pXh-W7-VaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="635" y="1886"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="jpH-nY-x1j">
             <objects>
@@ -546,7 +474,7 @@
                     </items>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="-249" y="1378"/>
+            <point key="canvasLocation" x="390" y="1391"/>
         </scene>
         <!--PaulTest-->
         <scene sceneID="TNZ-Ju-Q8v">
@@ -563,30 +491,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-Ur-kt2">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" id="ttr-H7-NTI">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YKa-rc-4tB">
-                                            <rect key="frame" x="16" y="7" width="90" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="back to Main">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="p27-2I-VFw" kind="show" id="4YZ-42-QMB"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="Mmo-FH-Trr">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Us5-Nh-Ew4">
-                                            <rect key="frame" x="116" y="7" width="102" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="to Nick Testing">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="yEm-wF-Dcj" kind="show" identifier="SettingsNick" id="OSd-lq-Y2U"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="save" id="ttr-H7-NTI"/>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-Fe-emP">
@@ -677,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1g-9b-4NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="-24"/>
+            <point key="canvasLocation" x="1192" y="602"/>
         </scene>
     </scenes>
     <resources>
@@ -690,9 +595,4 @@
         <image name="queryWest" width="50" height="50"/>
         <image name="redo" width="23" height="17"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4YZ-42-QMB"/>
-        <segue reference="zBJ-sG-Owt"/>
-        <segue reference="9pM-hX-n8s"/>
-    </inferredMetricsTieBreakers>
 </document>
