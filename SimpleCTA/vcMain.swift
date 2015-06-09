@@ -16,7 +16,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     ////// view's vars  /////////////
     private var vcnicktest:     vcNickTest!
     private var vcpaultest:     vcPaulTest!
-    private var tvcstops:       vcStops!
     @IBOutlet var tableView:    UITableView!
     
     //////// buttons / views /////////////
@@ -43,24 +42,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
         //print(bushttp)
     }
-
-//    @IBAction func refreshButtonClicked(sender: UIBarButtonItem) {
-//        cta.gotRoute = false
-//        cta.gotStop = false
-//        cta.route = nil
-//        cta.stop = nil
-//        DB().getRoutesByLocation()
-//        
-//        self.tableView.reloadData()
-//        
-//        var k = dbParams.keys        
-//        for key in k {
-//            dbParams[key] = false
-//        }
-//        
-//        gethtml()
-//    }
-
     
     @IBAction func downloadDb(sender: UIBarButtonItem) {
         DB().DownloadDatabase()
@@ -85,8 +66,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 println(dbParams[text])
             }
         }
-            self.reloadTable("Route")
-    
+        self.reloadTable("Route")
     }
     
     
@@ -101,7 +81,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // call reload table
         self.reloadTable("Route")
-        
     }
     
     func handelInput (itemSelected : PublicTransit)  {
@@ -118,7 +97,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             getWhat = "Stop"
         }
         self.reloadTable(getWhat)
-        
     }
     
     func getData (getWhat:String?) {
@@ -165,7 +143,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
-    /////////////////////////////////
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
@@ -175,10 +152,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
            handelInput(r[row])
         }
     }
-    //////////////////////////////////
-    
-    
-    
     
     ///////////// segues /////////////////
     @IBAction func switchViews(sender: UIBarButtonItem) {
@@ -190,10 +163,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if vcnicktest == nil {
                 vcnicktest = storyboard?.instantiateViewControllerWithIdentifier("Nick") as! vcNickTest
             }
-        } else if tvcstops?.view.superview == nil {
-            if tvcstops == nil {
-                tvcstops = storyboard?.instantiateViewControllerWithIdentifier("Stops") as! vcStops
-            }
             
             if vcpaultest != nil && vcpaultest!.view.superview != nil {
                 vcnicktest.view.frame = view.frame
@@ -201,9 +170,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             } else if (vcnicktest != nil && vcpaultest!.view.superview != nil){
                 vcpaultest.view.frame = view.frame
                 switchViewController(from: vcnicktest, to: vcpaultest)
-            } else  {
-                vcpaultest.view.frame = view.frame
-                switchViewController(from: vcpaultest, to: tvcstops)
             }
         }
     }
@@ -247,12 +213,10 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
-        if vcpaultest != nil
-            && vcpaultest!.view.superview == nil {
+        if vcpaultest != nil && vcpaultest!.view.superview == nil {
             vcpaultest = nil
         }
-        if vcnicktest != nil
-            && vcnicktest!.view.superview == nil {
+        if vcnicktest != nil && vcnicktest!.view.superview == nil {
             vcnicktest = nil
         }
     }
