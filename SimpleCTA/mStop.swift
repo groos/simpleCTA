@@ -18,13 +18,10 @@ class Stop: PublicTransit {
     let routeLongName: String?
     let stopLatitude: Double?   // b: lat db: stop_lat
     let stopLongitude: Double?  // b: lon db: stop_lon
-    let locationType: Int?   // db: location_type
+    let locationType: Int?      // db: location_type
     let cellStyle: String?
     let rId: String?
     
-    // in here or rts?
-    //let finalDestination :  String?  // b: des t: destSt
-    //let platform: String?           // which way t:
     let routeDirection: String?     // B: rtdir // should be enum
     let distanceToUser: Double?     // calc of how close and need to setup a sort by
     
@@ -34,8 +31,6 @@ class Stop: PublicTransit {
         self.stationName = sName
         self.stopLatitude = lat
         self.stopLongitude = lon
-        //self.finalDestination = dest
-        //self.platform = plat
         self.routeDirection = rtDir
         self.distanceToUser = distance
         self.locationType = locType
@@ -44,20 +39,14 @@ class Stop: PublicTransit {
     }
     
     var stopId: String? {
-        get {
-            return self.stationID
-        }
+        get { return self.stationID }
     }
     
     var routeId: String? {
-        get {
-            return self.rId
-        }
+        get { return self.rId }
     }
     var style: String? {
-        get {
-            return self.cellStyle
-        }
+        get { return self.cellStyle }
     }
     var title: String? {
         get {
@@ -67,6 +56,4 @@ class Stop: PublicTransit {
             return "Error"
         }
     }
-    
-
 }

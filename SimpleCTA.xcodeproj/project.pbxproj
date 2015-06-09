@@ -27,8 +27,6 @@
 		448D2E9B1B1584A3008881AA /* sbBusHttpReqestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */; };
 		449AD4821B1A2CFF00A029AE /* parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4811B1A2CFF00A029AE /* parse.swift */; };
 		449AD4881B1A386000A029AE /* sbDbQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4871B1A386000A029AE /* sbDbQuery.swift */; };
-		449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48A1B1A38AC00A029AE /* parseDB.swift */; };
-		449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD48C1B1A38E900A029AE /* parseXml.swift */; };
 		449AD4911B1A39A500A029AE /* mStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4901B1A39A400A029AE /* mStop.swift */; };
 		449AD4931B1A39BF00A029AE /* mRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4921B1A39BF00A029AE /* mRoute.swift */; };
 		449AD4951B1A3A2700A029AE /* mPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AD4941B1A3A2700A029AE /* mPrediction.swift */; };
@@ -83,8 +81,6 @@
 		448D2E9A1B1584A3008881AA /* sbBusHttpReqestsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbBusHttpReqestsTest.swift; sourceTree = "<group>"; };
 		449AD4811B1A2CFF00A029AE /* parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parse.swift; sourceTree = "<group>"; };
 		449AD4871B1A386000A029AE /* sbDbQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sbDbQuery.swift; sourceTree = "<group>"; };
-		449AD48A1B1A38AC00A029AE /* parseDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseDB.swift; sourceTree = "<group>"; };
-		449AD48C1B1A38E900A029AE /* parseXml.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseXml.swift; sourceTree = "<group>"; };
 		449AD4901B1A39A400A029AE /* mStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mStop.swift; sourceTree = "<group>"; };
 		449AD4921B1A39BF00A029AE /* mRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mRoute.swift; sourceTree = "<group>"; };
 		449AD4941B1A3A2700A029AE /* mPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mPrediction.swift; sourceTree = "<group>"; };
@@ -217,8 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				449AD4811B1A2CFF00A029AE /* parse.swift */,
-				449AD48A1B1A38AC00A029AE /* parseDB.swift */,
-				449AD48C1B1A38E900A029AE /* parseXml.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -381,7 +375,6 @@
 			files = (
 				4431301C1B1F7A44006A709B /* vcGps.swift in Sources */,
 				449AD49C1B1A3D8A00A029AE /* getXml.swift in Sources */,
-				449AD48B1B1A38AC00A029AE /* parseDB.swift in Sources */,
 				449AD4911B1A39A500A029AE /* mStop.swift in Sources */,
 				44E5ADC21B1BAD70000E0E44 /* FMDatabasePool.m in Sources */,
 				44BF8FFB1B1FF263001CE79C /* tvcRoutes.swift in Sources */,
@@ -409,7 +402,6 @@
 				449AD4821B1A2CFF00A029AE /* parse.swift in Sources */,
 				444022E11B14F98B009B208A /* vcPaul.swift in Sources */,
 				448D2E971B1582EE008881AA /* sbBusHttpReqests.swift in Sources */,
-				449AD48D1B1A38E900A029AE /* parseXml.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

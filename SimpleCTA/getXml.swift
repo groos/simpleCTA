@@ -9,8 +9,7 @@
 import Foundation
 
 class getXml {
-    
-    
+
     init (){}
     
     func getPerdictions(httpUrl:String?) -> NSString? {
@@ -20,15 +19,9 @@ class getXml {
         if let myURL = NSURL(string: myURLString) {
             var error: NSError?
             myHTMLString = NSString(contentsOfURL: myURL, encoding: NSUTF8StringEncoding, error: &error)
-            if let xml = myHTMLString {
-                return xml
-            }
-            else  {
-                return nil
-            }
-        } else {
-            return nil
-        }
+            if let xml = myHTMLString { return xml }
+            else { return nil }
+          } else { return nil }
     }
     
     /// might not need this maybe all could be done in one.....
@@ -40,13 +33,8 @@ class getXml {
             var error: NSError?
             myHTMLString = NSString(contentsOfURL: myURL, encoding: NSUTF8StringEncoding, error: &error)
     
-            if let xml = myHTMLString {
-                return xml
-            } else  {
-                return nil
-            }
-        } else {
-            return nil
-        }
+            if let xml = myHTMLString { return xml
+          } else { return nil }
+        } else { return nil }
     }
 }

@@ -18,41 +18,9 @@ var ROUTES_KEYS = NSMutableArray()
 var ACTIVE_ROUTE_DETAILS = NSMutableArray()
 
 var parser = Parse()
-///////////////////////////////////////////////////////////////////////////////////////////////
 
 class Parse: NSObject, NSXMLParserDelegate {
-    
-    //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40930
-    //http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5
-    
     var URLRequest = NSURL(string: "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5")
-    
-    /* Here is the xml object we want.
-    or paste this in browser: http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=25924988075841f2970d3e7f95c8070c&mapid=40380&max=5
-    
-    <eta>
-    <staId>40380</staId>
-    <stpId>30074</stpId>
-    <staNm>Clark/Lake</staNm>
-    <stpDe>Service at Inner Loop platform</stpDe>
-    <rn>015</rn>
-    <rt>G</rt>
-    <destSt>30057</destSt>
-    <destNm>Ashland/63rd</destNm>
-    <trDr>5</trDr>
-    <prdt>20150517 17:20:12</prdt>
-    <arrT>20150517 17:23:12</arrT>
-    <isApp>0</isApp>
-    <isSch>0</isSch>
-    <isDly>0</isDly>
-    <isFlt>0</isFlt>
-    <flags/>
-    <lat>41.88556</lat>
-    <lon>-87.65292</lon>
-    <heading>89</heading>
-    </eta>
-    */
-    
     
     // used throughout parsing for collecting xml attributes.
     // The elements dictionary gets added to ROUTES at the end of parsing
@@ -92,7 +60,6 @@ class Parse: NSObject, NSXMLParserDelegate {
         URLRequest = url
     }
     
-    //
     func updateRoutes(){
         println("in updateRoutes")
         ROUTES_KEYS.removeAllObjects()
@@ -108,7 +75,6 @@ class Parse: NSObject, NSXMLParserDelegate {
     // call this when user touches a Route from upper UITableView
     func updateRouteDetails(route: String){
         println("trying to update route details for: " + route)
-        
         if let d = ROUTES[route] as? NSMutableArray {
             println("got routes of route")
             for eta in d {
@@ -121,11 +87,10 @@ class Parse: NSObject, NSXMLParserDelegate {
     
     // First superclass parser function that gets called. Stop it on the object name you want (eta object is below)
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
-        
         // store current element name in outer class
         // so it can referenced from other parser method
         element = elementName
-        
+    
         if (elementName as NSString).isEqualToString("eta") || (elementName as NSString).isEqualToString("prd") {
             elements = NSMutableDictionary.alloc()
             elements = [:]
@@ -139,7 +104,6 @@ class Parse: NSObject, NSXMLParserDelegate {
             rt = ""
             destination = NSMutableString.alloc()
             destination = ""
-            
         }
     }
     
@@ -212,10 +176,6 @@ class Parse: NSObject, NSXMLParserDelegate {
             } else {
                 println("didnt get anything back for rt")
             }
-            
         }
     }
-    
-
-    
 }
