@@ -61,14 +61,14 @@ class Parse: NSObject, NSXMLParserDelegate {
     }
     
     func updateRoutes(){
-        println("in updateRoutes")
+        //println("in updateRoutes")
         ROUTES_KEYS.removeAllObjects()
         ACTIVE_ROUTE_DETAILS.removeAllObjects()
         
         var k = ROUTES.keyEnumerator()
         for key in k {
             ROUTES_KEYS.addObject(String(key as! NSString))
-            println("added key " + (key as! String))
+            //println("added key " + (key as! String))
         }
     }
     
@@ -76,9 +76,9 @@ class Parse: NSObject, NSXMLParserDelegate {
     func updateRouteDetails(route: String){
         println("trying to update route details for: " + route)
         if let d = ROUTES[route] as? NSMutableArray {
-            println("got routes of route")
+            //println("got routes of route")
             for eta in d {
-                println("added details for route " + route)
+                //println("added details for route " + route)
                 ACTIVE_ROUTE_DETAILS.addObject(eta)
             }
         }
@@ -155,22 +155,22 @@ class Parse: NSObject, NSXMLParserDelegate {
             // rt will be something like "blue" or "R" indicating a Route.
             // we will store an array of arrival data objects for each Route
             if let rt = elements["rt"] as? String {
-                println("got route key: " + rt)
+                //println("got route key: " + rt)
                 // if we have already created an array for this Route, add the elements to it
                 
                 
                 if let route = ROUTES[rt] as? NSMutableArray{
                     ROUTES[rt]!.addObject(elements)
-                    println("added a new object for a line")
-                    println(ROUTES[rt]!.count)
+                    //println("added a new object for a line")
+                    //println(ROUTES[rt]!.count)
                     
                 } else {
                     // array for this Route doesn't exist yet, so create a new one
                     ROUTES[rt] = NSMutableArray()
                     ROUTES[rt]!.addObject(elements)
-                    println("created new line array and added an object")
-                    println("count? " )
-                    println(ROUTES[rt]!.count)
+                    //println("created new line array and added an object")
+                    //println("count? " )
+                    //println(ROUTES[rt]!.count)
                 }
                 
             } else {
