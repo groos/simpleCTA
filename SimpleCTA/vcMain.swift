@@ -23,20 +23,7 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /////////  table data source ///////////
     private var transit : [PublicTransit]? = DB().getRoutesByLocation()
-    
-//    @IBAction func goButtonPressed(sender: UIBarButtonItem) {
-//        if cta.gotRoute == false {
-//            transit = DB().getRoutesByLocation()
-//        } else {
-//            transit = DB().getStopsByRoute(cta.route?.routeId!)
-//        }
-//        reloadTable()
-//    }
-
-
-    ///////////////////////////////////////////////////////////
-
-    
+        
     func gethtml () {
         let bushttp = sbBusHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
         let trainHttp = sbTrainHttpReqests().predictions(cta.stop?.stopId, rt: cta.route?.routeId, vid: nil, top: nil)
@@ -113,7 +100,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     break
             }
         }
-        
     }
     
     func reloadTable(getWhat:String?) {
@@ -122,7 +108,6 @@ class vcMain: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.tableView.reloadData()
         }
     }
-    
     
     ///////////////// table view /////////////////////
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

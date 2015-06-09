@@ -11,13 +11,11 @@ import MapKit
 
 class UserGps: NSObject {
 
-    var latitude : Double?  // need to make enums
-    var longitude : Double?
-    var manager: OneShotLocationManager?
-    
-    
-    var mileRadius: Double?
-    var degreesRadius: Double?
+    var latitude :      Double?  // need to make enums
+    var longitude :     Double?
+    var manager:        OneShotLocationManager?
+    var mileRadius:     Double?
+    var degreesRadius:  Double?
 
     override init(){
         self.latitude = 41.925222
@@ -41,7 +39,6 @@ class UserGps: NSObject {
  // /*------*/    GPS.longitude = -87.653689
                 /////////////////////////////////////
                 
-                
             } else if let err = error {
                 println(err.localizedDescription)
             }
@@ -49,12 +46,10 @@ class UserGps: NSObject {
             self.manager = nil
         }
 
-        
         if let lat = self.latitude, long = self.longitude {
             return ["latitude" : lat,  "longitude" : long]
         } else {
             return nil
         }
-        
     }
 }
