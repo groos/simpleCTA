@@ -9,7 +9,6 @@
 import UIKit
 
 class XMLTableViewController: UITableViewController {
-
     @IBOutlet weak var UpperTableView: UITableView!
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -25,7 +24,6 @@ class XMLTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("DetailsCell", forIndexPath: indexPath) as! UITableViewCell
 
         if let detail = ACTIVE_ROUTE_DETAILS[indexPath.row] as? NSMutableDictionary {
@@ -65,9 +63,6 @@ class XMLTableViewController: UITableViewController {
                         var busHttpString = String(bus)
                         parser.setUrl(busHttpString)
                     }
-                    
-                    //var busHttpString = bushttp!
-                    //parser.setUrl(bushttp)
                     
                     parser.myParse()
                     

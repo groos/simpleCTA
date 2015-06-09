@@ -39,12 +39,8 @@ class sbBusHttpReqests {
         if let bk = busKey, u = vehiclesBaseUrl {
             let url = "\(u)?key=\(bk)"
             
-            if let v = vid{
-                return (url + "&vid=\(v)")
-            }
-            if let r = rt{
-                return (url + "&rt=\(r)")
-            }
+            if let v = vid{ return (url + "&vid=\(v)")  }
+            if let r = rt{ return (url + "&rt=\(r)")    }
         }
         return nil
     }
@@ -128,15 +124,9 @@ class sbBusHttpReqests {
       //  if (rt == nil && stpid == nil) || (rt != nil && stpid != nil) { return nil }
         if let u = serviceBulletinsBaseUrl, bk = busKey {
             var url = "\(u)?key=\(bk)"
-            if let r = rt {
-                url = "\(url)&rt=\(r)"
-            }
-            if let s = stpid {
-                url = "\(url)&stpid=\(s)"
-            }
-            if let rd = rtDir {
-                url = "\(url)&Rtdir=\(rd)"
-            }
+            if let r = rt { url = "\(url)&rt=\(r)" }
+            if let s = stpid { url = "\(url)&stpid=\(s)" }
+            if let rd = rtDir { url = "\(url)&Rtdir=\(rd)" }
             return url
         }
         return nil

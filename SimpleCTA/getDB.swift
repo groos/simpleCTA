@@ -101,13 +101,9 @@ class DB {
                 var s = Stop(rId: rid , sId: sid, sName: sn, routeLongName: rln, lat: (slat as NSString).doubleValue,
                         lon: (slon as NSString).doubleValue, rtDir: rdir, distance: 0.34, locType: nil, style: style)
                     stop.append(s)
-                
-                }
-            } else {
-                println("select failed: \(database.lastErrorMessage())")
             }
+            } else { println("select failed: \(database.lastErrorMessage())") }
             database.close()
-        
         return stop
     }
 }

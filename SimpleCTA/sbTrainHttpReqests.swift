@@ -14,11 +14,11 @@ class sbTrainHttpReqests {
     let baseUrlArivals : String?   =    "lapi.transitchicago.com/api/1.0/ttarrivals.aspx"
     let baseUrlLocations :String?  =    "api.transitchicago.com/api/1.0/ttpositions.aspx"
     let baseUrlFollowTrain:String? =    "http://lapi.transitchicago.com/api/1.0/ttfollow.aspx"
-    let predictionsBaseUrl: String? = "lapi.transitchicago.com/api/1.0/ttarrivals.aspx"
-    var mid     : Int?  // map or stp reqired
-    var sid     : Int?  // map or stp reqired
-    var maxRt   : Int?   // optional
-    var rts     : Int?    // optional
+    let predictionsBaseUrl: String? =   "lapi.transitchicago.com/api/1.0/ttarrivals.aspx"
+    var mid     : Int?      // map or stp reqired
+    var sid     : Int?      // map or stp reqired
+    var maxRt   : Int?      // optional
+    var rts     : Int?      // optional
 
 
     // ------------Arivals API ---------------//
@@ -49,7 +49,6 @@ class sbTrainHttpReqests {
         
     }
 
-
     // ------------Follow This Train API ---------------//
 
     //This API produces a list of arrival predictions for a given train at all subsequent stations for which that train is estimated to arrive, up to 20 minutes in the future or to the end of its trip.
@@ -59,9 +58,7 @@ class sbTrainHttpReqests {
         return "\(baseUrlFollowTrain)?key=\(Trainkey)&runnumber=\(runNumber!)"
     }
 
-
     // ------------Locations API ---------------//
-
     // This API produces a list of in-service trains and basic info and their locations for one or more specified ‘L’ routes.
 
     func locations(rt:String?) -> String? {
@@ -74,23 +71,12 @@ class sbTrainHttpReqests {
        // if (stpid != nil && vid != nil) || (stpid == nil && vid == nil) || (stpid != nil && rt != nil) { return nil }
         if let tk = Trainkey, u = predictionsBaseUrl {
             var url = "\(u)?key=\(tk)"
-            if let s = stpid {
-                url = "\(url)&stpid=\(s)"
-            }
-            if let v = vid {
-                url  = "\(url)&vid=\(v)"
-            }
-            if let r = rt {
-                url  = "\(url)&rt=\(r)"
-            }
-            if let t = top {
-                url = "\(url)&top=\(t)"
-            }
+            if let s = stpid { url = "\(url)&stpid=\(s)" }
+            if let v = vid { url  = "\(url)&vid=\(v)" }
+            if let r = rt { url  = "\(url)&rt=\(r)" }
+            if let t = top { url = "\(url)&top=\(t)" }
             return NSURL(string:url)
         }
         return nil
     }
-    
-    
-    
 }
